@@ -5,6 +5,11 @@ import { obuasi } from "../assets/images";
 import { useTranslation } from "../hooks/useTranslation";
 import { FaGavel, FaHandshake, FaNetworkWired, FaChartLine, FaFileAlt, FaUsers, FaGlobe, FaAward, FaArrowRight } from "react-icons/fa";
 
+/**
+ * Full Our Impact page — preserved for future use.
+ * To publish again: uncomment the `/our-impact` route and nav/footer/search entries in
+ * main.jsx, Menu.jsx, constants/index.js, Footer.jsx, and SearchModal.jsx.
+ */
 const OurImpact = () => {
   const { t } = useTranslation();
   const location = useLocation();

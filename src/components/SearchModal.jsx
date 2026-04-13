@@ -43,7 +43,7 @@ const SearchModal = ({ isOpen, onClose }) => {
       { title: "Who We Are", link: "/who-we-are", description: "Learn about PDA's mission, vision, and team" },
       { title: "What We Do", link: "/what-we-do", description: "Our strategic themes, projects, and expertise" },
       { title: "Our Projects", link: "/our-projects", description: "Browse all our development projects" },
-      { title: "Our Impact", link: "/our-impact", description: "Impact stories, webinars, and workshops" },
+      // { title: "Our Impact", link: "/our-impact", description: "Impact stories, webinars, and workshops" },
       { title: "Publications", link: "/publications", description: "Research reports and publications" },
       { title: "Staff", link: "/staff", description: "Meet our team members" },
       { title: "Board of Directors", link: "/board", description: "Our board members" },

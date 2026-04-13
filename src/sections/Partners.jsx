@@ -111,13 +111,13 @@ const Partners = () => {
     <section id="partners" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Section Header - Consistent Style */}
       <motion.div
-        className="text-center mb-8 md:mb-10"
+        className="text-center mb-5 md:mb-6"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="flex items-center gap-2 sm:gap-4 mb-6 justify-center">
+        <div className="flex items-center gap-2 sm:gap-4 mb-3 justify-center">
           <motion.div
             className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
             initial={{ width: 0 }}

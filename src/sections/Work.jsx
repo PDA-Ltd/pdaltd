@@ -43,8 +43,8 @@ const Work = () => {
           transition={{ duration: 0.6 }}
         >
           {/* Section Header - Consistent Style */}
-          <div className="mb-5">
-            <div className="flex items-center gap-4 mb-4">
+          <div className="mb-3">
+            <div className="flex items-center gap-4 mb-2">
               <motion.div
                 className="h-1 bg-orange flex-1"
                 initial={{ width: 0 }}

@@ -32,6 +32,7 @@ bdi,
 kswa,
 kswb,
 etg,
+image2
 } from "../assets/images";
 
 const Photos = () => {
@@ -155,7 +156,7 @@ const Photos = () => {
   ];
 
   // Using a professional photography-themed header image
-  const headerImage = "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1920&q=80";
+  // const headerImage = "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1920&q=80";
 
   return (
     <section
@@ -170,8 +171,8 @@ const Photos = () => {
         transition={{ duration: 0.6 }}
       >
         <img 
-          src={headerImage} 
-          className="w-full h-[400px] md:h-[500px] object-cover" 
+          src={image2} 
+          className="w-full h-[400px] md:h-[500px] object-cover object-top" 
           alt="Photos" 
           onError={(e) => {
             e.target.style.display = 'none';

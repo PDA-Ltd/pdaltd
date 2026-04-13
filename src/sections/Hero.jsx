@@ -63,14 +63,14 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col justify-end lg:justify-center bg-cover bg-left top-20 min-h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px] wide:h-[800px] overflow-hidden"
+      className="relative flex flex-col justify-end lg:justify-center bg-cover bg-left top-20 min-h-[280px] sm:h-[340px] md:h-[390px] lg:h-[460px] wide:h-[560px] overflow-hidden"
     >
       <video
         loop
         autoPlay
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover -z-10"
+        className="absolute inset-0 w-full h-full object-cover object-top -z-10"
         poster="/assets/images/hero.png"
       >
         <source src="/assets/video/pdaSlider.mp4" type="video/mp4" />
@@ -79,7 +79,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent -z-10"></div>
       
       <motion.div
-        className="flex flex-col items-center justify-center h-full p-4 relative z-10 text-center"
+        className="flex flex-col items-center justify-end h-full p-4 pb-8 sm:pb-10 md:pb-12 relative z-10 text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

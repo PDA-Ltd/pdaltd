@@ -110,15 +110,16 @@ export const navigation = [
     ],
   },
 
-  {
-    title: "Impact",
-    link: "/our-impact",
-    links: [
-      { name: "Policy Change", link: "/our-impact#policies" },
-      { name: "Practice Change", link: "/our-impact#practices" },
-      { name: "System Change", link: "/our-impact#systems" },
-    ],
-  },
+  // Restore with Our Impact route (see OurImpact.jsx header comment)
+  // {
+  //   title: "Impact",
+  //   link: "/our-impact",
+  //   links: [
+  //     { name: "Policy Change", link: "/our-impact#policies" },
+  //     { name: "Practice Change", link: "/our-impact#practices" },
+  //     { name: "System Change", link: "/our-impact#systems" },
+  //   ],
+  // },
 ];
 
 export const socialMedia = [
@@ -208,14 +209,15 @@ export const footerLinks = [
     ],
   },
 
-  {
-    title: "Impact",
-    links: [
-      { name: "Policy Change", link: "/our-impact#policies" },
-      { name: "Practice Change", link: "/our-impact#practices" },
-      { name: "System Change", link: "/our-impact#systems" },
-    ],
-  },
+  // Restore with Our Impact route (see OurImpact.jsx header comment)
+  // {
+  //   title: "Impact",
+  //   links: [
+  //     { name: "Policy Change", link: "/our-impact#policies" },
+  //     { name: "Practice Change", link: "/our-impact#practices" },
+  //     { name: "System Change", link: "/our-impact#systems" },
+  //   ],
+  // },
 ];
 
 export const partners = [

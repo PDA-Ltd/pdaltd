@@ -50,17 +50,18 @@ const Footer = () => {
         return { ...link, name: nameMap[link.name] || link.name };
       }),
     },
-    {
-      title: t("footer.impact"),
-      links: baseFooterLinks[4].links.map(link => {
-        const nameMap = {
-          "Policy Change": t("ourImpact.policies.title"),
-          "Practice Change": t("ourImpact.practices.title"),
-          "System Change": t("ourImpact.systems.title"),
-        };
-        return { ...link, name: nameMap[link.name] || link.name };
-      }),
-    },
+    // Restore with Impact block in constants footerLinks and Our Impact route
+    // {
+    //   title: t("footer.impact"),
+    //   links: baseFooterLinks[4].links.map(link => {
+    //     const nameMap = {
+    //       "Policy Change": t("ourImpact.policies.title"),
+    //       "Practice Change": t("ourImpact.practices.title"),
+    //       "System Change": t("ourImpact.systems.title"),
+    //     };
+    //     return { ...link, name: nameMap[link.name] || link.name };
+    //   }),
+    // },
   ], [t]);
 
   return (

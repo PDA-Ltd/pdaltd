@@ -19,7 +19,8 @@ import Staff from "./pages/Staff.jsx";
 import Teams from "./pages/Teams.jsx";
 import ChildAbuseTracker from "./pages/ChildAbuseTracker.jsx";
 import Covid19 from "./pages/Covid19.jsx";
-import OurImpact from "./pages/OurImpact.jsx";
+// Our Impact page code kept in ./pages/OurImpact.jsx — uncomment import + route to restore.
+// import OurImpact from "./pages/OurImpact.jsx";
 import Publications from "./pages/Publications.jsx";
 import VidPic from "./pages/VidPic.jsx";
 import PodcastAndVodcast from "./pages/PodcastAndVodcast.jsx";
@@ -114,10 +115,10 @@ const router = createBrowserRouter([
         path: "/our-projects",
         element: <ProjectsPage />,
       },
-      {
-        path: "/our-impact",
-        element: <OurImpact />,
-      },
+      // {
+      //   path: "/our-impact",
+      //   element: <OurImpact />,
+      // },
       {
         path: "/publications",
         element: <Publications />,

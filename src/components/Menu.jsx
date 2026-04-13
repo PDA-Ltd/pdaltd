@@ -29,7 +29,7 @@ const Menu = ({ onLinkClick }) => {
     { href: "/covid-19", label: t("nav.covid19") },
     { href: "/partners", label: t("nav.partners") },
     { href: "/events", label: t("nav.events") },
-    { href: "https://www.pdaafrica.org", label: "PDA Africa", external: true, isSubOrg: true },
+    { href: "https://pdaafrica.org", label: "PDA Africa", external: true, isSubOrg: true },
   ], [t]);
 
   const navigation = useMemo(() => [
@@ -64,15 +64,16 @@ const Menu = ({ onLinkClick }) => {
         { name: t("nav.photos"), link: "/photos" },
       ],
     },
-    {
-      title: t("nav.impact"),
-      link: "/our-impact",
-      links: [
-        { name: t("ourImpact.policies.title"), link: "/our-impact#policies" },
-        { name: t("ourImpact.practices.title"), link: "/our-impact#practices" },
-        { name: t("ourImpact.systems.title"), link: "/our-impact#systems" },
-      ],
-    },
+    // Restore with Our Impact route in main.jsx
+    // {
+    //   title: t("nav.impact"),
+    //   link: "/our-impact",
+    //   links: [
+    //     { name: t("ourImpact.policies.title"), link: "/our-impact#policies" },
+    //     { name: t("ourImpact.practices.title"), link: "/our-impact#practices" },
+    //     { name: t("ourImpact.systems.title"), link: "/our-impact#systems" },
+    //   ],
+    // },
   ], [t]);
 
   const handleLinkClick = (e, href) => {
@@ -103,9 +104,9 @@ const Menu = ({ onLinkClick }) => {
 
   return (
     <>
-      <section className="max-container flex flex-col lg:flex-row justify-between p-4 sm:p-6 md:p-8 lg:p-10 gap-6 md:gap-7 lg:gap-8 overflow-y-auto max-h-[calc(100vh-100px)] pb-20 md:pb-24 lg:pb-24">
+      <section className="max-container flex flex-col lg:flex-row justify-between p-4 sm:p-6 md:p-8 lg:p-10 gap-6 md:gap-7 lg:gap-10 xl:gap-12 overflow-y-auto max-h-[calc(100vh-100px)] pb-20 md:pb-24 lg:pb-24">
         {/* Mobile & Tablet Layout */}
-        <div className="lg:hidden w-full space-y-5 md:space-y-6">
+        <div className="lg:hidden w-full space-y-6 md:space-y-7">
           {/* Top Action Buttons - Mobile & Tablet */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pb-4 md:pb-5 border-b border-gray-200">
             <motion.button
@@ -185,7 +186,7 @@ const Menu = ({ onLinkClick }) => {
           </div>
 
           {/* Navigation Sections - Mobile & Tablet (Collapsible) */}
-          <div className="space-y-2 md:space-y-3">
+          <div className="space-y-4 md:space-y-5">
             {navigation.map((section) => (
               <div key={section.title} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
                 <button
@@ -267,7 +268,7 @@ const Menu = ({ onLinkClick }) => {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:flex lg:flex-row justify-between w-full gap-6 xl:gap-8 2xl:gap-10">
+        <div className="hidden lg:flex lg:flex-row justify-between w-full gap-8 xl:gap-12 2xl:gap-16">
           {/* Main Navigation Links */}
           <div className="flex flex-col text-orange gap-5 lg:gap-6 xl:gap-8 font-semibold text-base lg:text-lg xl:text-xl font-poppins min-w-[220px] xl:min-w-[240px]">
             {navLinks.filter(section => !section.isSubOrg).map((section) => (
@@ -340,12 +341,12 @@ const Menu = ({ onLinkClick }) => {
           </div>
 
           {/* Divider */}
-          <div className="bg-gradient-to-b from-transparent via-orange to-transparent h-auto w-0.5 mx-2 xl:mx-4"></div>
+          <div className="bg-gradient-to-b from-transparent via-orange to-transparent h-auto w-0.5 shrink-0 mx-4 xl:mx-6"></div>
 
-          {/* Navigation Sections */}
-          <div className="grid grid-cols-5 gap-3 lg:gap-4 xl:gap-6 2xl:gap-8 flex-1">
+          {/* 3 nav columns + Contact/Search — 4 cols, wide gaps (5th column removed with Impact) */}
+          <div className="grid grid-cols-4 gap-6 lg:gap-8 xl:gap-12 2xl:gap-16 flex-1 min-w-0">
             {navigation.map((section) => (
-              <div key={section.title} className="min-w-0 xl:min-w-[140px]">
+              <div key={section.title} className="min-w-0 flex flex-col">
                 <motion.a
                   href={section.link === "#" ? "#" : section.link}
                   onClick={(e) => {
@@ -355,14 +356,14 @@ const Menu = ({ onLinkClick }) => {
                       e.preventDefault();
                     }
                   }}
-                  className="hover:text-orange transition-colors duration-300 block mb-3 lg:mb-4 xl:mb-5"
+                  className="hover:text-orange transition-colors duration-300 block mb-4 lg:mb-5 xl:mb-6"
                   whileHover={{ x: 3 }}
                 >
                   <h4 className="font-poppins text-black font-bold text-lg lg:text-xl xl:text-2xl 2xl:text-3xl border-b-2 border-transparent hover:border-orange pb-1.5 lg:pb-2 transition-all duration-300 break-words">
                     {section.title}
                   </h4>
                 </motion.a>
-                <ul className="space-y-2 lg:space-y-2.5">
+                <ul className="space-y-2.5 lg:space-y-3.5">
                   {section.links.map((link) => (
                     <li
                       className="font-poppins text-sm lg:text-base xl:text-lg text-black font-normal hover:text-orange transition-colors duration-300 break-words"

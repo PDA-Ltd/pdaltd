@@ -65,6 +65,12 @@ const App = () => {
 
   return (
     <main className="relative">
+      <a
+        href="#main-content"
+        className="skip-link font-poppins"
+      >
+        Skip to main content
+      </a>
       <ScrollToTop />
       <header>
         {location.pathname.startsWith("/pdaafrica") ? (
@@ -74,6 +80,7 @@ const App = () => {
         )}
       </header>
 
+      <div id="main-content" tabIndex={-1}>
       {location.pathname === "/" ? (
         // Home page layout with all the sections
         <>
@@ -147,6 +154,7 @@ const App = () => {
         // Outlet for other routes like Contact page
         <Outlet />
       )}
+      </div>
 
       <section className="bg-[#525050] padding">
         <Footer />

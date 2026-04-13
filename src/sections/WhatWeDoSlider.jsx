@@ -97,13 +97,13 @@ const WhatWeDoSlider = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header - Minimalist */}
         <motion.div
-          className="mb-10 md:mb-14"
+          className="mb-5 md:mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex items-center gap-2 sm:gap-4 mb-6 justify-center">
+          <div className="flex items-center gap-2 sm:gap-4 mb-3 justify-center">
             <motion.div
               className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
               initial={{ width: 0 }}

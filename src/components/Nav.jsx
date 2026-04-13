@@ -26,7 +26,10 @@ const Nav = () => {
   return (
     <header className="w-full h-24 fixed top-0 left-0 z-50">
       <div className="w-full h-3 bg-orange relative z-10"></div>
-      <nav className="w-full shadow-3xl bg-white flex justify-around items-center relative z-10 px-4">
+      <nav
+        className="w-full shadow-3xl bg-white flex justify-around items-center relative z-10 px-4"
+        aria-label="Primary navigation"
+      >
         <motion.a
           href="/"
           onClick={(e) => {
@@ -51,6 +54,8 @@ const Nav = () => {
               onClick={toggleMenu}
               className="sidebarIconToggle cursor-pointer w-[50px] h-[50px] z-[99] relative flex flex-col items-center justify-center"
               aria-label="Toggle menu"
+              aria-expanded={isMenuVisible}
+              aria-controls="primary-menu-panel"
             >
               {isMenuVisible ? (
                 <motion.div
@@ -73,6 +78,7 @@ const Nav = () => {
       <div className="h-28"></div>
 
       <div
+        id="primary-menu-panel"
         className={`absolute left-0 w-full bg-white bg-opacity-90 transform transition-transform duration-1000 ease-in-out ${
           isMenuVisible ? "translate-y-[-0%]" : "translate-y-[-200%]"
         }`}
