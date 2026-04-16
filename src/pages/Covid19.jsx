@@ -15,22 +15,22 @@ const Covid19 = () => {
     {
       date: "26 MAY, 2022",
       title: "PANDEMICS AND THE USE OF NON-PHARMACEUTICAL INTERVENTIONS: LESSONS FROM THE 1918 PANDEMIC AND COVID",
-      downloadLink: "#"
+      downloadLink: "/assets/documents/Pandemics-and-the-Use-of-Non-Pharmaceutical-Interventions-Lessons-from-the-1918-Pandemic-and-Covid-19.pdf"
     },
     {
       date: "28 MAY, 2022",
       title: "RETHINKING SOCIAL PROTECTION AND SAFETY NETS IN GHANA: WHAT THE COVID-19 PANDEMIC HAS TAUGHT US",
-      downloadLink: "#"
+      downloadLink: "/assets/documents/Rethinking-Social-Protection-and-Safety-Nets-in-Ghana-What-the-COVID-19-Pandemic-has-Taught-Us.pdf"
     },
     {
       date: "2 JUNE, 2023",
       title: "GHANA'S CHILD WELFARE SYSTEM AND COVID-19 PANDEMIC",
-      downloadLink: "#"
+      downloadLink: "/assets/documents/Ghanas-Child-Welfare-System-And-Covid-19-Pandemic.pdf"
     },
     {
       date: "18 JANUARY, 2024",
       title: "THE POLITICAL ECONOMY OF COVID-19 IN AFRICA",
-      downloadLink: "#"
+      downloadLink: "/assets/documents/The-political-economy-of-covid-19-in-africa.pdf"
     }
   ];
 

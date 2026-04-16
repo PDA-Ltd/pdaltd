@@ -65,12 +65,6 @@ const App = () => {
 
   return (
     <main className="relative">
-      <a
-        href="#main-content"
-        className="skip-link font-poppins"
-      >
-        Skip to main content
-      </a>
       <ScrollToTop />
       <header>
         {location.pathname.startsWith("/pdaafrica") ? (

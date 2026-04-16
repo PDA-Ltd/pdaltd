@@ -530,6 +530,44 @@ export const en = {
     viewMore: "View More Partners",
     visitWebsite: "Visit Website",
     testimonials: "Partner Testimonials",
+    associations: {
+      title: "PDA Associations",
+      intro:
+        "PDA is proud to be an active member of various associations and networks that align with our mission of participatory development and community-led change. Through these memberships, we collaborate with like-minded organizations, exchange knowledge, and advocate for policies that drive sustainable development and social impact.",
+      sourceLink: "View source",
+      items: {
+        ncpc: {
+          title: "National Child Protection Committee (NCPC)",
+          description:
+            "Under the auspices of the Ministry of Gender, Children and Social Protection, the National Child Protection Committee is a multi-sectoral committee which consists of relevant Departments and Agencies, Civil Society Organizations, Development Partners, and Non-Governmental Organizations with the mandate of ensuring child protection and welfare for children and their families. The NCPC serves as a platform to discuss child protection issues in the country, provide appropriate interventions to address challenges raised by partners, update on each organization’s activities, and allow for inter-sectoral partnerships towards child welfare. PDA is a member of this Committee in pursuit of our commitment to child welfare and protection.",
+        },
+        citizensBureau: {
+          title: "Citizen’s Bureau",
+          description:
+            "Under the auspices of the Parliament of Ghana, the Citizen’s Bureau aims to promote dialogue and collaboration between the legislature, think tanks, civil society organisations (CSOs), and the media, bridging the gap between the government and its citizens. It acts as a platform for the exchange of research findings between CSOs/think tanks and lawmakers as well as for the dissemination of public information from parliament to CSOs and think tanks. PDA is a member of this group in pursuit of our commitment to good governance, transparency and accountability.",
+        },
+        wuscPac: {
+          title: "WUSC Programme Advisory Committee",
+          description:
+            "The Program Advisory Committee (PAC), established under the auspices of WUSC, provides strategic guidance and oversight to ensure the successful implementation of in-country programs. Its responsibilities include validating research, advising on program outcomes, and reviewing key plans such as implementation strategies, budgets, and annual reports. The PAC also monitors project progress, addresses strategic-level risks, and facilitates collaboration among program partners to achieve shared objectives. As a member of the PAC, PDA contributes to these efforts, ensuring they align with its commitments to gender equality, youth empowerment, and sustainable community development.",
+        },
+        dataProtectionCommission: {
+          title: "Ghana Data Protection Commission",
+          description:
+            "PDA is certified by the Ghana Data Protection Commission, demonstrating compliance with national data protection regulations and adherence to established standards for data security and ethics. This certification ensures that PDA operates with transparency and accountability in handling personal and organizational data, aligning with best practices in data management.",
+        },
+        gmef: {
+          title: "GMEF",
+          description:
+            "The Ghana Monitoring and Evaluation Forum (GMEF) is Ghana’s only formal Voluntary Organization for Professional Evaluators (VOPE). Established in 2008 to promote evidence-based policy-making at all levels in Ghana, GMEF has grown to become a network of over 600 public-spirited individuals who seek to meet the need for improved M&E through the promotion of open dialogue around M&E issues. Its mission is to promote and enable the use of monitoring and evaluation in programme implementation and policy planning. Members of the Ghana Monitoring and Evaluation Forum (GMEF) include development enthusiasts, experts, and advocates, and PDA is a member of this VOPE in pursuit of our commitment to quality monitoring, evaluation and learning.",
+        },
+        afrea: {
+          title: "AfREA",
+          description:
+            "The African Evaluation Association (AfrEA) is a non-profit umbrella for African Voluntary Organizations for Professional Development (VOPEs). It serves as a leading source of evaluation knowledge for individual evaluators across the continent, promoting best practices, capacity building, and the use of evaluation to inform decision-making and policy development in Africa. PDA’s membership in AfrEA underscores our commitment to high-quality evaluation practices and reinforces the credibility and professionalism of our activities.",
+        },
+      },
+    },
   },
   // Cookie Consent
   cookieConsent: {

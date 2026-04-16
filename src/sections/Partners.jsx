@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Button from "../components/Button";
 import { useTranslation } from "../hooks/useTranslation";
-import { partnerTestimonials } from "../data/partnersData";
-import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import {
   beyond,
   british,
@@ -37,8 +35,6 @@ import {
 const Partners = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
 
   const partners = [
     { imgURL: beyond, name: "Beyond" },
@@ -68,44 +64,6 @@ const Partners = () => {
     { imgURL: unicef, name: "Unicef" },
     { imgURL: university, name: "University" },
   ];
-
-  const nextTestimonial = () => {
-    setDirection(1);
-    setCurrentTestimonialIndex((prev) => (prev + 1) % partnerTestimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setDirection(-1);
-    setCurrentTestimonialIndex((prev) => (prev - 1 + partnerTestimonials.length) % partnerTestimonials.length);
-  };
-
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setDirection(1);
-      setCurrentTestimonialIndex((prev) => (prev + 1) % partnerTestimonials.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [currentTestimonialIndex]);
-
-  const currentTestimonial = partnerTestimonials[currentTestimonialIndex];
-
-  const slideVariants = {
-    enter: (direction) => ({
-      x: direction > 0 ? 100 : -100,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      position: "relative",
-    },
-    exit: (direction) => ({
-      x: direction < 0 ? 100 : -100,
-      opacity: 0,
-      position: "absolute",
-    }),
-  };
 
   return (
     <section id="partners" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -153,92 +111,8 @@ const Partners = () => {
         </motion.p>
       </motion.div>
 
-      {/* Combined Section: Testimonials + Partner Logos */}
+      {/* Partner Logos */}
       <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8">
-        {/* Compact Testimonial Section */}
-        <div className="relative mb-8 pb-8 border-b border-gray-200">
-          <div className="relative h-[320px] sm:h-[280px] md:h-[240px] overflow-hidden">
-            <AnimatePresence initial={false} custom={direction} mode="wait">
-              <motion.div
-                key={currentTestimonialIndex}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 400, damping: 30 },
-                  opacity: { duration: 0.2 }
-                }}
-                className="h-full"
-              >
-                <div className="flex flex-col md:flex-row items-start gap-6 h-full">
-                  <div className="flex-shrink-0">
-                    <img
-                      src={currentTestimonial.image}
-                      alt={currentTestimonial.partner}
-                      className="w-16 h-16 md:w-20 md:h-20 rounded-full object-contain bg-gray-100 p-2 shadow-md"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex-grow">
-                    <FaQuoteLeft className="text-orange text-2xl md:text-3xl mb-3" />
-                    <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4 italic line-clamp-3">
-                      "{currentTestimonial.quote}"
-                    </p>
-                    <div>
-                      <p className="font-bold text-gray-800 text-base md:text-lg mb-1">
-                        {currentTestimonial.name}
-                      </p>
-                      <p className="text-orange font-semibold text-sm md:text-base mb-1">
-                        {currentTestimonial.role}
-                      </p>
-                      <p className="text-gray-600 text-sm md:text-base">
-                        {currentTestimonial.partner}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Compact Navigation Buttons */}
-            <button
-              onClick={prevTestimonial}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white hover:bg-orange border-2 border-gray-200 hover:border-orange flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 group"
-              aria-label="Previous"
-            >
-              <FaChevronLeft className="text-gray-600 group-hover:text-white transition-colors text-sm" />
-            </button>
-            <button
-              onClick={nextTestimonial}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white hover:bg-orange/15 border-2 border-gray-200 hover:border-orange flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 group"
-              aria-label="Next"
-            >
-              <FaChevronRight className="text-gray-600 group-hover:text-white transition-colors text-sm" />
-            </button>
-
-            {/* Compact Dots Indicator */}
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex justify-center gap-2">
-              {partnerTestimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setDirection(index > currentTestimonialIndex ? 1 : -1);
-                    setCurrentTestimonialIndex(index);
-                  }}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentTestimonialIndex
-                      ? "bg-orange w-6"
-                      : "bg-gray-300 hover:bg-gray-400 w-2"
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Partner Logos Carousel */}
         <div>
           <div className="flex overflow-hidden group justify-center py-4">
