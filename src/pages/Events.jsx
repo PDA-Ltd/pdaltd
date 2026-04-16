@@ -4,6 +4,9 @@ import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaExternalLinkAlt, FaShieldAlt,
 import { useTranslation } from "../hooks/useTranslation";
 import { webinar } from "../assets/images";
 
+// When false: page is normal again. Also uncomment Events in Menu.jsx and constants/index.js navLinks.
+const EVENTS_PAGE_BLURRED = true;
+
 const Events = () => {
   const { t } = useTranslation();
 
@@ -125,8 +128,12 @@ const Events = () => {
   return (
     <section
       id="events"
-      className="max-container max-w-full w-full min-h-screen font-poppins bg-gradient-to-b from-gray-50 to-white"
+      className="max-container max-w-full w-full min-h-screen font-poppins bg-gradient-to-b from-gray-50 to-white relative"
     >
+      <div
+        className={EVENTS_PAGE_BLURRED ? "blur-md pointer-events-none select-none" : ""}
+        aria-hidden={EVENTS_PAGE_BLURRED}
+      >
       {/* Hero Section */}
       <motion.div
         className="relative w-full mt-24"
@@ -243,6 +250,16 @@ const Events = () => {
           </div>
         </div>
       </motion.div>
+      </div>
+      {EVENTS_PAGE_BLURRED && (
+        <>
+          <p className="sr-only">Events page content is temporarily unavailable.</p>
+          <div
+            className="absolute inset-0 z-40 bg-white/30 backdrop-blur-sm"
+            aria-hidden
+          />
+        </>
+      )}
     </section>
   );
 };
