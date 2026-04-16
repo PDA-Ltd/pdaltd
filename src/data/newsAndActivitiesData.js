@@ -256,15 +256,25 @@ newsAndActivitiesData.push(
     date: "March 9, 2026",
     title: "PDA Delivers GALS + CHILD Methodology Training for ETG Uganda",
     description:
-      "PDA is implementing a Training of Trainers on the Gender Action Learning System (GALS) + CHILD methodology for ETG Uganda to strengthen gender equity, dialogue and child protection in coffee communities.",
+      "Participatory Development Associates (PDA) is implementing a Training of Trainers (TOT) on the Gender Action Learning System (GALS) + CHILD methodology for Export Trading Group (ETG) Uganda—supporting community-level training in Uganda's coffee supply chain to strengthen gender equity, household dialogue, and child protection.",
     fullContent: [
-      "PDA is building the capacity of ETG Uganda field staff through a five‑day Training of Trainers, followed by field mentorship in the Greater Masaka Region.",
-      "The programme covers core GALS tools such as Soulmate Visioning, Vision Journey, Gender Balance Tree, Gender Diamond and Leadership Map, alongside CHILD flashcards for child protection dialogue.",
-      "Field supervision supports correct tool application and strengthens facilitation skills, embedding GALS + CHILD within community training processes."
+      "Participatory Development Associates (PDA) is currently implementing a Training of Trainers (TOT) programme on the Gender Action Learning System (GALS) + CHILD methodology for Export Trading Group (ETG) Uganda. The initiative supports the rollout of community-level training within Uganda's coffee supply chain, with the aim of strengthening gender equity, household dialogue, and child protection in farming communities.",
+      "As part of the assignment, PDA is building the capacity of field staff who work directly with farmer groups to effectively apply the GALS + CHILD methodology. The training equips participants with practical tools that promote inclusive decision-making within households while addressing child protection concerns in agricultural communities.",
+      "PDA's Programme Coordinator, David Eshun, is leading the training and field mentorship in the Greater Masaka Region. Through a participatory and hands-on approach, he is supporting ETG field teams as they begin implementing the GALS + CHILD tools with farmer groups.",
+      "The programme includes a five-day in-person Training of Trainers, during which participants are introduced to core GALS tools such as Soulmate Visioning, Vision Journey, Gender Balance Tree, Gender Diamond, and Leadership Map. Participants are also trained in the use of CHILD flashcards—a practical facilitation tool used to stimulate dialogue on child protection and responsible caregiving within farming households.",
+      "Following the classroom sessions, PDA provides three days of field supervision and mentorship. Trainees apply the methodology directly with farmer groups while PDA facilitators observe the sessions, provide coaching, and help strengthen facilitation skills in real time. Beyond technical training, the mentorship process focuses on ensuring that the tools are applied correctly, strengthening facilitation approaches, and identifying practical improvements that can enhance the effectiveness of community sessions.",
+      "This assignment reflects PDA's continued commitment to supporting partners with practical methodologies that promote gender equality, child protection, and sustainable livelihoods in agricultural value chains. By strengthening the capacity of local field teams, the programme aims to ensure that the GALS + CHILD methodology is effectively embedded within community training processes across Uganda's coffee sector."
     ],
     image: davidetg,
     category: "Capacity Building",
     location: "Uganda",
+    additionalInfo: [
+      "Partner: Export Trading Group (ETG) Uganda",
+      "Lead: David Eshun, Programme Coordinator",
+      "Region: Greater Masaka",
+      "Format: 5-day TOT + 3 days field supervision",
+      "Tools: GALS core tools + CHILD flashcards"
+    ],
     sourceUrl: "https://pdaghana.com/pda-delivers-gals-child-methodology-training-for-etg-uganda/"
   },
   {
@@ -274,32 +284,53 @@ newsAndActivitiesData.push(
     date: "March 5, 2026",
     title: "PDA Participates in Africa–Australia Partnership for Climate Responsive Agriculture Event",
     description:
-      "PDA’s REL team joined stakeholders at an ACIAR and Australian High Commission event in Accra highlighting a six‑year partnership to strengthen climate‑responsive agriculture across Africa.",
+      "Members of PDA's Research, Evaluation and Learning (REL) team represented PDA at the celebration of the Africa–Australia Partnership for Climate Responsive Agriculture in Accra—hosted by ACIAR and the Australian High Commission in Ghana.",
     fullContent: [
-      "The A$76.4m partnership, launched in 2024, aims to improve resilience and food security via collaborative research and capacity development.",
-      "The event gathered government, research and development partners and reaffirmed PDA’s commitment to evidence‑driven programming."
+      "Members of PDA's Research, Evaluation and Learning (REL) team represented Participatory Development Associates (PDA) at the recent celebration of the Africa–Australia Partnership for Climate Responsive Agriculture, held in Accra.",
+      "The event was organised by the Australian Centre for International Agricultural Research (ACIAR) and the Australian High Commission in Ghana, bringing together key stakeholders from government, research institutions, and development organisations to highlight efforts aimed at strengthening climate-responsive agriculture across Africa.",
+      "The Africa–Australia Partnership for Climate Responsive Agriculture is a six-year initiative valued at A$76.4 million and jointly funded by ACIAR and the Australian Department of Foreign Affairs and Trade (DFAT). Launched in 2024, the partnership seeks to strengthen the climate resilience of African farming systems and improve food security through collaborative research and capacity development between African and Australian institutions.",
+      "The event was officially opened by Berenice Owen-Jones, who highlighted the importance of international collaboration in addressing climate challenges affecting agriculture. The event was attended by several high-level stakeholders, including Emmanuel Kwadwo Agyekum, Ghana's Minister for Special Initiatives, and Gussie Tandoh, Director of the 24-Hour Economy Secretariat. Representatives from the Council for Scientific and Industrial Research (Ghana) (CSIR), the African Continental Free Trade Area Secretariat (AfCFTA), and other development partners were also present.",
+      "For PDA, the event provided an opportunity to engage with partners and stakeholders while reaffirming the organisation's commitment to research and learning as critical tools for designing effective development programmes. By grounding interventions in evidence and community realities, PDA continues to contribute to initiatives that strengthen livelihoods, promote sustainability, and support resilient agricultural systems."
     ],
     image: agri,
     category: "Agriculture & Climate",
     location: "Accra, Ghana",
+    additionalInfo: [
+      "Hosts: ACIAR & Australian High Commission in Ghana",
+      "Partnership value: A$76.4 million (six years)",
+      "Funders: ACIAR & DFAT (Australia)",
+      "Opened by: Berenice Owen-Jones"
+    ],
     sourceUrl: "https://pdaghana.com/pda-participates-in-africa-australia-partnership-for-climate-responsive-agriculture-event/"
   },
   {
     id: 12,
     slug: "protecting-people-protecting-data-webinar",
     type: "news",
-    date: "February 13, 2026",
+    date: "March 26, 2026",
     title:
-      "Protecting people by protecting data: Practical Lessons from PDA’s Work in Ethical Research and MEL",
+      "Protecting People by Protecting Data: Practical Lessons from PDA's Work in Ethical Research and MEL",
     description:
-      "Invitation to a practical, field‑tested webinar on responsible data use in development programs, covering risk awareness, governance, and adoptable tools.",
+      "On March 26, 2026, PDA hosted a webinar bridging technical compliance and human-centred ethics in data protection—with perspectives from Ghana's Data Protection Commission and PDA's field-tested Privacy by Design approach.",
     fullContent: [
-      "The session shares PDA’s approach to integrating privacy, consent and security practices across MERL and programming.",
-      "Attendees gain tools, checklists and workflows suitable for resource‑constrained environments."
+      "In an era where data is frequently described as \"the new oil,\" it is easy to lose sight of a fundamental truth: behind every data point is a living, breathing person. Whether it is a mother sharing her household income or a farmer discussing his yield, the information we collect is a digital extension of their lives. On March 26, 2026, Participatory Development Associates (PDA) hosted a webinar to bridge the gap between technical compliance and human-centered ethics in data protection.",
+      "Beyond the Checkbox: A Legal Necessity — The conversation opened with a vital reality check from the Data Protection Commission (DPC). In Ghana, data privacy is not merely a best practice—it is a legal mandate under the Data Protection Act 2012 (Act 843). Enock Wilson Essuman, representing the DPC, clarified that any organization handling personal information is a \"Data Controller\" and must be officially registered with the Commission. From ensuring meaningful consent to understanding the difference between those who collect data and the third-party \"processors\" who manage it, legal compliance serves as the first line of defense for participant safety.",
+      "Privacy by Design: Field-Tested Strategy — While laws provide the framework, the real work happens in the field. Ernest Adu Owusu, MEL Specialist and PDA's Data Protection Supervisor, shared the organization's \"Privacy by Design\" philosophy. This approach treats data protection as a thread woven through every stage of a project, rather than an afterthought. He outlined how PDA integrates data protection into the entire project lifecycle, starting with a comprehensive consent process that ensures participants are fully informed of their rights. He detailed the use of strict Standard Operating Procedures (SOPs) for field teams, which include specialized training for enumerators on safeguarding and the secure management of mobile collection devices. By enforcing high standards for data transmission and storage, he demonstrated that ethical research relies on a proactive culture where every team member is accountable for maintaining participant confidentiality.",
+      "Key to this strategy is the Principle of Least Privilege, a security model where access to sensitive information is strictly limited to those who absolutely need it. In practice, this means raw data is siloed and anonymized almost immediately, ensuring that even within a research team, the identities of vulnerable individuals remain shielded. This technical rigor is matched by human oversight: field enumerators undergo rigorous safeguarding training and follow strict protocols to secure mobile devices and report potential data breaches the moment they occur.",
+      "Adapting to a Digital Future — The discussion took a forward-looking turn during the interactive Q&A, tackling the complexities of emerging technologies. As Artificial Intelligence and automated tools become more common in Monitoring, Evaluation, and Learning (MEL), the facilitators emphasized the need for Data Protection Impact Assessments (DPIAs). These assessments allow organizations to anticipate risks such as algorithmic bias or unintended data leaks, before they manifest. For smaller organizations, the advice was practical and immediate: start by encrypting shared files, refining consent forms to be more protection-centered, and fostering a culture where every staff member feels responsible for privacy.",
+      "The Growing River: A Commitment to Improvement — The session concluded with a powerful reminder that data ethics is an evolving journey. Moderating the event, Aseda Mensah closed with a poignant African proverb: \"No matter how full the river is, it always wants to keep growing.\" This sentiment captures the heart of the webinar. Regardless of how robust an organization's current policies may be, there is always room to refine, improve, and grow. By treating data protection as a core value rather than a technical hurdle, we don't just secure information—we honor the trust of the people who provide it, ensuring that social development remains a safe and empowering space for all."
     ],
     image: webinar,
     category: "Webinar",
     location: "Online",
+    recordingUrl: "https://www.youtube.com/watch?v=BTHLwBTgBII",
+    additionalInfo: [
+      "Date: March 26, 2026",
+      "DPC: Enock Wilson Essuman",
+      "PDA: Ernest Adu Owusu (MEL / Data Protection Supervisor)",
+      "Moderator: Aseda Mensah",
+      "Session recording: use the link at the end of the article"
+    ],
     sourceUrl:
       "https://pdaghana.com/protecting-people-by-protecting-data-practical-lessons-from-pdas-work-in-ethical-research-and-mel/"
   },
@@ -307,34 +338,54 @@ newsAndActivitiesData.push(
     id: 13,
     slug: "international-development-day-celebration",
     type: "news",
-    date: "February 6, 2026",
+    date: "February 5, 2026",
     title: "International Development Day Celebration",
     description:
-      "PDA joined partners to showcase program outcomes and partnership‑driven approaches that advance development impact.",
+      "PDA participated in the International Development Day Celebration on Thursday, 5 February 2026 at the WUSC Country Office, Westlands–Accra, under the IGNI+E Project, themed \"Prosperity Through Partnerships.\"",
     fullContent: [
-      "The event featured partner presentations and a PDA video on the Young Female Entrepreneurs in Businesses for Growth (YoFeB‑4G) Project.",
-      "Closing remarks encouraged partners to prepare for the reopening of the Partner Innovation Fund."
+      "PDA participated in the International Development Day Celebration which was held on Thursday, 5th February 2026 at the WUSC Country Office, Westlands–Accra, under the IGNI+E Project, themed \"Prosperity Through Partnerships.\" The event brought together partners, volunteers, and stakeholders to share experiences and highlight the impact of collaborative initiatives supported by WUSC.",
+      "The programme commenced with a welcome address and statement of purpose delivered by Ms. Appiah Wiafe-Adofo, WUSC Country Director. She highlighted the importance of partnerships in advancing sustainable development outcomes and expressed appreciation to all partners and volunteers for their continued contributions.",
+      "An interactive icebreaker session followed, during which participating organisations were given sheets of paper and tasked to illustrate a story or concept that best represents their organisation, without the use of words. Before each organisation explained their drawing, participants were invited to guess what the illustration represented. This activity fostered engagement, creativity, and collaboration among participants.",
+      "The main presentation session was themed \"Show Us Your Story – Prosperity Through Partnerships\". Participating organisations included: Farm Radio International, SE Ghana, KASA Initiative, MBC Africa, McKingtorch Africa, GCYE, PDA, AAG, GENCED, ABCDE, GTVET and CTVET. Partner–volunteer teams shared impact stories highlighting how partnerships and volunteer support have contributed to organisational success.",
+      "During this session, Participatory Development Associates (PDA), in collaboration with Artisans Association of Ghana, presented a video documentary on the Young Female Businesses for Growth (YoFeB-4G) Project. The project was funded through the Partner Innovation Fund (PIF) provided by WUSC. The video showcased key project activities, outcomes, and the impact of the intervention on young female artisans in the construction sector.",
+      "Other partner organisations also delivered brief presentations, each demonstrating the value of partnership-driven approaches in achieving development impact.",
+      "The programme concluded with closing remarks from Mr. Awudu Zakari, Program Manager at WUSC, who thanked all participants for their active involvement. He also informed partners that the Partner Innovation Fund would soon be reopened, encouraging organisations to prepare and apply. The event ended with a group picture session, followed by lunch and networking."
     ],
     image: wuscevent,
     category: "Events",
-    location: "Ghana",
+    location: "Accra, Ghana",
+    additionalInfo: [
+      "Venue: WUSC Country Office, Westlands–Accra",
+      "Project: IGNI+E",
+      "Theme: Prosperity Through Partnerships",
+      "Featured: YoFeB-4G video (PDA & Artisans Association of Ghana)"
+    ],
     sourceUrl: "https://pdaghana.com/international-development-day-celebration/"
   },
   {
     id: 14,
     slug: "pda-at-amsterdam-chocoa-week-2026",
     type: "news",
-    date: "February 2026",
+    date: "February 20, 2026",
     title: "PDA at Amsterdam Chocoa Week 2026",
     description:
-      "PDA participated in Amsterdam Chocoa Week 2026, engaging cocoa sector stakeholders on sustainability, ethics and community outcomes.",
+      "Participatory Development Associates Ltd (PDA) will participate in the Chocoa Conference 2026 during Amsterdam Chocoa Week—a leading global platform on sustainable cocoa and responsible chocolate. Edem Agbe will speak in Panel Breakout Session 5.2 on gender, family well-being, and resilience.",
     fullContent: [
-      "Engagements focused on responsible value chains, child protection and community‑centred approaches in cocoa.",
-      "PDA shared learning from field programmes and explored collaboration opportunities across the cocoa ecosystem."
+      "Participatory Development Associates Ltd (PDA) will participate in the Chocoa Conference 2026, held as part of Amsterdam Chocoa Week, one of the leading global platforms for dialogue on sustainable cocoa and responsible chocolate production.",
+      "At the conference, Edem Agbe will speak during Panel Breakout Session 5.2: Gender, Family Well-Being and Resilience, where he will share insights and lessons from PDA's work in cocoa-growing communities. The session will highlight how gender-responsive and family-centred approaches contribute to stronger household resilience and long-term sustainability within the cocoa sector.",
+      "PDA's contribution will draw on practical field experience, demonstrating how inclusive community development strengthens livelihoods, supports social well-being, and aligns with global efforts toward sustainable and responsible cocoa value chains.",
+      "The Chocoa Conference brings together global chocolate manufacturers, policymakers, development partners, civil society organisations, and other key stakeholders committed to shaping the future of sustainable cocoa.",
+      "Conference details: Friday, 20 February 2026 — Amsterdam, Netherlands."
     ],
     image: chocoa,
     category: "Cocoa & Sustainability",
     location: "Amsterdam, Netherlands",
+    additionalInfo: [
+      "Event: Chocoa Conference 2026 (Amsterdam Chocoa Week)",
+      "Session: 5.2 — Gender, Family Well-Being and Resilience",
+      "Speaker: Edem Agbe",
+      "Date: Friday, 20 February 2026"
+    ],
     sourceUrl: "https://pdaghana.com/pda-at-amsterdam-chocoa-week-2026/"
   }
 );

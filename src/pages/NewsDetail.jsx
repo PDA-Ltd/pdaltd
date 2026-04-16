@@ -103,6 +103,18 @@ const NewsDetail = () => {
                   {paragraph}
                 </p>
               ))}
+              {item.recordingUrl && (
+                <p className="text-base md:text-lg">
+                  <a
+                    href={item.recordingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-orange underline decoration-2 underline-offset-2 hover:text-orange/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 rounded"
+                  >
+                    Access the full recording of the session here
+                  </a>
+                </p>
+              )}
             </div>
           ) : (
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">

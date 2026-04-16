@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaNewspaper, FaVideo, FaImage } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 import { newsAndActivitiesData } from "../data/newsAndActivitiesData.js";
@@ -83,18 +83,21 @@ const NewsAndActivities = () => {
           {filteredItems.map((item, index) => (
             <motion.div
               key={item.id}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
             >
-              <div className="relative h-48 overflow-hidden">
+              <Link
+                to={`/news-and-activities/${item.slug}`}
+                className="relative h-48 overflow-hidden block focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-orange"
+              >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   onError={(e) => {
                     e.target.src = "https://via.placeholder.com/800x400?text=PDA";
                   }}
@@ -111,15 +114,20 @@ const NewsAndActivities = () => {
                     {item.category}
                   </span>
                 </div>
-              </div>
+              </Link>
               <div className="p-6">
                 <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
                   <FaCalendarAlt />
                   <span>{item.date}</span>
                 </div>
-                <h3 className="font-bold text-xl mb-3 text-gray-800 line-clamp-2">
-                  {item.title}
-                </h3>
+                <Link
+                  to={`/news-and-activities/${item.slug}`}
+                  className="block mb-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 rounded"
+                >
+                  <h3 className="font-bold text-xl text-gray-800 line-clamp-2 hover:text-orange transition-colors">
+                    {item.title}
+                  </h3>
+                </Link>
                 <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
                   {item.description}
                 </p>
