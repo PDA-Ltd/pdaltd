@@ -8,6 +8,7 @@ import { useTranslation } from "../hooks/useTranslation";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const contactFormRecipients = "info@pdaghana.com,amensah@pdaghana.com,gmyamoah@pdaghana.com";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,7 +43,7 @@ const Contact = () => {
     );
 
     // For now, use mailto (can be replaced with backend API later)
-    window.location.href = `mailto:info@pdaghana.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${contactFormRecipients}?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
       setIsSubmitting(false);

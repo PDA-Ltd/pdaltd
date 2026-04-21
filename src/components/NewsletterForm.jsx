@@ -6,6 +6,7 @@ import { useTranslation } from "../hooks/useTranslation";
 
 const NewsletterForm = () => {
   const { t } = useTranslation();
+  const newsletterRecipients = "info@pdaghana.com,amensah@pdaghana.com,gmyamoah@pdaghana.com";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,7 +40,7 @@ const NewsletterForm = () => {
     );
 
     // Use mailto (can be replaced with backend API later)
-    window.location.href = `mailto:info@pdaghana.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${newsletterRecipients}?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
       setIsSubmitting(false);

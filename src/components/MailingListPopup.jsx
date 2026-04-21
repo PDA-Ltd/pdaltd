@@ -4,6 +4,7 @@ import { FaTimes, FaEnvelope } from "react-icons/fa";
 
 const MailingListPopup = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState("");
+  const mailingListRecipients = "info@pdaghana.com,amensah@pdaghana.com,gmyamoah@pdaghana.com";
 
   useEffect(() => {
     if (!isOpen) return;
@@ -27,7 +28,7 @@ const MailingListPopup = ({ isOpen, onClose }) => {
       `Please add this email to the PDA mailing list:\n\nEmail: ${email.trim()}`
     );
 
-    window.location.href = `mailto:info@pdaghana.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${mailingListRecipients}?subject=${subject}&body=${body}`;
     onClose();
     setEmail("");
   };
