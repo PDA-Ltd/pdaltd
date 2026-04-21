@@ -1,7 +1,8 @@
-import React from "react";
+import { useMemo } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
-import { projects } from "../components/ProjectsData";
+import { getProjectForSlug } from "../components/ProjectsData";
 import { archivedProjects } from "../components/ArchivedProjectsData";
+import { localizeArchivedProject } from "../data/projectLocalization.js";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaTag } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
@@ -11,43 +12,16 @@ const ProjectDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { currentLanguage } = useTranslation();
-  
-  // Check if this is an archived project based on the route
+
   const isArchived = location.pathname.startsWith("/archives");
-  
-  // Find the project by slug in the appropriate data source
-  const project = isArchived 
-    ? archivedProjects.find((p) => p.slug === slug)
-    : projects.find((p) => p.slug === slug);
-  
-  // Helper function to get translated field or fallback to English
-  const getField = (fieldName) => {
-    if (!project) return "";
-    
-    // If French is selected, try to get French field first
-    if (currentLanguage === "fr") {
-      const frenchField = project[`${fieldName}Fr`];
-      
-      // Check if it's an array
-      if (Array.isArray(frenchField)) {
-        return frenchField.length > 0 ? frenchField : (project[fieldName] || []);
-      }
-      
-      // Check if it's a string
-      if (typeof frenchField === "string" && frenchField.trim() !== "") {
-        return frenchField;
-      }
-      
-      // If French field doesn't exist or is empty, fall through to English
+
+  const project = useMemo(() => {
+    if (isArchived) {
+      const raw = archivedProjects.find((p) => p.slug === slug);
+      return raw ? localizeArchivedProject(raw, currentLanguage) : null;
     }
-    
-    // Fallback to English field
-    const englishField = project[fieldName];
-    if (Array.isArray(englishField)) {
-      return englishField;
-    }
-    return englishField || "";
-  };
+    return getProjectForSlug(slug, currentLanguage);
+  }, [slug, isArchived, currentLanguage]);
 
   if (!project) {
     return (
@@ -73,13 +47,12 @@ const ProjectDetail = () => {
         text: "text-orange",
         border: "border-orange",
       };
-    } else {
-      return {
-        bg: "bg-orange",
-        text: "text-orange",
-        border: "border-orange",
-      };
     }
+    return {
+      bg: "bg-orange",
+      text: "text-orange",
+      border: "border-orange",
+    };
   };
 
   const colors = getColorClasses(project.color);
@@ -94,9 +67,12 @@ const ProjectDetail = () => {
     }
   };
 
+  const objectives = project.objectives || [];
+  const activities = project.activities || [];
+  const outcomes = project.outcomes || [];
+
   return (
     <section className="max-container w-full min-h-screen bg-white relative" key={`project-${slug}-${currentLanguage}`}>
-      {/* Back Button */}
       <div className="fixed top-20 left-6 z-50 lg:left-20">
         <motion.button
           onClick={handleBackClick}
@@ -108,13 +84,12 @@ const ProjectDetail = () => {
           transition={{ duration: 0.3 }}
         >
           <FaArrowLeft className="text-lg" />
-          <span>{currentLanguage === "fr" 
+          <span>{currentLanguage === "fr"
             ? (isArchived ? "Retour aux Archives" : "Retour aux Projets")
             : (isArchived ? "Back to Archives" : "Back to Projects")}</span>
         </motion.button>
       </div>
 
-      {/* Hero Section */}
       <motion.div
         className="relative w-full h-[60vh] overflow-hidden"
         initial={{ opacity: 0 }}
@@ -123,7 +98,7 @@ const ProjectDetail = () => {
       >
         <img
           src={project.image}
-          alt={getField("title")}
+          alt={project.title}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
@@ -134,22 +109,21 @@ const ProjectDetail = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            {getField("title")}
+            {project.title}
           </motion.h1>
-          {getField("subtitle") && (
+          {project.subtitle && (
             <motion.p
               className="text-xl text-white/90 font-poppins"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              {getField("subtitle")}
+              {project.subtitle}
             </motion.p>
           )}
         </div>
       </motion.div>
 
-      {/* Project Metadata */}
       <div className="px-6 lg:px-20 py-8 bg-gray-50">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {project.partners && (
@@ -191,10 +165,8 @@ const ProjectDetail = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="px-6 lg:px-20 py-12" key={currentLanguage}>
         <div className="max-w-4xl mx-auto">
-          {/* Project Snapshot */}
           {project.snapshot && (
             <motion.div
               className="mb-8"
@@ -206,7 +178,7 @@ const ProjectDetail = () => {
                 {currentLanguage === "fr" ? "Aperçu du Projet" : "Project Snapshot"}
               </h2>
               <div className="prose prose-lg max-w-none">
-                {(getField("snapshot") || "").split('\n').map((paragraph, index) => (
+                {(project.snapshot || "").split("\n").map((paragraph, index) => (
                   paragraph.trim() && (
                     <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
                       {paragraph.trim()}
@@ -217,7 +189,6 @@ const ProjectDetail = () => {
             </motion.div>
           )}
 
-          {/* How We Went About It */}
           {project.howWeWentAboutIt && (
             <motion.div
               className="mb-8"
@@ -229,7 +200,7 @@ const ProjectDetail = () => {
                 {currentLanguage === "fr" ? "Comment Nous Nous Y Sommes Pris" : "How We Went About It"}
               </h2>
               <div className="prose prose-lg max-w-none">
-                {(getField("howWeWentAboutIt") || "").split('\n').map((paragraph, index) => (
+                {(project.howWeWentAboutIt || "").split("\n").map((paragraph, index) => (
                   paragraph.trim() && (
                     <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
                       {paragraph.trim()}
@@ -240,8 +211,7 @@ const ProjectDetail = () => {
             </motion.div>
           )}
 
-          {/* Key Objectives */}
-          {project.objectives && project.objectives.length > 0 && (
+          {objectives.length > 0 && (
             <motion.div
               className="mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -252,7 +222,7 @@ const ProjectDetail = () => {
                 {currentLanguage === "fr" ? "Objectifs Clés" : "Key Objectives"}
               </h2>
               <ul className="list-disc list-inside space-y-3">
-                {getField("objectives").map((objective, index) => (
+                {objectives.map((objective, index) => (
                   <li key={index} className="text-gray-700 leading-relaxed font-poppins">
                     {objective}
                   </li>
@@ -261,8 +231,7 @@ const ProjectDetail = () => {
             </motion.div>
           )}
 
-          {/* Key Activities */}
-          {project.activities && project.activities.length > 0 && (
+          {activities.length > 0 && (
             <motion.div
               className="mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -273,7 +242,7 @@ const ProjectDetail = () => {
                 {currentLanguage === "fr" ? "Activités Clés" : "Key Activities"}
               </h2>
               <ul className="list-disc list-inside space-y-3">
-                {getField("activities").map((activity, index) => (
+                {activities.map((activity, index) => (
                   <li key={index} className="text-gray-700 leading-relaxed font-poppins">
                     {activity}
                   </li>
@@ -282,8 +251,7 @@ const ProjectDetail = () => {
             </motion.div>
           )}
 
-          {/* Expected Outcomes */}
-          {project.outcomes && project.outcomes.length > 0 && (
+          {outcomes.length > 0 && (
             <motion.div
               className="mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -294,7 +262,7 @@ const ProjectDetail = () => {
                 {currentLanguage === "fr" ? "Résultats Attendus" : "Expected Outcomes"}
               </h2>
               <ul className="list-disc list-inside space-y-3">
-                {getField("outcomes").map((outcome, index) => (
+                {outcomes.map((outcome, index) => (
                   <li key={index} className="text-gray-700 leading-relaxed font-poppins">
                     {outcome}
                   </li>
@@ -303,47 +271,39 @@ const ProjectDetail = () => {
             </motion.div>
           )}
 
-          {/* Additional Content Sections */}
-          {project.additionalSections && project.additionalSections.map((section, index) => {
-            // Get translated section title and content
-            const sectionTitle = currentLanguage === "fr" && section.titleFr ? section.titleFr : section.title;
-            const sectionContent = currentLanguage === "fr" && section.contentFr ? section.contentFr : section.content;
-            
-            return (
-              <motion.div
-                key={index}
-                className="mb-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 + index * 0.1 }}
-              >
-                <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
-                  {sectionTitle}
-                </h2>
-                <div className="prose prose-lg max-w-none">
-                  {typeof sectionContent === 'string' ? (
-                    sectionContent.split('\n').map((paragraph, pIndex) => (
-                      paragraph.trim() && (
-                        <p key={pIndex} className="text-gray-700 mb-4 leading-relaxed font-poppins">
-                          {paragraph.trim()}
-                        </p>
-                      )
-                    ))
-                  ) : (
-                    <ul className="list-disc list-inside space-y-3">
-                      {Array.isArray(sectionContent) && sectionContent.map((item, itemIndex) => (
-                        <li key={itemIndex} className="text-gray-700 leading-relaxed font-poppins">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </motion.div>
-            );
-          })}
+          {project.additionalSections && project.additionalSections.map((section, index) => (
+            <motion.div
+              key={index}
+              className="mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 + index * 0.1 }}
+            >
+              <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
+                {section.title}
+              </h2>
+              <div className="prose prose-lg max-w-none">
+                {typeof section.content === "string" ? (
+                  section.content.split("\n").map((paragraph, pIndex) => (
+                    paragraph.trim() && (
+                      <p key={pIndex} className="text-gray-700 mb-4 leading-relaxed font-poppins">
+                        {paragraph.trim()}
+                      </p>
+                    )
+                  ))
+                ) : (
+                  <ul className="list-disc list-inside space-y-3">
+                    {Array.isArray(section.content) && section.content.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-gray-700 leading-relaxed font-poppins">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </motion.div>
+          ))}
 
-          {/* Status Badge */}
           <motion.div
             className="mt-12 pt-8 border-t border-gray-200"
             initial={{ opacity: 0 }}

@@ -1,0 +1,29 @@
+HOW TO ADD OR EDIT CURRENT PROJECTS (no developer required for text)
+
+1) Open this file in a text editor (VS Code, Notepad++, etc.):
+   src/data/projectsRawContent.json
+
+2) Each project is one object in the top-level array with:
+   - id            — number (unique)
+   - slug          — URL segment (letters, numbers, hyphens only)
+   - imageKey      — must match a key exported from src/assets/images/index.js
+                     (same names as before: business, iapghana, vsla, …).
+                     If you need a brand-new photo, ask a developer once to add the file and key.
+   - color         — usually "orange"
+   - detailLink    — optional internal link string
+   - en            — REQUIRED: all English text fields
+   - fr            — optional French; any field you omit (or leave as "") falls back to English
+
+3) Inside "en" (and matching keys inside "fr" when you translate), use:
+   title, description, fullDescription, snapshot, howWeWentAboutIt,
+   objectives (array of strings), activities (array), outcomes (array),
+   partners, period, category, location, status,
+   subtitle (optional).
+
+4) To add a new project: copy a full { ... } block, change id and slug, set imageKey,
+   fill "en", then add "fr" when translations are ready.
+
+5) Save the file, then run your usual build/deploy (npm run build).
+
+Note: Older "archived" projects still live in src/components/ArchivedProjectsData.jsx
+and were not moved to JSON in this phase.

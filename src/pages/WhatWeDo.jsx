@@ -6,7 +6,7 @@ import Button from "../components/Button";
 import { clipboard, bulb } from "../assets/icons";
 import { Link, useNavigate } from "react-router-dom";
 import { FaGlobe, FaHandshake, FaUsers, FaDollarSign, FaArrowRight, FaSearch, FaChartBar, FaBook, FaUsersCog, FaChevronLeft, FaChevronRight, FaMapMarkerAlt } from "react-icons/fa";
-import { projects } from "../components/ProjectsData";
+import { getProjectsForLocale } from "../components/ProjectsData";
 import { useTranslation } from "../hooks/useTranslation";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -16,17 +16,17 @@ const WhatWeDo = () => {
   const [hoveredObjective, setHoveredObjective] = useState(null);
   const [hoveredService, setHoveredService] = useState(null);
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   const leftExpertise = useMemo(() => t("whatWeDo.leftExpertise"), [t]);
   const rightExpertise = useMemo(() => t("whatWeDo.rightExpertise"), [t]);
 
   // Filter current projects (Active and Ongoing) - Limit to 6
   const currentProjects = useMemo(() => {
-    return projects.filter(project => 
-      project.status === "Active" || project.status === "Ongoing"
-    ).slice(0, 6);
-  }, []);
+    return getProjectsForLocale(language)
+      .filter((project) => project.status === "Active" || project.status === "Ongoing")
+      .slice(0, 6);
+  }, [language]);
 
   const services = useMemo(() => [
     {

@@ -522,6 +522,7 @@ export const fr = {
     viewVideos: "Voir les Vidéos",
     viewPhotos: "Voir les Photos",
     viewPublications: "Voir les Publications",
+    recordingLink: "Accéder à l’enregistrement complet de la session ici",
   },
   // Partners Page
   partnersPage: {

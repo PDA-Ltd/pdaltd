@@ -1,10 +1,14 @@
+import { useMemo } from "react";
 import Slider from "react-slick";
-import { projects } from "../components/ProjectsData";
+import { getProjectsForLocale } from "../components/ProjectsData";
 import ProjectCard from "../components/ProjectCard";
 import { Link } from "react-router-dom";
 import Tab from "../components/Tab";
+import { useTranslation } from "../hooks/useTranslation";
 
 const ProjectsSection = () => {
+  const { language } = useTranslation();
+  const projects = useMemo(() => getProjectsForLocale(language), [language]);
   const settings = {
     dots: true,
     arrows: false,
@@ -36,7 +40,7 @@ const ProjectsSection = () => {
         <Slider {...settings}>
           {projects.map((project) => (
             <div key={project.id} className="px-3">
-              <ProjectCard {...project} />
+              <ProjectCard project={project} />
             </div>
           ))}
         </Slider>

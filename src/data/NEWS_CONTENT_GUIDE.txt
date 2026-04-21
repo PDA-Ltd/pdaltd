@@ -1,0 +1,33 @@
+HOW TO ADD OR EDIT NEWS & ACTIVITIES (no developer required)
+
+1) Open this file in any text editor:
+   src/data/newsArticlesContent.js
+
+2) Scroll to the bottom of the list inside:
+   export const newsArticlesRaw = [ ... ];
+
+3) Copy an entire article block (from { to }, including the comma after it).
+
+4) Change these fields:
+   - id          → use the next number (e.g. 15)
+   - slug        → short URL name, only letters, numbers and hyphens (e.g. my-new-story)
+   - type        → "news" or "activity"
+   - imageKey    → must match a key exported from src/assets/images/index.js
+                   (same pattern as projects; wrong or missing keys use a default image.)
+                   If you need a new photo, ask a developer to add the file and export in index.js.
+   - dateIso     → sorting date, format YYYY-MM-DD (e.g. 2026-04-01)
+   - recordingUrl, sourceUrl → optional; leave out if not needed.
+
+5) Fill the "en" section in English:
+   date, title, description, category, location,
+   fullContent (array of paragraphs),
+   additionalInfo (array of short bullet lines).
+
+6) Fill the "fr" section in French with the SAME keys.
+   If French is not ready yet, you can omit a field inside "fr":
+   the website will show the English text for that field until you add it.
+
+7) Save the file. After the next site build or deployment, the new item appears.
+
+Tip: Keep quotation marks balanced; each paragraph in fullContent must be in "double quotes"
+with a comma between items.

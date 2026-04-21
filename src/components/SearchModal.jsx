@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FaSearch, FaTimes } from "react-icons/fa";
-import { projects } from "./ProjectsData";
+import { getProjectsForLocale } from "./ProjectsData";
+import { useTranslation } from "../hooks/useTranslation";
 
 const SearchModal = ({ isOpen, onClose }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState([]);
   const navigate = useNavigate();
+  const { language } = useTranslation();
 
-  // Search across projects, pages, and content
-  const performSearch = (query) => {
+  const performSearch = useCallback((query) => {
     if (!query.trim()) {
       setResults([]);
       return;
@@ -19,8 +20,8 @@ const SearchModal = ({ isOpen, onClose }) => {
     const searchResults = [];
     const lowerQuery = query.toLowerCase();
 
-    // Search projects
-    projects.forEach((project) => {
+    const projectList = getProjectsForLocale(language);
+    projectList.forEach((project) => {
       const matches =
         project.title.toLowerCase().includes(lowerQuery) ||
         project.description.toLowerCase().includes(lowerQuery) ||
@@ -65,13 +66,13 @@ const SearchModal = ({ isOpen, onClose }) => {
     });
 
     setResults(searchResults.slice(0, 10)); // Limit to 10 results
-  };
+  }, [language]);
 
   useEffect(() => {
     if (isOpen) {
       performSearch(searchQuery);
     }
-  }, [searchQuery, isOpen]);
+  }, [searchQuery, isOpen, performSearch]);
 
   const handleResultClick = (link) => {
     navigate(link);
@@ -165,7 +166,7 @@ const SearchModal = ({ isOpen, onClose }) => {
                     </div>
                   ) : (
                     <div className="text-center py-12">
-                      <p className="text-gray-500 font-poppins">No results found for "{searchQuery}"</p>
+                      <p className="text-gray-500 font-poppins">{`No results found for "${searchQuery}"`}</p>
                     </div>
                   )}
                 </div>

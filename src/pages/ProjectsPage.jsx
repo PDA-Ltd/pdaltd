@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { projects as allProjects } from "../components/ProjectsData";
+import { getProjectsForLocale } from "../components/ProjectsData";
 import { archivedProjects } from "../components/ArchivedProjectsData";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -18,6 +18,7 @@ const FEATURED_PROJECT_SLUGS = [
 const ProjectsPage = () => {
   const { t, language } = useTranslation();
   const navigate = useNavigate();
+  const allProjects = useMemo(() => getProjectsForLocale(language), [language]);
   const allValue = t("projectsPage.all");
   const [hoveredProject, setHoveredProject] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -50,7 +51,7 @@ const ProjectsPage = () => {
   // Extract unique partners and countries from projects
   const uniquePartners = useMemo(() => {
     const partners = new Set();
-    allProjects.forEach((project) => {
+    getProjectsForLocale("en").forEach((project) => {
       if (project.partners && project.partners.trim() !== "") {
         // Handle multiple partners separated by semicolons or commas
         const partnerList = project.partners.split(/[;,]/).map((p) => p.trim());
@@ -64,7 +65,7 @@ const ProjectsPage = () => {
 
   const uniqueCountries = useMemo(() => {
     const countries = new Set();
-    allProjects.forEach((project) => {
+    getProjectsForLocale("en").forEach((project) => {
       if (project.location && project.location.trim() !== "") {
         // Handle multiple locations separated by commas
         const locationList = project.location.split(",").map((l) => l.trim());
@@ -195,15 +196,12 @@ const ProjectsPage = () => {
   // Combine projects: include archived projects only when searching
   const projectsToSearch = useMemo(() => {
     if (searchQuery.trim() === "") {
-      // No search query: only show current projects
-      return allProjects.map(p => ({ ...p, isArchived: false }));
-    } else {
-      // Search query exists: include both current and archived projects
-      const current = allProjects.map(p => ({ ...p, isArchived: false }));
-      const archived = archivedProjects.map(p => ({ ...p, isArchived: true }));
-      return [...current, ...archived];
+      return allProjects.map((p) => ({ ...p, isArchived: false }));
     }
-  }, [searchQuery]);
+    const current = allProjects.map((p) => ({ ...p, isArchived: false }));
+    const archived = archivedProjects.map((p) => ({ ...p, isArchived: true }));
+    return [...current, ...archived];
+  }, [searchQuery, allProjects]);
 
   // Filter projects based on search, category, date, partner, and country
   const filteredProjects = useMemo(() => {

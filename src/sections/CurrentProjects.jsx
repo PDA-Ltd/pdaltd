@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-import { projects } from "../components/ProjectsData";
+import { getProjectsForLocale } from "../components/ProjectsData";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { clipboard } from "../assets/icons";
@@ -8,12 +8,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from "../components/Button";
+import { useTranslation } from "../hooks/useTranslation";
 
 const CurrentProjects = () => {
   const navigate = useNavigate();
+  const { language } = useTranslation();
 
   // Filter current projects (Active and Ongoing) and limit to 6
   const currentProjects = useMemo(() => {
+    const projects = getProjectsForLocale(language);
     const featuredSlugs = [
       "digital-economy-programs-young-africa-works-ghana",
       "ghana-community-led-development-collaborative",
@@ -23,7 +26,6 @@ const CurrentProjects = () => {
       "ghana-netherlands-seed-partnership-gnsp",
     ];
 
-    // Keep the Home "current projects" carousel deterministic by showing these featured projects first.
     const featuredProjects = projects.filter(
       (project) =>
         featuredSlugs.includes(project.slug) &&
@@ -40,7 +42,7 @@ const CurrentProjects = () => {
     return projects
       .filter((project) => project.status === "Active" || project.status === "Ongoing")
       .slice(0, 6);
-  }, []);
+  }, [language]);
 
   const handleProjectClick = (project) => {
     if (project.detailLink && project.detailLink !== "#") {

@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaCalendarAlt, FaArrowLeft, FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
-import { newsAndActivitiesData } from "../data/newsAndActivitiesData.js";
+import { getNewsArticleForSlug } from "../data/newsAndActivitiesData.js";
 
 const NewsDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
-  const item = newsAndActivitiesData.find((item) => item.slug === slug);
+  const item = useMemo(() => getNewsArticleForSlug(slug, language), [slug, language]);
 
   if (!item) {
     return (
@@ -111,7 +111,7 @@ const NewsDetail = () => {
                     rel="noopener noreferrer"
                     className="font-semibold text-orange underline decoration-2 underline-offset-2 hover:text-orange/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 rounded"
                   >
-                    Access the full recording of the session here
+                    {t("newsAndActivities.recordingLink")}
                   </a>
                 </p>
               )}

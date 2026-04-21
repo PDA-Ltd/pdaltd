@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { archivedProjects } from "../components/ArchivedProjectsData";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +22,11 @@ import {
   rand15,
 } from "../assets/images";
 
-const ArchivesPage = () => {
+/**
+ * Archived project copy is English-only for now. UI chrome (filters, headings) still follows the site language.
+ * State is keyed by `language` so filter values stay in sync when "All" is translated (e.g. All vs Tous).
+ */
+function ArchivesPageContent() {
   const { t, language } = useTranslation();
   const navigate = useNavigate();
   const allValue = t("projectsPage.all");
@@ -33,25 +37,10 @@ const ArchivesPage = () => {
   const [selectedPartner, setSelectedPartner] = useState(allValue);
   const [selectedCountry, setSelectedCountry] = useState(allValue);
 
-  // Reset category filter when language changes
-  useEffect(() => {
-    setSelectedCategory(allValue);
-  }, [language, allValue]);
-
-  // Helper function to get translated project field
-  const getProjectField = (project, fieldName) => {
+  const getArchivedField = (project, fieldName) => {
     if (!project) return "";
-    
-    // If French is selected and French field exists and is not empty
-    if (language === "fr") {
-      const frenchField = project[`${fieldName}Fr`];
-      if (frenchField && frenchField.trim() !== "") {
-        return frenchField;
-      }
-    }
-    
-    // Fallback to English field
-    return project[fieldName] || "";
+    const v = project[fieldName];
+    return typeof v === "string" ? v : "";
   };
 
   // Extract unique partners and countries from archived projects
@@ -212,8 +201,8 @@ const ArchivesPage = () => {
       // Search filter
       if (searchQuery) {
         const searchLower = searchQuery.toLowerCase();
-        const titleMatch = getProjectField(project, "title").toLowerCase().includes(searchLower);
-        const descMatch = getProjectField(project, "description").toLowerCase().includes(searchLower);
+        const titleMatch = String(getArchivedField(project, "title")).toLowerCase().includes(searchLower);
+        const descMatch = String(getArchivedField(project, "description")).toLowerCase().includes(searchLower);
         if (!titleMatch && !descMatch) return false;
       }
 
@@ -403,8 +392,8 @@ const ArchivesPage = () => {
             }}
           >
             {filteredProjects.map((project) => {
-              const projectTitle = getProjectField(project, "title");
-              const projectDescription = getProjectField(project, "description");
+              const projectTitle = getArchivedField(project, "title");
+              const projectDescription = getArchivedField(project, "description");
               const projectCategory = mapCategoryToFilter(project.category);
 
               return (
@@ -469,6 +458,11 @@ const ArchivesPage = () => {
       </div>
     </section>
   );
+}
+
+const ArchivesPage = () => {
+  const { language } = useTranslation();
+  return <ArchivesPageContent key={language} />;
 };
 
 export default ArchivesPage;

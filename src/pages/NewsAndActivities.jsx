@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaNewspaper, FaVideo, FaImage } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
-import { newsAndActivitiesData } from "../data/newsAndActivitiesData.js";
+import { getNewsArticlesForLocale } from "../data/newsAndActivitiesData.js";
 
 const NewsAndActivities = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("all");
 
-  const newsItems = newsAndActivitiesData;
+  const newsItems = useMemo(() => getNewsArticlesForLocale(language), [language]);
 
   const filteredItems = activeTab === "all" 
     ? newsItems 
