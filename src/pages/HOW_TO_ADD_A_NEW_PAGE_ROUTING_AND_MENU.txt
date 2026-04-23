@@ -1,0 +1,117 @@
+================================================================================
+HOW TO ADD A NEW PAGE (routing, layout, menu, translations)
+================================================================================
+This project uses React 18, Vite, and React Router v6 (createBrowserRouter).
+
+--------------------------------------------------------------------------------
+1. CREATE THE PAGE COMPONENT
+--------------------------------------------------------------------------------
+- Add a new file under:  src/pages/YourPageName.jsx
+- Export a default React component (see Contact.jsx, PrivacyPolicy.jsx for patterns).
+- For bilingual UI strings, use:
+    import { useTranslation } from "../hooks/useTranslation";
+    const { t, language, currentLanguage } = useTranslation();
+    … t("some.nested.key") …
+- Keep page-specific logic in the page file; reuse shared UI from src/components/.
+
+--------------------------------------------------------------------------------
+2. REGISTER THE ROUTE (REQUIRED)
+--------------------------------------------------------------------------------
+File:  src/main.jsx
+
+Steps:
+  a) At the top, import your page:
+       import YourPageName from "./pages/YourPageName.jsx";
+
+  b) Inside createBrowserRouter([ … ]), the main site layout is the child list of
+     path: "/" with element: <App />. Add a new object next to the other routes:
+
+       {
+         path: "/your-url-path",
+         element: <YourPageName />,
+       },
+
+  Rules:
+  - Use a leading slash in path (e.g. "/about", "/our-services").
+  - Dynamic segments use a colon: "/news/:slug" (see /projects/:slug).
+  - Place your route BEFORE the catch-all at the bottom:
+       { path: "*", element: <UnderConstruction /> },
+    Otherwise every unknown URL will hit the catch-all and your page may never match.
+
+  c) Save and run:  npm run dev   (or  npm run build  to verify production build).
+
+--------------------------------------------------------------------------------
+3. HOW LAYOUT WORKS (App.jsx)
+--------------------------------------------------------------------------------
+File:  src/App.jsx
+
+- The home route (path "/") renders the main landing sections (Hero, sliders, etc.).
+- All other registered routes render through <Outlet /> — your new page content
+  appears in that outlet area, with the shared header (Nav) and footer.
+
+--------------------------------------------------------------------------------
+4. ADD THE PAGE TO THE MAIN SITE MENU
+--------------------------------------------------------------------------------
+File:  src/components/Menu.jsx
+
+There are two structures:
+
+  A) Top bar links (simple list)
+     Inside useMemo for navLinks, add an object:
+       { href: "/your-url-path", label: t("nav.yourMenuKey") },
+     For an external site:
+       { href: "https://example.org", label: "Example", external: true },
+
+  B) Dropdown sections (Who we are / What we do / Resources)
+     Inside useMemo for navigation, add or extend a section’s links array:
+       { name: t("nav.yourItemKey"), link: "/your-url-path" },
+     Optional hash links to a section on another page:
+       { name: t("nav.something"), link: "/who-we-are#vision" },
+
+After editing Menu.jsx, add the same keys to translations (next section).
+
+Note: src/constants/index.js still exports navLinks and navigation with English
+labels; the live menu is driven by Menu.jsx + t(). Update constants only if
+another feature still depends on them (e.g. consistency or future reuse).
+
+--------------------------------------------------------------------------------
+5. TRANSLATIONS (EN + FR)
+--------------------------------------------------------------------------------
+Files:
+  src/translations/en.js
+  src/translations/fr.js
+
+- Mirror the same object shape in both files.
+- For a new menu label used as t("nav.myNewPage"), add:
+    en.js →  nav: { …, myNewPage: "My New Page", … }
+    fr.js →  nav: { …, myNewPage: "Ma nouvelle page", … }
+- useTranslation falls back to English if a French key is missing (see useTranslation.js).
+
+--------------------------------------------------------------------------------
+6. LINKING TO THE PAGE FROM CODE
+--------------------------------------------------------------------------------
+- Prefer React Router:
+    import { Link, useNavigate } from "react-router-dom";
+    <Link to="/your-url-path">…</Link>
+    navigate("/your-url-path");
+- Avoid full page reloads for internal routes (do not use <a href="/…"> for same-site
+  navigation unless you have a specific reason).
+
+--------------------------------------------------------------------------------
+7. FOOTER OR OTHER COMPONENTS
+--------------------------------------------------------------------------------
+If the new page should appear in the footer or another component, search the repo
+for similar links (e.g. "privacy-policy") and add a matching entry there.
+
+--------------------------------------------------------------------------------
+8. CHECKLIST
+--------------------------------------------------------------------------------
+[ ] src/pages/YourPageName.jsx created with default export
+[ ] Import + route object added in src/main.jsx (before path: "*")
+[ ] npm run build succeeds
+[ ] Menu.jsx updated (navLinks and/or navigation)
+[ ] en.js and fr.js updated for any new t("…") keys
+
+================================================================================
+END
+================================================================================
