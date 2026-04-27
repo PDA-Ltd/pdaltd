@@ -754,4 +754,56 @@ export const newsArticlesRaw = [
       ],
     },
   },
+  {
+    id: 15,
+    slug: "News Test Trial",
+    type: "news",
+    imageKey: "test_img",
+    dateIso: "2026-04-23",
+    en: {
+      date: "April 24, 2026",
+      title: "This is just a test trial for news updates",
+      description:
+        "Participatory Development Associates (PDA), in partnership with the Department of Children under the Ministry of Gender, Children and Social Protection, convened the 8th Knowledge Sharing Workshop on Child Protection (KSWoCP) with two multi-level events in Accra and Bechem.",
+      category: "ACU Team",
+      location: "Tema Michel Camp",
+      fullContent: [
+        "Participatory Development Associates (PDA), in partnership with the Department of Children under the Ministry of Gender, Children and Social Protection, convened the 8th Knowledge Sharing Workshop on Child Protection (KSWoCP) with two multi-level events in Accra and Bechem.",
+        "The 2025 edition of the workshop brought together national and community stakeholders to address the growing threat of illegal mining galamsey to children in Ghana's cocoa-growing regions.",
+        "The workshop provided a platform for dialogue, knowledge sharing, and collaborative action to strengthen child protection mechanisms and address the unique challenges facing children in mining-affected communities.",
+        "Key discussions focused on the intersection of illegal mining activities and child protection, exploring how galamsey operations expose children to hazardous working conditions, disrupt education, and compromise their safety and well-being.",
+        "Participants included representatives from government agencies, civil society organizations, community leaders, and child protection advocates who shared experiences, best practices, and strategies for protecting children in mining-affected areas.",
+        "The workshop outcomes included the development of action plans for enhanced monitoring, community awareness programs, and strengthened collaboration between stakeholders to prevent child exploitation in mining contexts.",
+      ],
+      additionalInfo: [
+        "8th Knowledge Sharing Workshop on Child Protection",
+        "Partnership with Department of Children",
+        "Focus: Galamsey's impact on children",
+        "Multi-level events in Accra and Bechem",
+      ],
+    },
+    fr: {
+      date: "11 décembre 2025",
+      title:
+        "Le PDA organise le 8e atelier sur la protection de l’enfance et met en lumière les risques de la galamsey pour les enfants",
+      description:
+        "Participatory Development Associates (PDA), en partenariat avec le Département des enfants du ministère du Genre, des Enfants et de la Protection sociale, a organisé le 8e atelier de partage des connaissances sur la protection de l’enfance (KSWoCP), avec deux événements multi-niveaux à Accra et Bechem.",
+      category: "Protection de l’enfance",
+      location: "Accra et Bechem, Ghana",
+      fullContent: [
+        "Le PDA, avec le Département des enfants du ministère du Genre, des Enfants et de la Protection sociale, a tenu le 8e atelier de partage des connaissances sur la protection de l’enfance (KSWoCP) à Accra et Bechem.",
+        "L’édition 2025 a réuni des acteurs nationaux et communautaires autour de la menace croissante de l’orpaillage illégal (galamsey) pour les enfants des régions cacaoyères du Ghana.",
+        "L’atelier a favorisé le dialogue, le partage d’expériences et l’action concertée pour renforcer la protection des enfants dans les communautés minières.",
+        "Les échanges ont porté sur les liens entre activités minières illégales et protection de l’enfance : conditions de travail dangereuses, perturbation de la scolarité et atteinte au bien-être.",
+        "Y participaient des représentants de l’État, de la société civile, des leaders communautaires et des défenseurs des droits des enfants.",
+        "Des plans d’action ont été esquissés pour le suivi, la sensibilisation communautaire et une meilleure coordination contre l’exploitation des enfants dans le secteur minier.",
+      ],
+      additionalInfo: [
+        "8e atelier de partage sur la protection de l’enfance",
+        "Partenariat avec le Département des enfants",
+        "Thème : impact de la galamsey sur les enfants",
+        "Événements à Accra et Bechem",
+      ],
+    },
+  },
 ];
