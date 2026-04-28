@@ -286,13 +286,13 @@ const Staff = () => {
         bio: "Seth is a Senior Project Officer with the PDA Communications and Advocacy department. Seth has a decade of experience working as a multimedia expert. He is highly skilled in graphic engineering, photography and videography, website management, 3D modelling, and motion graphics. He has designed several communication and promotional materials on financial inclusion and child protection. Seth graduated from the Kwame Nkrumah University of Science and Technology with a BA in Communication Design.",
         profileLink: "#",
       },
-      {
-        name: "JOSEPHINE ESI KPODO",
-        position: "Project Officer",
-        image: josephine,
-        bio: "Josephine Esi Kpodo is a biomedical engineer who is passionate about using technology to drive improvements in various fields, particularly in healthcare and development. Spurred on by this passion, she pursued software engineering and has gained proficiency in programming languages such as HTML, CSS, JavaScript, TypeScript and React. As the graduate intern for website programming and management at Participatory Development Associates, Josephine utilizes her technical skills to create and manage websites that align with the organization's strategic themes. Her strong analytical and creative abilities enable her to develop innovative solutions that enhance user experiences and support the organization's initiatives, positioning her to excel in her role.",
-        profileLink: "#",
-      },
+      // {
+      //   name: "JOSEPHINE ESI KPODO",
+      //   position: "Project Officer",
+      //   image: josephine,
+      //   bio: "Josephine Esi Kpodo is passionate about using technology to drive improvements in various fields. Spurred on by this passion, she pursued software engineering and has gained proficiency in programming languages such as HTML, CSS, JavaScript, TypeScript and React. As the graduate intern for website programming and management at Participatory Development Associates, Josephine utilizes her technical skills to create and manage websites that align with the organization's strategic themes. Her strong analytical and creative abilities enable her to develop innovative solutions that enhance user experiences and support the organization's initiatives, positioning her to excel in her role.",
+      //   profileLink: "#",
+      // },
       {
         name: "DEREK AMPOFO NKANSAH",
         position: "Project Officer",
