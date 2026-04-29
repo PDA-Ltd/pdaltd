@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_f2dFmFy2oPxshjqDNxxtDuaBjATC",
+  "orgId": "team_AUYq0rrU4BD04TRteG1pL5Xd",
+  "projectName": "pdaltd",
+  "settings": {
+    "createdAt": 1777329766880,
+    "framework": "vite",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": "dist",
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "24.x"
+  }
+}

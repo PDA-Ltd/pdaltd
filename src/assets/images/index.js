@@ -251,6 +251,8 @@ import yfi from "./yfi.jpg";
 import edemnewJpg from "./Edemnew.jpg";
 import test_img from "./test_img.png";
 import testproject from "./testproject.jpg";
+import example from "./example.jpeg";
+
 
 
 export {
@@ -494,4 +496,5 @@ export {
   edemnewJpg,
   test_img,
   testproject,
+  example,
 };

@@ -2102,5 +2102,67 @@
       "location": "Ghana",
       "status": "En cours"
     }
+  },
+  {
+    "id": 41,
+    "slug": "Slug for This is just a project trial",
+    "imageKey": "example",
+    "color": "orange",
+    "en": {
+      "title": "This is just a project trial",
+      "description": "Strengthening community-driven approaches to education and literacy, with participatory learning and evaluation to influence practice and policy.",
+      "fullDescription": "The Ghana Community-Led Development (CLD) Collaborative is a multi-partner initiative aimed at strengthening community-driven approaches to education and literacy. Rooted in the belief that sustainable change happens when communities drive their own development, the Collaborative works to ensure that Community-Led Development is increasingly adopted, resourced, and legitimized within education planning and delivery.",
+      "snapshot": "The Collaborative supports local organizations, communities, and government actors to center community voices in designing solutions that address children’s educational needs, generating evidence to influence both practice and policy.",
+      "howWeWentAboutIt": "PDA serves as the Participatory Research (PR) and Learning Partner in Ghana, designing and implementing a robust Learning & Evaluation (L&E) framework that integrates participatory methodologies, strengthens outcome monitoring (OM), facilitates Participatory Learning and Action (PLA) processes, and synthesizes evidence to support advocacy for Community-Led Development approaches.",
+      "objectives": [
+        "Promote community-driven approaches that place communities at the center of education solutions",
+        "Strengthen the capacity of local actors to design, lead, advocate for, and sustain initiatives addressing children’s educational needs",
+        "Foster cross-learning among local organizations to deepen effective community-driven strategies",
+        "Advocate for policy and practice changes that recognize and invest in communities as central to equitable, quality education",
+        "Document, analyze, and share lessons from community-led initiatives to support adaptation and scaling"
+      ],
+      "activities": [
+        "Participate in the inaugural three-day onboarding workshop in Accra to align on vision, principles, and shared learning priorities",
+        "Participate in a 10-day intensive training on advancing community-led wellbeing (delivered by Tostan in Thiès, Senegal)",
+        "Develop and finalize a comprehensive Learning & Evaluation framework integrating learning across community, collaborative partner, and overall collaborative levels"
+      ],
+      "outcomes": [
+        "Evidence generated from participatory learning and evaluation to support advocacy for CLD",
+        "Strengthened learning and adaptive capacity across partners and communities"
+      ],
+      "partners": "mc2h Foundation; Global Fund for Children",
+      "period": "2026 – Present",
+      "category": "Education & Literacy; Community Development; Evidence Generation (MERL); Policy Analysis & Advocacy",
+      "location": "Ghana",
+      "status": "Ongoing"
+    },
+    "fr": {
+      "title": "Collaboratif ghanaïen pour le développement communautaire",
+      "description": "Renforcer les approches pilotées par les communautés en éducation et alphabétisation, avec apprentissage et évaluation participatifs pour influencer les pratiques et les politiques.",
+      "fullDescription": "Le Collaborative pour le développement communautaire dirigé par les communautés (CLD) au Ghana est une initiative multipartite qui renforce les approches où les communautés mènent le changement en éducation et alphabétisation. Il vise à faire reconnaître, financer et légitimer davantage le développement communautaire dans la planification et la prestation éducatives.",
+      "snapshot": "Le Collaborative soutient organisations locales, communautés et pouvoirs publics pour centrer les voix communautaires dans la conception de réponses aux besoins éducatifs des enfants et produire des preuves pour influencer pratiques et politiques.",
+      "howWeWentAboutIt": "Le PDA est partenaire recherche participative et apprentissage au Ghana : cadre apprentissage et évaluation intégrant méthodes participatives, suivi des résultats, démarche d’apprentissage et d’action participative (PLA), et synthèse des preuves pour le plaidoyer en faveur du CLD.",
+      "objectives": [
+        "Promouvoir des approches communautaires qui placent les communautés au cœur des solutions éducatives",
+        "Renforcer les capacités des acteurs locaux pour concevoir, porter, défendre et pérenniser les initiatives répondant aux besoins éducatifs des enfants",
+        "Favoriser l’apprentissage croisé entre organisations locales",
+        "Plaider pour des politiques et pratiques qui investissent dans les communautés pour une éducation équitable et de qualité",
+        "Documenter, analyser et partager les leçons des initiatives communautaires pour l’adaptation et la montée en échelle"
+      ],
+      "activities": [
+        "Participation à l’atelier inaugural de trois jours à Accra (vision, principes, priorités d’apprentissage)",
+        "Participation à une formation intensive de 10 jours sur le bien-être communautaire (Tostan, Thiès, Sénégal)",
+        "Élaboration et finalisation d’un cadre complet apprentissage et évaluation intégrant les niveaux communauté, partenaires du collaborative et ensemble du collaborative"
+      ],
+      "outcomes": [
+        "Preuves issues de l’apprentissage et de l’évaluation participatifs pour le plaidoyer CLD",
+        "Capacité d’apprentissage et d’adaptation renforcée chez les partenaires et les communautés"
+      ],
+      "partners": "mc2h Foundation ; Global Fund for Children",
+      "period": "2026 – en cours",
+      "category": "Éducation et alphabétisation ; développement communautaire ; production de preuves (MERL) ; analyse et plaidoyer politiques",
+      "location": "Ghana",
+      "status": "En cours"
+    }
   }
 ]
