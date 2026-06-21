@@ -512,6 +512,18 @@ export const fr = {
     workshops: "Ateliers",
     workshopsDesc: "Regardez nos sessions d'ateliers interactives où nous partageons des connaissances, méthodologies et approches pratiques du travail de développement.",
   },
+  // Impact Stories Page
+  impactStories: {
+    title: "Histoires d'impact",
+    description: "Des récits de personnes et de communautés dont les vies, le travail et les opportunités ont été transformés par les programmes et partenariats de PDA.",
+    all: "Tout",
+    videoStory: "Récit vidéo",
+    photoStory: "Récit photo",
+    watchStory: "Regarder le récit",
+    photoGallery: "Galerie photo",
+    keyOutcomes: "Résultats clés",
+    backToImpactStories: "Retour aux histoires d'impact",
+  },
   // News and Activities Page
   newsAndActivities: {
     title: "Actualités et Activités",

@@ -88,13 +88,13 @@ const App = () => {
             <Work />
           </section>
           <section className="py-12 sm:py-16 md:py-24 bg-gray-50">
-            <Updates />
+            <ImpactStats />
           </section>
           <section className="py-12 sm:py-16 md:py-24 bg-white">
             <CurrentProjects />
           </section>
           <section className="py-12 sm:py-16 md:py-24 bg-gray-50">
-            <ImpactStats />
+            <Updates />
           </section>
           <section className="py-12 sm:py-16 md:py-24 bg-white">
             <Partners />

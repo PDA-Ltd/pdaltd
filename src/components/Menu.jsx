@@ -60,6 +60,7 @@ const Menu = ({ onLinkClick }) => {
       links: [
         { name: t("nav.publications"), link: "/publications" },
         { name: t("common.newsAndActivities"), link: "/news-and-activities" },
+        { name: t("nav.impactStories"), link: "/impact-stories" },
         { name: t("nav.podcastAndVodcast"), link: "/podcast-and-vodcast" },
         { name: t("nav.videos"), link: "/videos" },
         { name: t("nav.photos"), link: "/photos" },
@@ -67,13 +68,13 @@ const Menu = ({ onLinkClick }) => {
     },
     // Restore with Our Impact route in main.jsx
     // {
-    //   title: t("nav.impact"),
-    //   link: "/our-impact",
-    //   links: [
-    //     { name: t("ourImpact.policies.title"), link: "/our-impact#policies" },
-    //     { name: t("ourImpact.practices.title"), link: "/our-impact#practices" },
-    //     { name: t("ourImpact.systems.title"), link: "/our-impact#systems" },
-    //   ],
+    //  title: t("nav.impact"),
+    //  link: "/our-impact",
+    //  links: [
+    //    { name: t("ourImpact.policies.title"), link: "/our-impact#policies" },
+    //    { name: t("ourImpact.practices.title"), link: "/our-impact#practices" },
+    //    { name: t("ourImpact.systems.title"), link: "/our-impact#systems" },
+    // ],
     // },
   ], [t]);
 
@@ -298,7 +299,7 @@ const Menu = ({ onLinkClick }) => {
                 </motion.a>
               )
             ))}
-            
+
             {/* PDA Africa - Special Position */}
             {navLinks.filter(section => section.isSubOrg).map((section) => (
               <motion.a
@@ -313,7 +314,7 @@ const Menu = ({ onLinkClick }) => {
               >
                 <motion.button
                   className="w-full px-6 py-4 border font-poppins text-base lg:text-lg leading-none bg-gradient-to-r from-orange to-orange/90 text-white font-bold border-none rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
-                  whileHover={{ 
+                  whileHover={{
                     boxShadow: "0 10px 30px rgba(248, 154, 35, 0.5)",
                   }}
                 >
@@ -322,7 +323,7 @@ const Menu = ({ onLinkClick }) => {
                 </motion.button>
               </motion.a>
             ))}
-            
+
             <div className="flex gap-3 lg:gap-4 mt-4 pt-4 border-t border-gray-200">
               {socialMedia.map((icon) => (
                 <motion.a
@@ -401,8 +402,8 @@ const Menu = ({ onLinkClick }) => {
           </div>
         </div>
       </section>
-      
-      
+
+
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );

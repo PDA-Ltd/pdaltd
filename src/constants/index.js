@@ -105,6 +105,7 @@ export const navigation = [
     links: [
       { name: "Publications", link: "/publications" },
       { name: "News & Activities", link: "/news-and-activities" },
+      { name: "Impact Stories", link: "/impact-stories" },
       { name: "Podcast and Vodcasts", link: "/podcast-and-vodcast" },
       { name: "Videos", link: "/videos" },
       { name: "Photos", link: "/photos" },
@@ -112,15 +113,15 @@ export const navigation = [
   },
 
   // Restore with Our Impact route (see OurImpact.jsx header comment)
-  // {
-  //   title: "Impact",
-  //   link: "/our-impact",
-  //   links: [
-  //     { name: "Policy Change", link: "/our-impact#policies" },
-  //     { name: "Practice Change", link: "/our-impact#practices" },
-  //     { name: "System Change", link: "/our-impact#systems" },
-  //   ],
-  // },
+  //{
+  //  title: "Impact",
+  //  link: "/our-impact",
+  //  links: [
+  //    { name: "Policy Change", link: "/our-impact#policies" },
+  //    { name: "Practice Change", link: "/our-impact#practices" },
+  //    { name: "System Change", link: "/our-impact#systems" },
+  //  ],
+  //},
 ];
 
 export const socialMedia = [
@@ -204,6 +205,7 @@ export const footerLinks = [
     links: [
       { name: "Publications", link: "/publications" },
       { name: "News & Activities", link: "/news-and-activities" },
+      { name: "Impact Stories", link: "/impact-stories" },
       { name: "Podcast and Vodcasts", link: "/podcast-and-vodcast" },
       { name: "Videos", link: "/videos" },
       { name: "Photos", link: "/photos" },
@@ -211,14 +213,14 @@ export const footerLinks = [
   },
 
   // Restore with Our Impact route (see OurImpact.jsx header comment)
-  // {
-  //   title: "Impact",
-  //   links: [
-  //     { name: "Policy Change", link: "/our-impact#policies" },
-  //     { name: "Practice Change", link: "/our-impact#practices" },
-  //     { name: "System Change", link: "/our-impact#systems" },
-  //   ],
-  // },
+  //{
+  //  title: "Impact",
+  //  links: [
+  //    { name: "Policy Change", link: "/our-impact#policies" },
+  //    { name: "Practice Change", link: "/our-impact#practices" },
+  //    { name: "System Change", link: "/our-impact#systems" },
+  //  ],
+  //},
 ];
 
 export const partners = [

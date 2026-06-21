@@ -512,6 +512,18 @@ export const en = {
     workshops: "Workshops",
     workshopsDesc: "Watch our interactive workshop sessions where we share knowledge, methodologies, and practical approaches to development work.",
   },
+  // Impact Stories Page
+  impactStories: {
+    title: "Impact Stories",
+    description: "Success stories from people and communities whose lives, work, and opportunities have been shaped through PDA's programmes and partnerships.",
+    all: "All",
+    videoStory: "Video story",
+    photoStory: "Photo story",
+    watchStory: "Watch the Story",
+    photoGallery: "Photo Gallery",
+    keyOutcomes: "Key Outcomes",
+    backToImpactStories: "Back to Impact Stories",
+  },
   // News and Activities Page
   newsAndActivities: {
     title: "News & Activities",

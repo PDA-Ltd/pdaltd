@@ -42,6 +42,7 @@ const Footer = () => {
         const nameMap = {
           "Publications": t("footer.links.publications"),
           "News & Activities": t("common.newsAndActivities"),
+          "Impact Stories": t("footer.links.impactStories"),
           "Podcast": t("footer.links.podcast"),
           "Vodcast": t("footer.links.vodcast"),
           "Videos": t("footer.links.videos"),
@@ -114,8 +115,8 @@ const Footer = () => {
       </div>
 
       <div className="flex mt-10 justify-between items-center">
-        <a 
-          href="/disclaimer" 
+        <a
+          href="/disclaimer"
           className="font-poppins text-sm text-white hover:text-orange transition-colors"
         >
           {t("footer.links.disclaimer")}

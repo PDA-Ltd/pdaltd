@@ -20,7 +20,7 @@ import Teams from "./pages/Teams.jsx";
 import ChildAbuseTracker from "./pages/ChildAbuseTracker.jsx";
 import Covid19 from "./pages/Covid19.jsx";
 // Our Impact page code kept in ./pages/OurImpact.jsx — uncomment import + route to restore.
-// import OurImpact from "./pages/OurImpact.jsx";
+import OurImpact from "./pages/OurImpact.jsx";
 import Publications from "./pages/Publications.jsx";
 import VidPic from "./pages/VidPic.jsx";
 import PodcastAndVodcast from "./pages/PodcastAndVodcast.jsx";
@@ -41,6 +41,8 @@ import ArchivesPage from "./pages/ArchivesPage.jsx";
 import ProjectDetail from "./pages/ProjectDetail.jsx";
 import NewsAndActivities from "./pages/NewsAndActivities.jsx";
 import NewsDetail from "./pages/NewsDetail.jsx";
+import ImpactStories from "./pages/ImpactStories.jsx";
+import ImpactStoryDetail from "./pages/ImpactStoryDetail.jsx";
 import Photos from "./pages/Photos.jsx";
 import Videos from "./pages/Videos.jsx";
 import Events from "./pages/Events.jsx";
@@ -49,11 +51,11 @@ import Events from "./pages/Events.jsx";
 const router = createBrowserRouter([
 
   {
-    
+
     path: "/",
     element: <App />,
     errorElement: <ErrorFallback />,
-  
+
     children: [
       {
         path: "/pdaafrica/dataanalytics",
@@ -111,14 +113,14 @@ const router = createBrowserRouter([
         path: "/what-we-do",
         element: <WhatWeDo />,
       },
+      //{
+      //  path: "/our-projects",
+      //  element: <ProjectsPage />,
+      //},
       {
-        path: "/our-projects",
-        element: <ProjectsPage />,
+        path: "/our-impact",
+        element: <OurImpact />,
       },
-      // {
-      //   path: "/our-impact",
-      //   element: <OurImpact />,
-      // },
       {
         path: "/publications",
         element: <Publications />,
@@ -194,6 +196,14 @@ const router = createBrowserRouter([
       {
         path: "/news-and-activities/:slug",
         element: <NewsDetail />,
+      },
+      {
+        path: "/impact-stories",
+        element: <ImpactStories />,
+      },
+      {
+        path: "/impact-stories/:slug",
+        element: <ImpactStoryDetail />,
       },
       {
         path: "/photos",
