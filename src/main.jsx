@@ -113,10 +113,10 @@ const router = createBrowserRouter([
         path: "/what-we-do",
         element: <WhatWeDo />,
       },
-      //{
-      //  path: "/our-projects",
-      //  element: <ProjectsPage />,
-      //},
+      {
+        path: "/our-projects",
+        element: <ProjectsPage />,
+      },
       {
         path: "/our-impact",
         element: <OurImpact />,
