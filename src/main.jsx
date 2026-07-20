@@ -24,6 +24,7 @@ import OurImpact from "./pages/OurImpact.jsx";
 import Publications from "./pages/Publications.jsx";
 import VidPic from "./pages/VidPic.jsx";
 import PodcastAndVodcast from "./pages/PodcastAndVodcast.jsx";
+import Vodcast from "./pages/Vodcast.jsx";
 import BoardOfDirectors from "./pages/BoardOfDirectors.jsx";
 import CCLPDashboard from "./pages/CCLPDashboard.jsx";
 import VSLADashboard from "./pages/VSLADashboard.jsx";
@@ -132,6 +133,14 @@ const router = createBrowserRouter([
       {
         path: "/podcast-and-vodcast",
         element: <PodcastAndVodcast />,
+      },
+      {
+        path: "/vodcasts",
+        element: <Vodcast />,
+      },
+      {
+        path: "/vodcast",
+        element: <Vodcast />,
       },
       {
         path: "/staff",

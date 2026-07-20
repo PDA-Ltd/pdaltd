@@ -51,6 +51,7 @@ const localizeImpactStory = (story, language) => {
     id: story.id,
     slug: story.slug,
     image: story.image,
+    imagePosition: story.imagePosition || "center",
     galleryImages: story.galleryImages,
     videoUrl: story.videoUrl,
     dateIso: story.dateIso,

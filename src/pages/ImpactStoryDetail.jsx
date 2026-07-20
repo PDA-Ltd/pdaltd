@@ -49,6 +49,7 @@ const ImpactStoryDetail = () => {
           src={story.image}
           className="w-full h-[420px] md:h-[620px] object-cover"
           alt={story.title}
+          style={{ objectPosition: story.imagePosition }}
           loading="lazy"
           decoding="async"
         />

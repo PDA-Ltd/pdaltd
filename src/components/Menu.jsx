@@ -61,7 +61,7 @@ const Menu = ({ onLinkClick }) => {
         { name: t("nav.publications"), link: "/publications" },
         { name: t("common.newsAndActivities"), link: "/news-and-activities" },
         { name: t("nav.impactStories"), link: "/impact-stories" },
-        { name: t("nav.podcastAndVodcast"), link: "/podcast-and-vodcast" },
+        { name: t("nav.podcastAndVodcast"), link: "/vodcasts" },
         { name: t("nav.videos"), link: "/videos" },
         { name: t("nav.photos"), link: "/photos" },
       ],

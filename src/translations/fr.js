@@ -22,8 +22,8 @@ export const fr = {
     expertise: "Expertise",
     publications: "Publications",
     podcast: "Podcast",
-    vodcast: "Vodcast",
-    podcastAndVodcast: "Podcast et Vodcasts",
+    vodcast: "Vodcasts",
+    podcastAndVodcast: "Vodcasts",
     videos: "Vidéos",
     photos: "Photos",
     impactStories: "Histoires d'impact",
@@ -92,7 +92,7 @@ export const fr = {
       expertise: "Expertise",
       publications: "Publications",
       podcast: "Podcast",
-      vodcast: "Vodcast",
+      vodcast: "Vodcasts",
       videos: "Vidéos",
       photos: "Photos",
       impactStories: "Histoires d'impact",
@@ -313,7 +313,7 @@ export const fr = {
   },
   // Vodcast Page
   vodcast: {
-    title: "Vodcast",
+    title: "Vodcasts",
     watchOn: "Regarder sur",
     latestEpisodes: "Derniers Épisodes",
     comingSoonMessage: "Nous travaillons sur un contenu de podcast vidéo passionnant qui explorera les informations sur le développement, partagera des histoires impactantes et vous rapprochera de notre travail. Restez à l'écoute!",

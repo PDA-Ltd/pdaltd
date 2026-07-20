@@ -12,6 +12,72 @@
 
 export const impactStoriesRaw = [
   {
+    id: 4,
+    slug: "mathew-vsla-success-story",
+    imageKey: "mathewVslaSuccessStory",
+    imagePosition: "center 18%",
+    galleryImageKeys: [],
+    videoUrl: "",
+    dateIso: "2026-07-17",
+    en: {
+      date: "July 17, 2026",
+      title: "Mathew's Inspiring VSLA Success Story",
+      description:
+        "Through the Unity VSLA Group, Mathew invested in a tricycle that strengthened his farming work and created an additional transport business.",
+      category: "Financial Inclusion",
+      location: "Kawotrihwe",
+      person: "Mathew",
+      project: "Unity VSLA Group",
+      fullContent: [
+        "In the vibrant community of Kawotrihwe, a hardworking farmer named Mathew belonged to the Unity VSLA Group. Like many rural farmers, Mathew faced challenges in transporting farm produce and accessing reliable means of income. However, through the support of his Village Savings and Loans Association (VSLA), he saw an opportunity to change his situation.",
+        "After consistently saving with the Unity Group and demonstrating commitment to the association, Mathew qualified for a loan. Rather than spending the money on short-term needs, he made a wise investment by purchasing a tricycle.",
+        "The tricycle quickly became a valuable asset. On his farm, it helped him transport fertilizers, seedlings, harvested crops, and other farming inputs with ease. Tasks that once required a lot of time, effort, and money became much more manageable. As a result, his farming activities became more productive and efficient.",
+        "Beyond farming, Mathew saw another opportunity. When the tricycle was not being used on the farm, he operated it as a transportation business within Kawotrihwe and neighboring communities. The additional income from the transport service helped him support his family, repay his VSLA loan on time, and increase his savings.",
+        "Today, Mathew's story is a shining example of how VSLA programs empower individuals to transform their lives. Through discipline, wise financial decisions, and the support of the Unity VSLA Group, he turned a simple loan into a sustainable source of livelihood. His journey demonstrates that when people have access to financial services and use them effectively, they can build stronger businesses, improve their families' well-being, and contribute positively to their communities.",
+      ],
+      keyOutcomes: [
+        "Purchased a tricycle through a VSLA loan",
+        "Improved transport of farm inputs and harvested crops",
+        "Created an additional transport business",
+        "Repaid the loan on time and increased savings",
+      ],
+    },
+    fr: {},
+  },
+  {
+    id: 3,
+    slug: "comfort",
+    imageKey: "comfortKwakyeVsla",
+    imagePosition: "center 18%",
+    galleryImageKeys: [],
+    videoUrl: "",
+    dateIso: "2026-07-16",
+    en: {
+      date: "July 16, 2026",
+      title: "Comfort Kwakye Builds Confidence and Income Through VSLA",
+      description:
+        "Comfort Kwakye used VSLA training and loans to start and grow small businesses while learning to make informed financial decisions.",
+      category: "Financial Inclusion",
+      location: "Kwame Ntow",
+      person: "Comfort Kwakye",
+      project: "PEACE VSLA",
+      fullContent: [
+        "My name is Comfort Kwakye, and I live in Kwame Ntow. I am a member of the PEACE VSLA, and our response is ASOMDWOE (\"peace\"). It has been three years since I joined this group, and I am very grateful for the impact it has had on my life.",
+        "Seeing Possibilities Differently: Even though we live in a village, we were ignorant of the fact that we could grow vegetables and sell them for additional income. Before the trainings, we used to buy items such as meat, tomatoes, and pepper. I learned that I could grow pepper and garden eggs, even in small quantities, to earn some extra income. This has helped me a lot.",
+        "Taking Calculated Risks: When we started the VSLA, I took a small loan and used it to start a bread business. The business performed well, and I repaid the loan in full. I later applied for another loan, which I used to buy a small deep freezer for selling ice cream, yogurt, and other items. I am currently repaying this second loan and am confident about meeting my timeline. I strongly believe that I will complete the repayment before the three-month loan period ends. Even before the share-out, I plan to take another loan to further invest in the ice cream business so that I can achieve my set goals.",
+        "Learning to Track What Matters: Initially, when I ordered bread from my suppliers, I never kept records. I did not record transportation costs, trekking, or even food expenses. After the training, I realized that all these costs should be recorded and deducted from my sales so that I can know my true profit. The lessons opened my eyes to the importance of proper records and helped me avoid impulse purchases.",
+        "It has helped me immensely. I would like to sincerely thank all the partners. Today, I am not only earning additional income; I am making informed business decisions, planning ahead, and steadily expanding my activities. My story demonstrates how practical knowledge, combined with personal determination, can translate into sustained economic progress within rural communities.",
+      ],
+      keyOutcomes: [
+        "Started and repaid a small loan for a bread business",
+        "Invested in a deep freezer to expand into ice cream and yogurt sales",
+        "Improved record keeping and profit tracking",
+        "Identified vegetable growing as an additional income opportunity",
+      ],
+    },
+    fr: {},
+  },
+  {
     id: 1,
     slug: "vsla-women-build-household-resilience",
     imageKey: "sucdenvsla",

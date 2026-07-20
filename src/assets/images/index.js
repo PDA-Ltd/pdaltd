@@ -252,6 +252,8 @@ import edemnewJpg from "./Edemnew.jpg";
 import test_img from "./test_img.png";
 import testproject from "./testproject.jpg";
 import example from "./example.jpeg";
+import comfortKwakyeVsla from "./comfort-kwakye-vsla.jpg";
+import mathewVslaSuccessStory from "./mathew-vsla-success-story.jpeg";
 
 
 
@@ -497,4 +499,6 @@ export {
   test_img,
   testproject,
   example,
+  comfortKwakyeVsla,
+  mathewVslaSuccessStory,
 };

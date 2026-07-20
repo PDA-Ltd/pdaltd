@@ -109,6 +109,7 @@ const ImpactStories = () => {
                   src={story.image}
                   alt={story.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  style={{ objectPosition: story.imagePosition }}
                 />
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 rounded-full text-xs font-semibold bg-orange text-white">

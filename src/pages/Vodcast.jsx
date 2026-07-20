@@ -7,7 +7,14 @@ import { useTranslation } from "../hooks/useTranslation";
 const Vodcast = () => {
   const { t } = useTranslation();
   const vodcastEpisodes = [
-    // Coming soon episodes
+    {
+      id: "VSvz_fSONdU",
+      title: "Making M.E.R.L work for a change",
+    },
+    {
+      id: "sVqGZfIW5zc",
+      title: "Equipping organizations to thrive and transform communities",
+    },
   ];
 
   const platforms = [
@@ -81,6 +88,46 @@ const Vodcast = () => {
         </div>
       </motion.div>
 
+      {/* Episodes List */}
+      <motion.div
+        className="w-full max-w-6xl mx-auto mb-8 px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-orange mb-8 text-center">{t("vodcast.latestEpisodes")}</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {vodcastEpisodes.map((episode, index) => (
+            <motion.article
+              key={episode.id}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+            >
+              <div className="aspect-video bg-gray-900">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${episode.id}`}
+                  title={episode.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900">
+                  {episode.title}
+                </h3>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </motion.div>
+
       {/* Where to Watch Section */}
       <motion.div
         className="w-full max-w-6xl mx-auto mb-8 px-4 sm:px-6 lg:px-8"
@@ -115,65 +162,6 @@ const Vodcast = () => {
             {t("vodcast.orSearch")}
           </p>
         </div>
-      </motion.div>
-
-      {/* Episodes List */}
-      <motion.div
-        className="w-full max-w-6xl mx-auto mb-8 px-4 sm:px-6 lg:px-8"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <h2 className="text-2xl md:text-3xl font-bold text-orange mb-8 text-center">{t("vodcast.latestEpisodes")}</h2>
-        
-        {/* Coming Soon Section */}
-        <motion.div
-          className="bg-gradient-to-br from-orange/10 via-orange/10 to-orange/5 rounded-2xl p-12 md:p-16 shadow-lg border-2 border-dashed border-orange/30"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="text-center">
-            <motion.div
-              className="inline-block mb-6"
-              animate={{ 
-                rotate: [0, 10, -10, 10, -10, 0],
-                scale: [1, 1.1, 1, 1.1, 1, 1]
-              }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                repeatDelay: 3
-              }}
-            >
-              <FaPlayCircle className="text-orange text-8xl md:text-9xl opacity-50" />
-            </motion.div>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              {t("common.comingSoon")}!
-            </h3>
-            <p className="text-lg md:text-xl text-gray-600 mb-6 max-w-2xl mx-auto">
-              {t("vodcast.comingSoonMessage")}
-            </p>
-            <motion.div
-              className="inline-block px-6 py-3 bg-orange text-white rounded-full font-semibold"
-              animate={{ 
-                boxShadow: [
-                  "0 0 0 0 rgba(248, 154, 35, 0.7)",
-                  "0 0 0 10px rgba(248, 154, 35, 0)",
-                  "0 0 0 0 rgba(248, 154, 35, 0)"
-                ]
-              }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity
-              }}
-            >
-              {t("vodcast.beFirstToKnow")}
-            </motion.div>
-          </div>
-        </motion.div>
       </motion.div>
 
       {/* Newsletter Section */}
