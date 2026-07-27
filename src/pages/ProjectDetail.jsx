@@ -178,13 +178,23 @@ const ProjectDetail = () => {
                 {currentLanguage === "fr" ? "Aperçu du Projet" : "Project Snapshot"}
               </h2>
               <div className="prose prose-lg max-w-none">
-                {(project.snapshot || "").split("\n").map((paragraph, index) => (
-                  paragraph.trim() && (
+                {(project.snapshot || "").split("\n").map((paragraph, index) => {
+                  const trimmed = paragraph.trim();
+                  if (!trimmed) return null;
+                  const boldMatch = trimmed.match(/^\*\*(.+)\*\*$/);
+                  if (boldMatch) {
+                    return (
+                      <p key={index} className={`font-bold mb-2 leading-relaxed font-poppins ${colors.text}`}>
+                        {boldMatch[1]}
+                      </p>
+                    );
+                  }
+                  return (
                     <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
-                      {paragraph.trim()}
+                      {trimmed}
                     </p>
-                  )
-                ))}
+                  );
+                })}
               </div>
             </motion.div>
           )}

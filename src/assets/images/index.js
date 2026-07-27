@@ -254,6 +254,10 @@ import testproject from "./testproject.jpg";
 import example from "./example.jpeg";
 import comfortKwakyeVsla from "./comfort-kwakye-vsla.jpg";
 import mathewVslaSuccessStory from "./mathew-vsla-success-story.jpeg";
+import purAgroforestry from "./purAgroforestry.png";
+import ipoMastercard from "./ipoMastercard.png";
+import aciarLivestock from "./aciarLivestock.jpeg";
+import march26quarter from "./march26quarter.jpeg";
 
 
 
@@ -501,4 +505,8 @@ export {
   example,
   comfortKwakyeVsla,
   mathewVslaSuccessStory,
+  purAgroforestry,
+  ipoMastercard,
+  aciarLivestock,
+  march26quarter,
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { pic, micro, vid } from "../assets/icons";
-import { publication, glasses, indigenous, realimpact, education } from "../assets/images";
+import { publication, glasses, indigenous, realimpact, education, march26quarter } from "../assets/images";
 import Button from "../components/Button";
 import BookSlider from "../components/BookSlider";
 import FilterableTable from "../components/FilterableTable";
@@ -13,6 +13,12 @@ const Publications = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("publications");
   const newsletterItems = [
+    {
+      title: "Pushing Forward Together",
+      date: "March 2026",
+      image: march26quarter,
+      url: "https://sh1.sendinblue.com/adf0b3fzwlpfe.html?t=1785147349233",
+    },
     {
       title: "From Research to Real Impact: Our Latest Milestones and Opportunities",
       date: "September 2025",
