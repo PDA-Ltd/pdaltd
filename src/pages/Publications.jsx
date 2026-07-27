@@ -6,7 +6,7 @@ import Button from "../components/Button";
 import BookSlider from "../components/BookSlider";
 import FilterableTable from "../components/FilterableTable";
 import NewsletterForm from "../components/NewsletterForm";
-import { FaMicrophone, FaImage, FaVideo, FaDownload, FaArrowRight } from "react-icons/fa";
+import { FaMicrophone, FaImage, FaVideo, FaDownload } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const Publications = () => {
@@ -232,9 +232,6 @@ const Publications = () => {
                     <h3 className="text-white text-xl font-semibold leading-snug">
                       {item.title}
                     </h3>
-                  </div>
-                  <div className="absolute left-0 bottom-0 bg-orange p-3">
-                    <FaArrowRight className="text-white text-xl" />
                   </div>
                 </div>
               </motion.a>
