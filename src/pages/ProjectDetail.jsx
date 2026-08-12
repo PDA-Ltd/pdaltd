@@ -174,9 +174,6 @@ const ProjectDetail = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
-                {currentLanguage === "fr" ? "Aperçu du Projet" : "Project Snapshot"}
-              </h2>
               <div className="prose prose-lg max-w-none">
                 {(project.snapshot || "").split("\n").map((paragraph, index) => {
                   const trimmed = paragraph.trim();
@@ -210,13 +207,23 @@ const ProjectDetail = () => {
                 {currentLanguage === "fr" ? "Comment Nous Nous Y Sommes Pris" : "How We Went About It"}
               </h2>
               <div className="prose prose-lg max-w-none">
-                {(project.howWeWentAboutIt || "").split("\n").map((paragraph, index) => (
-                  paragraph.trim() && (
+                {(project.howWeWentAboutIt || "").split("\n").map((paragraph, index) => {
+                  const trimmed = paragraph.trim();
+                  if (!trimmed) return null;
+                  const boldMatch = trimmed.match(/^\*\*(.+)\*\*$/);
+                  if (boldMatch) {
+                    return (
+                      <p key={index} className={`font-bold mb-2 leading-relaxed font-poppins ${colors.text}`}>
+                        {boldMatch[1]}
+                      </p>
+                    );
+                  }
+                  return (
                     <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
-                      {paragraph.trim()}
+                      {trimmed}
                     </p>
-                  )
-                ))}
+                  );
+                })}
               </div>
             </motion.div>
           )}
