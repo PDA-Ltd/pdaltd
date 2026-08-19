@@ -221,6 +221,7 @@ import mou from "./MOU.jpg";
 import organizational from "./organizational.jpg";
 import toony from "./Toony-Chocoloni.jpg";
 import wuscevent from "./wusc-event.jpg";
+import wuscseminar2026 from "./wusc-seminar-2026.png";
 import education from "./education.jpg";
 import indigenous from "./indigenous.jpg";
 import realimpact from "./realimpact.jpg";
@@ -473,6 +474,7 @@ export {
   organizational,
   toony,
   wuscevent,
+  wuscseminar2026,
   education,
   indigenous,
   realimpact,
