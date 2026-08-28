@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "../hooks/useTranslation";
 import { partnersData } from "../data/partnersData.js";
+import { partnersnew } from "../assets/images";
 
 const PartnersPage = () => {
   const { t } = useTranslation();
@@ -54,7 +55,7 @@ const PartnersPage = () => {
         transition={{ duration: 0.6 }}
       >
         <img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80"
+          src={partnersnew}
           className="w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] object-cover"
           alt="Our Partners"
           loading="lazy"

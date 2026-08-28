@@ -10,6 +10,11 @@ import contactimage from "./contactimage.jpg";
 import communication from "./communication.png";
 
 import beyond from "./Beyond-Beans.png";
+import aciarLogo from "./aciar-logo.png";
+import australianHighCommission from "./australian-high-commission.png";
+import purLogo from "./pur-logo.png";
+import magicLibraries from "./magic-libraries.png";
+import partnersnew from "./partnersnew.png";
 import british from "./BRITISH-council.png";
 import callund from "./Callund-Consulting.png";
 import cdd from "./CDD.jpg";
@@ -479,6 +484,11 @@ export {
   wuscseminar2026,
   newhero4,
   vodcasthero,
+  aciarLogo,
+  australianHighCommission,
+  purLogo,
+  magicLibraries,
+  partnersnew,
   education,
   indigenous,
   realimpact,

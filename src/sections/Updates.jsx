@@ -1,28 +1,23 @@
+import { useMemo } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { image2, competition, reading, cluster, fvr, ksw, dpw } from "../assets/images";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { getNewsArticlesForLocale } from "../data/newsAndActivitiesData.js";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Updates = () => {
-  const updates = [
-    {
-      image: dpw,
-      title: "Data Protection Workshop with DPC",
-      date: "August 8, 2025",
-    },
-    {
-      image: ksw,
-      title: "PDA Holds 8th Child Protection Workshop Spotlighting Galamsey's Threat to Children",
-      date: "November 27, 2025",
-    },
-    {
-      image: reading,
-      title: "CCLP 2025 Annual Quiz Competition",
-      date: "December 5, 2025",
-    },
-  ];
+  const navigate = useNavigate();
+  const { language } = useTranslation();
+
+  // Most recent 5 news/activities, auto-rotating as new ones are appended to
+  // newsArticlesContent.js — same shared source as the News & Activities page.
+  const updates = useMemo(
+    () => getNewsArticlesForLocale(language).slice(0, 5),
+    [language]
+  );
 
   // Custom Next Arrow
   const CustomNextArrow = ({ onClick }) => (
@@ -108,8 +103,12 @@ const Updates = () => {
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <Slider {...settings}>
-            {updates.map((update, index) => (
-              <div key={index} className="relative">
+            {updates.map((update) => (
+              <div
+                key={update.slug}
+                className="relative cursor-pointer"
+                onClick={() => navigate(`/news-and-activities/${update.slug}`)}
+              >
                 <div className="relative h-[350px] sm:h-[400px] md:h-[500px] overflow-hidden">
                   <motion.img
                     src={update.image}

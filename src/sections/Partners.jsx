@@ -3,67 +3,18 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
 import { useTranslation } from "../hooks/useTranslation";
-import {
-  beyond,
-  british,
-  callund,
-  cdd,
-  cocoa,
-  coram,
-  edtech,
-  euro,
-  slaves,
-  gain,
-  initial,
-  institute,
-  ipsos,
-  kokoo,
-  mastercard,
-  opm,
-  pandemics,
-  root,
-  sabre,
-  schol,
-  star,
-  sustainable,
-  tonys,
-  tzedek,
-  unicef,
-  university,
-} from "../assets/images";
+import { partnersData } from "../data/partnersData";
 
 const Partners = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const partners = [
-    { imgURL: beyond, name: "Beyond" },
-    { imgURL: british, name: "British" },
-    { imgURL: callund, name: "Callund" },
-    { imgURL: cdd, name: "CDD" },
-    { imgURL: cocoa, name: "Cocoa" },
-    { imgURL: coram, name: "Coram" },
-    { imgURL: edtech, name: "EdTech" },
-    { imgURL: euro, name: "Euro" },
-    { imgURL: slaves, name: "Slaves" },
-    { imgURL: gain, name: "gAIN" },
-    { imgURL: initial, name: "Initial" },
-    { imgURL: institute, name: "Institute" },
-    { imgURL: ipsos, name: "IPSOS" },
-    { imgURL: kokoo, name: "Kokoo" },
-    { imgURL: mastercard, name: "Mastercard" },
-    { imgURL: opm, name: "OPM" },
-    { imgURL: pandemics, name: "Pandemics" },
-    { imgURL: root, name: "Root" },
-    { imgURL: sabre, name: "Sabre" },
-    { imgURL: schol, name: "Schol" },
-    { imgURL: star, name: "Star" },
-    { imgURL: sustainable, name: "Sustainable" },
-    { imgURL: tonys, name: "Tonys" },
-    { imgURL: tzedek, name: "Tzedek" },
-    { imgURL: unicef, name: "Unicef" },
-    { imgURL: university, name: "University" },
-  ];
+  // Single shared source (src/data/partnersData.js) — adding a partner there
+  // automatically appears here and on the full /partners page.
+  const partners = partnersData.map((partner) => ({
+    imgURL: partner.image,
+    name: partner.name,
+  }));
 
   return (
     <section id="partners" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

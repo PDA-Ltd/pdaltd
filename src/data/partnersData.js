@@ -26,16 +26,21 @@ import {
   tzedek,
   unicef,
   university,
+  aciarLogo,
+  australianHighCommission,
+  purLogo,
+  nestle,
+  magicLibraries,
 } from "../assets/images";
 
 export const partnersData = [
   {
     id: 1,
-    name: "Beyond",
+    name: "Beyond Beans Foundation",
     image: beyond,
-    website: "https://www.beyond.org",
-    category: "Development",
-    description: "A development organization focused on sustainable solutions."
+    website: "https://beyondbeans.org",
+    category: "Agriculture",
+    description: "ETG's foundation working with cocoa farmers in Ghana on deforestation-free, regenerative farming."
   },
   {
     id: 2,
@@ -236,6 +241,46 @@ export const partnersData = [
     website: "https://www.university.edu",
     category: "Education",
     description: "Academic partnerships for research and development."
+  },
+  {
+    id: 27,
+    name: "ACIAR",
+    image: aciarLogo,
+    website: "https://www.aciar.gov.au",
+    category: "Agriculture",
+    description: "Australian Centre for International Agricultural Research, funding agricultural research for development."
+  },
+  {
+    id: 28,
+    name: "Australian High Commission",
+    image: australianHighCommission,
+    website: "https://ghana.highcommission.gov.au",
+    category: "Government",
+    description: "The Australian Government's diplomatic mission to Ghana."
+  },
+  {
+    id: 29,
+    name: "PUR",
+    image: purLogo,
+    website: "https://pur.co",
+    category: "Agriculture",
+    description: "Regenerating landscapes through agroforestry and regenerative agriculture projects worldwide."
+  },
+  {
+    id: 30,
+    name: "Nestlé",
+    image: nestle,
+    website: "https://www.nestle.com",
+    category: "Business",
+    description: "Global food and beverage company sourcing cocoa and supporting farming communities."
+  },
+  {
+    id: 31,
+    name: "Magic Libraries Foundation",
+    image: magicLibraries,
+    website: "https://magiclibraries.org",
+    category: "Education",
+    description: "Building community libraries and promoting children's reading literacy."
   },
 ];
 

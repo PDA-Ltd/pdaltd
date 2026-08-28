@@ -10,38 +10,24 @@ import "slick-carousel/slick/slick-theme.css";
 import Button from "../components/Button";
 import { useTranslation } from "../hooks/useTranslation";
 
+const VALID_SLUG = /^[a-z0-9-]+$/;
+
 const CurrentProjects = () => {
   const navigate = useNavigate();
   const { language } = useTranslation();
 
-  // Filter current projects (Active and Ongoing) and limit to 6
+  // Show the 6 most recently added projects (Active/Ongoing), auto-rotating as new
+  // ones are appended to projectsRawContent.json — no manual slug list to maintain.
   const currentProjects = useMemo(() => {
     const projects = getProjectsForLocale(language);
-    const featuredSlugs = [
-      "digital-economy-programs-young-africa-works-ghana",
-      "ghana-community-led-development-collaborative",
-      "absa-young-africa-works-program",
-      "global-plastic-action-partnership",
-      "happy-program",
-      "ghana-netherlands-seed-partnership-gnsp",
-    ];
-
-    const featuredProjects = projects.filter(
+    const eligible = projects.filter(
       (project) =>
-        featuredSlugs.includes(project.slug) &&
+        VALID_SLUG.test(project.slug || "") &&
         (project.status === "Active" || project.status === "Ongoing")
     );
 
-    if (featuredProjects.length >= featuredSlugs.length) {
-      const ordered = featuredSlugs
-        .map((slug) => featuredProjects.find((p) => p.slug === slug))
-        .filter(Boolean);
-      return ordered.slice(0, 6);
-    }
-
-    return projects
-      .filter((project) => project.status === "Active" || project.status === "Ongoing")
-      .slice(0, 6);
+    const source = eligible.length >= 6 ? eligible : projects.filter((p) => VALID_SLUG.test(p.slug || ""));
+    return source.slice(-6);
   }, [language]);
 
   const handleProjectClick = (project) => {

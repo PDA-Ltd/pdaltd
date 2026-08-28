@@ -7,6 +7,7 @@ import search from "./magnifying-glass-solid.svg";
 import facebook from "./square-facebook-brands-solid.svg";
 import twitter from "./square-x-twitter-brands-solid.svg";
 import youtube from "./youtube-brands-solid.svg";
+import instagram from "./square-instagram-brands-solid.svg";
 import pdf from "./paper.svg";
 import paper from "./PDF.svg";
 import menu from "./ham.svg";
@@ -19,6 +20,7 @@ import whiteLinkedin from "./square-linkedin.svg";
 import whiteFacebook from "./square-facebook.svg";
 import whiteTwitter from "./square-x-twitter.svg";
 import whiteYoutube from "./square-youtube.svg";
+import whiteInstagram from "./square-instagram.svg";
 import givelove from "./give-love.svg";
 import volunteer from "./volunteer.svg";
 import negotiation from "./negotiation.svg";
@@ -51,6 +53,7 @@ export {
   facebook,
   twitter,
   youtube,
+  instagram,
   pdf,
   paper,
   menu,
@@ -62,6 +65,7 @@ export {
   whiteFacebook,
   whiteTwitter,
   whiteYoutube,
+  whiteInstagram,
   givelove,
   volunteer,
   negotiation,

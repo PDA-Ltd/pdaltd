@@ -3,10 +3,12 @@ import {
   youtube,
   twitter,
   linkedin,
+  instagram,
   whiteYoutube,
   whiteFacebook,
   whiteLinkedin,
   whiteTwitter,
+  whiteInstagram,
   givelove,
   volunteer,
   negotiation,
@@ -141,6 +143,11 @@ export const socialMedia = [
     link: "https://www.linkedin.com/company/pdaghana/",
   },
   { src: twitter, alt: "twitter logo", link: "https://x.com/pdaghofficial" },
+  {
+    src: instagram,
+    alt: "instagram logo",
+    link: "https://www.instagram.com/pdaghana2018/",
+  },
 ];
 
 export const whiteMedia = [
@@ -163,6 +170,11 @@ export const whiteMedia = [
     src: whiteTwitter,
     alt: "twitter logo",
     link: "https://x.com/pdaghofficial",
+  },
+  {
+    src: whiteInstagram,
+    alt: "instagram logo",
+    link: "https://www.instagram.com/pdaghana2018/",
   },
 ];
 
