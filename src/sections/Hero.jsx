@@ -35,7 +35,12 @@ import Button from "../components/Button";
 import { useTranslation } from "../hooks/useTranslation";
 import { image2, education, de, newhero4 } from "../assets/images";
 
-const heroImages = [image2, education, de, newhero4];
+const heroImages = [
+  { src: image2, focusClass: "object-top" },
+  { src: education, focusClass: "object-top lg:object-[center_30%]" },
+  { src: de, focusClass: "object-top lg:object-[center_30%]" },
+  { src: newhero4, focusClass: "object-top lg:object-[center_30%]" },
+];
 const SLIDE_DURATION = 5000;
 
 const Hero = () => {
@@ -82,9 +87,9 @@ const Hero = () => {
         <AnimatePresence mode="sync">
           <motion.img
             key={activeSlide}
-            src={heroImages[activeSlide]}
+            src={heroImages[activeSlide].src}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className={`absolute inset-0 w-full h-full object-cover ${heroImages[activeSlide].focusClass}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
