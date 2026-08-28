@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import NewsletterForm from "../components/NewsletterForm";
 import { FaYoutube, FaVimeo, FaPlayCircle } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
+import { vodcasthero } from "../assets/images";
 
 const Vodcast = () => {
   const { t } = useTranslation();
@@ -22,8 +23,7 @@ const Vodcast = () => {
     { name: "Vimeo", icon: FaVimeo, color: "text-blue-500", link: "https://vimeo.com" },
   ];
 
-  // Using a professional video podcast-themed header image
-  const headerImage = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&q=80";
+  const headerImage = vodcasthero;
 
   return (
     <section
@@ -39,7 +39,7 @@ const Vodcast = () => {
       >
         <img 
           src={headerImage} 
-          className="w-full h-[400px] md:h-[500px] object-cover" 
+          className="w-full h-[400px] md:h-[500px] object-cover object-top"
           alt="Vodcast" 
           onError={(e) => {
             e.target.style.display = 'none';

@@ -28,14 +28,27 @@
 
 // export default Hero;
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { useTranslation } from "../hooks/useTranslation";
+import { image2, education, de, newhero4 } from "../assets/images";
+
+const heroImages = [image2, education, de, newhero4];
+const SLIDE_DURATION = 5000;
 
 const Hero = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroImages.length);
+    }, SLIDE_DURATION);
+    return () => clearInterval(interval);
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -65,18 +78,35 @@ const Hero = () => {
       id="home"
       className="relative flex flex-col justify-end lg:justify-center bg-cover bg-left top-20 min-h-[280px] sm:h-[340px] md:h-[390px] lg:h-[460px] wide:h-[560px] overflow-hidden"
     >
-      <video
-        loop
-        autoPlay
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover object-top -z-10"
-        poster="/assets/images/hero.png"
-      >
-        <source src="/assets/video/pdaSlider.mp4" type="video/mp4" />
-        <source src="/assets/video/pdaSlider.webm" type="video/webm" />
-      </video>
+      <div className="absolute inset-0 -z-10">
+        <AnimatePresence mode="sync">
+          <motion.img
+            key={activeSlide}
+            src={heroImages[activeSlide]}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-top"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          />
+        </AnimatePresence>
+      </div>
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent -z-10"></div>
+
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            aria-label={`Show slide ${index + 1}`}
+            onClick={() => setActiveSlide(index)}
+            className={`h-2 rounded-full transition-all ${
+              index === activeSlide ? "w-6 bg-white" : "w-2 bg-white/50"
+            }`}
+          />
+        ))}
+      </div>
       
       <motion.div
         className="flex flex-col items-center justify-end h-full p-4 pb-8 sm:pb-10 md:pb-12 relative z-10 text-center"

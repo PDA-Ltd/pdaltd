@@ -439,7 +439,7 @@ const Staff = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="flex items-center gap-4 mb-5 pb-3 border-b-4 border-orange">
+      <div className="flex items-center gap-4 mb-5 pb-3 border-b-2 border-orange">
         {Icon && (
           <motion.div
             className="bg-orange rounded-full p-3"
@@ -558,7 +558,7 @@ const Staff = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-4 mb-5 pb-3 border-b-4 border-orange">
+          <div className="flex items-center gap-4 mb-5 pb-3 border-b-2 border-orange">
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-ash">
               {t("staff.fieldOfficers")}
             </h2>
