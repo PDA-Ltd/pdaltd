@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { tony, eleanor, akosua, edem, annabelle, alex, clement, osei, allstaff, celia, flexcorp, nana } from "../assets/images";
+import { tony, eleanor, akosua, edem, annabelle, alex, clement, osei, celia, flexcorp, nana, boardHero } from "../assets/images";
 import { FaCrown, FaUserTie, FaBuilding, FaCoins, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
@@ -93,9 +93,9 @@ const BoardOfDirectors = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <img 
-          src={allstaff}
-          className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover" 
+        <img
+          src={boardHero}
+          className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
           alt="Board of Directors"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />

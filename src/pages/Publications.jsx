@@ -14,6 +14,12 @@ const Publications = () => {
   const [activeTab, setActiveTab] = useState("publications");
   const newsletterItems = [
     {
+      title: "Building Resilience, Together",
+      date: "September 2026",
+      image: march26quarter,
+      url: "https://my.brevo.com/template/7v6DxxjoR8wxY7HY2xLdz3tmM9VYhBmt1o6wKMBJTSV0xRW1RBM4NqIyhQ",
+    },
+    {
       title: "Pushing Forward Together",
       date: "March 2026",
       image: march26quarter,

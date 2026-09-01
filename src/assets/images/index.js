@@ -15,6 +15,11 @@ import australianHighCommission from "./australian-high-commission.png";
 import purLogo from "./pur-logo.png";
 import magicLibraries from "./magic-libraries.png";
 import partnersnew from "./partnersnew.png";
+import boardHero from "./board_hero.jpeg";
+import estherNyarkoVsla from "./esther_nyarko_VSLA.png";
+import mosesAgbelenyoVsla from "./moses_agbelenyo_VSLA.png";
+import yawKwakyeVsla from "./yaw_kwakye_VSLA.png";
+import kofiAcheampongVsla from "./kofi_acheampong_VSLA.png";
 import british from "./BRITISH-council.png";
 import callund from "./Callund-Consulting.png";
 import cdd from "./CDD.jpg";
@@ -489,6 +494,11 @@ export {
   purLogo,
   magicLibraries,
   partnersnew,
+  boardHero,
+  estherNyarkoVsla,
+  mosesAgbelenyoVsla,
+  yawKwakyeVsla,
+  kofiAcheampongVsla,
   education,
   indigenous,
   realimpact,

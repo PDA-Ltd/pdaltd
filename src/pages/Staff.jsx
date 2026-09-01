@@ -433,7 +433,7 @@ const Staff = () => {
   const DepartmentSection = ({ title, staff, departmentKey, icon: Icon }) => (
     <motion.div
       id={departmentKey}
-      className="mb-10 scroll-mt-24"
+      className="mb-32 scroll-mt-24"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -552,7 +552,7 @@ const Staff = () => {
         {/* Field Officers */}
         <motion.div
           id="fieldOfficers"
-          className="mb-10 scroll-mt-24"
+          className="mb-32 scroll-mt-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
