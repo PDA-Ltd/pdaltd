@@ -17,7 +17,7 @@ const Publications = () => {
       title: "Building Resilience, Together",
       date: "September 2026",
       image: march26quarter,
-      url: "https://my.brevo.com/template/7v6DxxjoR8wxY7HY2xLdz3tmM9VYhBmt1o6wKMBJTSV0xRW1RBM4NqIyhQ",
+      url: "https://sh1.sendinblue.com/akfuj3fzwlpfe.html?t=1788433602635",
     },
     {
       title: "Pushing Forward Together",
