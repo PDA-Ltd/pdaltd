@@ -12,6 +12,39 @@
 
 export const impactStoriesRaw = [
   {
+    id: 9,
+    slug: "atanga-esther-accelerator-programme-block-store",
+    imageKey: "atangaWife",
+    imagePosition: "center 20%",
+    galleryImageKeys: [],
+    videoUrl: "",
+    dateIso: "2026-09-06",
+    en: {
+      date: "September 6, 2026",
+      title: "From a Shipping Container to a Permanent Business",
+      description:
+        "Financial literacy training through the Accelerator Programme gave Atanga George and Esther Arthur the confidence to build a permanent two-unit store instead of a temporary shipping-container shop.",
+      category: "Financial Inclusion",
+      location: "Ghana",
+      person: "Atanga George & Esther Arthur",
+      project: "Accelerator Programme",
+      fullContent: [
+        "Atanga George and his wife, Esther Arthur, shared how participating in the Accelerator Programme has transformed the way they manage their finances and plan for their family's future. Before joining the programme, although they earned income, they lacked effective financial management skills and found it difficult to save consistently or make long-term investment decisions.",
+        "Through the training and mentorship provided by the programme officers, the couple learned practical skills in financial management, budgeting, and saving. They began setting aside money regularly and making deliberate financial decisions instead of spending without a plan. According to them, these lessons became the foundation for achieving one of their long-held dreams.",
+        "By applying what they learned, Atanga and Esther have successfully constructed a two-unit block store building. One of the stores will operate as a beauty salon, while the other will be used as a provisions shop, creating sustainable sources of income for the household. Esther explained that their original plan was to use a shipping container as a shop, but the training inspired them to think bigger. Instead, they invested in constructing a permanent block building, which they believe will provide greater long-term value and security for their family.",
+        "Reflecting on their experience, the couple expressed their appreciation for the programme. Esther remarked, \"The Accelerator Programme has helped us tremendously. It changed the way we manage our money and gave us the confidence to invest in a permanent business instead of a temporary structure. We pray that the programme continues so that many more people can benefit from the same opportunity we received.\"",
+        "Their story demonstrates that strengthening financial literacy and encouraging disciplined saving can empower households to make informed investment decisions, build productive assets, and improve their long-term economic resilience.",
+      ],
+      keyOutcomes: [
+        "Gained practical skills in financial management, budgeting and saving",
+        "Built a permanent two-unit block store instead of a temporary container shop",
+        "Created two new income streams: a beauty salon and a provisions shop",
+        "Strengthened long-term economic resilience through disciplined saving",
+      ],
+    },
+    fr: {},
+  },
+  {
     id: 8,
     slug: "kofi-acheampong-cocoa-livestock-resilience",
     imageKey: "kofiAcheampongVsla",
