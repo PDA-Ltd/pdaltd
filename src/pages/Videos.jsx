@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
 import { useTranslation } from "../hooks/useTranslation";
+import { videospage } from "../assets/images";
 
 const Videos = () => {
   const { t } = useTranslation();
@@ -21,8 +22,7 @@ const Videos = () => {
     { id: "rcsM63m0EG8", title: "PDA 2024 End of year message " },
   ];
 
-  // Using a professional video-themed header image URL
-  const headerImage = "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1920&q=80";
+  const headerImage = videospage;
 
   return (
     <section
