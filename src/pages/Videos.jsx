@@ -7,6 +7,8 @@ import { videospage } from "../assets/images";
 const Videos = () => {
   const { t } = useTranslation();
   const videos = [
+    { id: "2xmX4kIHsBE", title: "WEBINAR: Cultural Norms and Child Protection: Lessons from Community Practice" },
+    { id: "BTHLwBTgBII", title: "Protecting People by Protecting Data: Practical Lessons from PDA's Work in Ethical Research and MEL" },
     {
       id: "CBXOLspFKug",
       title: "8th Knowledge Sharing Workshop",

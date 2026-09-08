@@ -186,8 +186,14 @@ const ProjectDetail = () => {
                       </p>
                     );
                   }
+                  const numberedMatch = trimmed.match(/^(\d+\.|•)\s/);
                   return (
-                    <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
+                    <p
+                      key={index}
+                      className={`text-gray-700 mb-4 leading-relaxed font-poppins ${
+                        numberedMatch ? "pl-6" : ""
+                      }`}
+                    >
                       {trimmed}
                     </p>
                   );
@@ -196,6 +202,7 @@ const ProjectDetail = () => {
             </motion.div>
           )}
 
+          {/* Disabled site-wide — reusable if needed later.
           {project.howWeWentAboutIt && (
             <motion.div
               className="mb-8"
@@ -218,8 +225,14 @@ const ProjectDetail = () => {
                       </p>
                     );
                   }
+                  const numberedMatch = trimmed.match(/^(\d+\.|•)\s/);
                   return (
-                    <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
+                    <p
+                      key={index}
+                      className={`text-gray-700 mb-4 leading-relaxed font-poppins ${
+                        numberedMatch ? "pl-6" : ""
+                      }`}
+                    >
                       {trimmed}
                     </p>
                   );
@@ -287,6 +300,7 @@ const ProjectDetail = () => {
               </ul>
             </motion.div>
           )}
+          */}
 
           {project.additionalSections && project.additionalSections.map((section, index) => (
             <motion.div

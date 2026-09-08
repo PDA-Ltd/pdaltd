@@ -10,10 +10,13 @@ const PartnersPage = () => {
 
   const categories = ["all", ...new Set(partnersData.map((p) => p.category))];
 
-  const filteredPartners =
+  const filteredPartners = (
     selectedCategory === "all"
       ? partnersData
-      : partnersData.filter((partner) => partner.category === selectedCategory);
+      : partnersData.filter((partner) => partner.category === selectedCategory)
+  )
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   const associations = useMemo(
     () => [
