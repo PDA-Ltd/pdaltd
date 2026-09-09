@@ -29,6 +29,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         email,
         attributes: name ? { FIRSTNAME: name } : undefined,
+        listIds: [2],
         updateEnabled: true,
       }),
     });
