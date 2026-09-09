@@ -5,8 +5,7 @@ import { FaEnvelope, FaCheckCircle } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const NewsletterForm = () => {
-  const { t } = useTranslation();
-  const newsletterRecipients = "info@pdaghana.com,amensah@pdaghana.com,gmyamoah@pdaghana.com";
+  const { t, currentLanguage } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,30 +22,62 @@ const NewsletterForm = () => {
     });
   };
 
+  // Previous approach — opened the visitor's own email client via a mailto: link.
+  // Kept for reference in case we ever need to fall back to it.
+  // const newsletterRecipients = "info@pdaghana.com,amensah@pdaghana.com,gmyamoah@pdaghana.com";
+  // const handleSubmitMailto = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   setSubmitStatus(null);
+  //
+  //   const subject = encodeURIComponent(t("publications.signUpToday"));
+  //   const body = encodeURIComponent(
+  //     `${t("publications.signUpToday")}\n\n` +
+  //     `${t("common.name")}: ${formData.name}\n` +
+  //     `${t("common.email")}: ${formData.email}\n` +
+  //     `${t("common.organization")}: ${formData.organization}\n` +
+  //     `${t("common.phone")}: ${formData.contact}\n\n` +
+  //     `Please add this person to the newsletter mailing list.`
+  //   );
+  //
+  //   window.location.href = `mailto:${newsletterRecipients}?subject=${subject}&body=${body}`;
+  //
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     setSubmitStatus("success");
+  //     setFormData({ name: "", email: "", organization: "", contact: "" });
+  //   }, 1000);
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Create mailto link with form data
-    const subject = encodeURIComponent(t("publications.signUpToday"));
-    const body = encodeURIComponent(
-      `${t("publications.signUpToday")}\n\n` +
-      `${t("common.name")}: ${formData.name}\n` +
-      `${t("common.email")}: ${formData.email}\n` +
-      `${t("common.organization")}: ${formData.organization}\n` +
-      `${t("common.phone")}: ${formData.contact}\n\n` +
-      `Please add this person to the newsletter mailing list.`
-    );
+    try {
+      const response = await fetch("/api/newsletter-signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          organization: formData.organization,
+          contact: formData.contact,
+        }),
+      });
 
-    // Use mailto (can be replaced with backend API later)
-    window.location.href = `mailto:${newsletterRecipients}?subject=${subject}&body=${body}`;
+      if (!response.ok) {
+        throw new Error("Signup failed");
+      }
 
-    setTimeout(() => {
-      setIsSubmitting(false);
       setSubmitStatus("success");
       setFormData({ name: "", email: "", organization: "", contact: "" });
-    }, 1000);
+    } catch (err) {
+      console.error("Newsletter signup error:", err);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -130,6 +161,20 @@ const NewsletterForm = () => {
         >
           <FaCheckCircle />
           <span className="font-poppins">{t("publications.subscriptionSuccess")}</span>
+        </motion.div>
+      )}
+
+      {submitStatus === "error" && (
+        <motion.div
+          className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg flex items-center gap-2"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <span className="font-poppins">
+            {currentLanguage === "fr"
+              ? "Une erreur s'est produite. Veuillez réessayer plus tard."
+              : "Something went wrong. Please try again later."}
+          </span>
         </motion.div>
       )}
 
