@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email } = req.body || {};
+  const { firstName, lastName, email, organization } = req.body || {};
 
   if (!email || typeof email !== "string" || !EMAIL_RE.test(email)) {
     return res.status(400).json({ error: "A valid email is required" });
@@ -18,6 +18,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Newsletter service is not configured" });
   }
 
+  const attributes = {};
+  if (firstName) attributes.FIRSTNAME = firstName;
+  if (lastName) attributes.LASTNAME = lastName;
+  if (organization) attributes.ORGANIZATION = organization;
+
   try {
     const brevoRes = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
@@ -28,7 +33,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         email,
-        attributes: name ? { FIRSTNAME: name } : undefined,
+        attributes: Object.keys(attributes).length ? attributes : undefined,
         listIds: [2],
         updateEnabled: true,
       }),

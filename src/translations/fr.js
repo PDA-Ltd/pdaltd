@@ -58,6 +58,8 @@ export const fr = {
     viewAll: "Voir tout",
     newsAndActivities: "Actualités et activités",
     name: "Nom",
+    firstName: "Prénom",
+    lastName: "Nom de famille",
     email: "E-mail",
     organization: "Organisation",
     phone: "Téléphone",

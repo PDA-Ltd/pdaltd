@@ -7,10 +7,10 @@ import { useTranslation } from "../hooks/useTranslation";
 const NewsletterForm = () => {
   const { t, currentLanguage } = useTranslation();
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     organization: "",
-    contact: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -59,10 +59,10 @@ const NewsletterForm = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: formData.name,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
           organization: formData.organization,
-          contact: formData.contact,
         }),
       });
 
@@ -71,7 +71,7 @@ const NewsletterForm = () => {
       }
 
       setSubmitStatus("success");
-      setFormData({ name: "", email: "", organization: "", contact: "" });
+      setFormData({ firstName: "", lastName: "", email: "", organization: "" });
     } catch (err) {
       console.error("Newsletter signup error:", err);
       setSubmitStatus("error");
@@ -91,18 +91,34 @@ const NewsletterForm = () => {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="newsletter-name" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-            {t("common.name")} *
+          <label htmlFor="newsletter-firstName" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
+            {t("common.firstName")} *
           </label>
           <input
             type="text"
-            id="newsletter-name"
-            name="name"
+            id="newsletter-firstName"
+            name="firstName"
             required
-            value={formData.name}
+            value={formData.firstName}
             onChange={handleChange}
             className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
-            placeholder={t("common.name")}
+            placeholder={t("common.firstName")}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="newsletter-lastName" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
+            {t("common.lastName")} *
+          </label>
+          <input
+            type="text"
+            id="newsletter-lastName"
+            name="lastName"
+            required
+            value={formData.lastName}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
+            placeholder={t("common.lastName")}
           />
         </div>
 
@@ -134,21 +150,6 @@ const NewsletterForm = () => {
             onChange={handleChange}
             className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
             placeholder={t("common.organization")}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="newsletter-contact" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-            {t("common.phone")}
-          </label>
-          <input
-            type="tel"
-            id="newsletter-contact"
-            name="contact"
-            value={formData.contact}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
-            placeholder="+233 XX XXX XXXX"
           />
         </div>
       </div>

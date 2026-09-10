@@ -58,6 +58,8 @@ export const en = {
     viewAll: "View All",
     newsAndActivities: "News & Activities",
     name: "Name",
+    firstName: "First Name",
+    lastName: "Last Name",
     notFound: "Content not found",
     backToNews: "Back to News & Activities",
     keyPoints: "Key Points",
