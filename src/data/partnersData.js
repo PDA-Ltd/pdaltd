@@ -31,6 +31,15 @@ import {
   purLogo,
   nestle,
   magicLibraries,
+  soronkoAcademy,
+  kosmosInnovationCenter,
+  mestLogo,
+  iiafricaLogo,
+  absaLogo,
+  agriImpact,
+  wuscEumcLogo,
+  gnbcc,
+  mc2hFoundation,
 } from "../assets/images";
 
 export const partnersData = [
@@ -281,6 +290,78 @@ export const partnersData = [
     website: "https://magiclibraries.org",
     category: "Education",
     description: "Building community libraries and promoting children's reading literacy."
+  },
+  {
+    id: 32,
+    name: "Soronko Academy",
+    image: soronkoAcademy,
+    website: "https://soronkoacademy.com",
+    category: "Education",
+    description: "Bridging the gender gap in technology through digital skills training for young women."
+  },
+  {
+    id: 33,
+    name: "Kosmos Innovation Center",
+    image: kosmosInnovationCenter,
+    website: "https://kicghana.org",
+    category: "Agriculture",
+    description: "Investing in young agripreneurs through training, mentorship and seed funding."
+  },
+  {
+    id: 34,
+    name: "MEST",
+    image: mestLogo,
+    website: "https://meltwater.org",
+    category: "Education",
+    description: "Training, funding and mentoring aspiring technology entrepreneurs across Africa."
+  },
+  {
+    id: 35,
+    name: "Industry Immersion Africa (iiAfrica)",
+    image: iiafricaLogo,
+    website: "https://iiafrica.org",
+    category: "Education",
+    description: "Boosting STEM graduate employability through industry-ready technical and soft-skills training."
+  },
+  {
+    id: 36,
+    name: "Absa Bank Ghana",
+    image: absaLogo,
+    website: "https://www.absa.com.gh",
+    category: "Finance",
+    description: "Providing affordable finance and business development support to MSMEs across Ghana."
+  },
+  {
+    id: 37,
+    name: "Agri-Impact Group",
+    image: agriImpact,
+    website: "https://www.agriimpactgroup.com",
+    category: "Agriculture",
+    description: "Managing agricultural value chain and enterprise development programs across Africa."
+  },
+  {
+    id: 38,
+    name: "WUSC-EUMC",
+    image: wuscEumcLogo,
+    website: "https://wusc.ca",
+    category: "Development",
+    description: "Advancing global education and economic opportunities for youth and refugees."
+  },
+  {
+    id: 39,
+    name: "Ghana Netherlands Business & Culture Council",
+    image: gnbcc,
+    website: "https://gnbcc.net",
+    category: "Trade",
+    description: "Facilitating trade and business cooperation between Ghana and the Netherlands."
+  },
+  {
+    id: 40,
+    name: "mc2h Foundation",
+    image: mc2hFoundation,
+    website: "https://www.mc2hfoundation.com",
+    category: "Education",
+    description: "Supporting community-led efforts to improve children's education across West Africa."
   },
 ];
 

@@ -22,6 +22,15 @@ import yawKwakyeVsla from "./yaw_kwakye_VSLA.png";
 import kofiAcheampongVsla from "./kofi_acheampong_VSLA.png";
 import atangaWife from "./Atanga&wife.jpeg";
 import videospage from "./videospage.png";
+import soronkoAcademy from "./soronko-academy.png";
+import kosmosInnovationCenter from "./kosmos-innovation-center.png";
+import mestLogo from "./mest-logo.png";
+import iiafricaLogo from "./iiafrica.jpeg";
+import absaLogo from "./absa-logo.png";
+import agriImpact from "./agri-impact.png";
+import wuscEumcLogo from "./wusc-eumc-logo.png";
+import gnbcc from "./gnbcc.jpg";
+import mc2hFoundation from "./mc2h-foundation.png";
 import british from "./BRITISH-council.png";
 import callund from "./Callund-Consulting.png";
 import cdd from "./CDD.jpg";
@@ -503,6 +512,15 @@ export {
   kofiAcheampongVsla,
   atangaWife,
   videospage,
+  soronkoAcademy,
+  kosmosInnovationCenter,
+  mestLogo,
+  iiafricaLogo,
+  absaLogo,
+  agriImpact,
+  wuscEumcLogo,
+  gnbcc,
+  mc2hFoundation,
   education,
   indigenous,
   realimpact,
