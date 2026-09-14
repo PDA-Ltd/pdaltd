@@ -35,7 +35,7 @@ const Publications = () => {
       title: "Indigenous Knowledge Systems in Evaluation Practice",
       date: "July 2025",
       image: indigenous,
-      url: "https://info.mailer.pdaghana.com/emails/webview/1470346/164329918169089334",
+      url: "/assets/documents/Indigenouse-Knowledge-systems-in-Evaluation-Practice.pdf",
     },
     {
       title: "See How Education Is Transforming Lives",

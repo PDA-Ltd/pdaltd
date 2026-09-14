@@ -1,5 +1,19 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/pda-staff", "destination": "/staff", "permanent": true },
+    { "source": "/pda-staff/", "destination": "/staff", "permanent": true },
+    { "source": "/pages/contact/pda", "destination": "/contact", "permanent": true },
+    { "source": "/pages/contact/pda/", "destination": "/contact", "permanent": true },
+    { "source": "/what-we-stand-for", "destination": "/who-we-are", "permanent": true },
+    { "source": "/what-we-stand-for/", "destination": "/who-we-are", "permanent": true },
+    { "source": "/board-of-directors", "destination": "/board", "permanent": true },
+    { "source": "/board-of-directors/", "destination": "/board", "permanent": true },
+    { "source": "/projects", "destination": "/our-projects", "permanent": true },
+    { "source": "/projects/", "destination": "/our-projects", "permanent": true },
+    { "source": "/category/jobs", "destination": "/", "permanent": true },
+    { "source": "/category/jobs/", "destination": "/", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
