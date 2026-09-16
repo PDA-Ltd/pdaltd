@@ -38,10 +38,10 @@
     { "source": "/impact-story-mathew-attisobi", "destination": "/impact-stories/mathew-vsla-success-story", "permanent": true },
     { "source": "/impact-story-mathew-attisobi/", "destination": "/impact-stories/mathew-vsla-success-story", "permanent": true },
 
-    { "source": "/nyonkopa-child-labour-remediation-vsla", "destination": "/", "permanent": true },
-    { "source": "/nyonkopa-child-labour-remediation-vsla/", "destination": "/", "permanent": true },
-    { "source": "/my-life-my-right", "destination": "/", "permanent": true },
-    { "source": "/my-life-my-right/", "destination": "/", "permanent": true }
+    { "source": "/nyonkopa-child-labour-remediation-vsla", "destination": "/pdaafrica/nyonkopa-child-labour-remediation", "permanent": true },
+    { "source": "/nyonkopa-child-labour-remediation-vsla/", "destination": "/pdaafrica/nyonkopa-child-labour-remediation", "permanent": true },
+    { "source": "/my-life-my-right", "destination": "/projects/my-life-my-rights", "permanent": true },
+    { "source": "/my-life-my-right/", "destination": "/projects/my-life-my-rights", "permanent": true }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
