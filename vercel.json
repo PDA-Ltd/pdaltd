@@ -13,7 +13,35 @@
     { "source": "/projects", "destination": "/our-projects", "permanent": true },
     { "source": "/projects/", "destination": "/our-projects", "permanent": true },
     { "source": "/category/jobs", "destination": "/", "permanent": true },
-    { "source": "/category/jobs/", "destination": "/", "permanent": true }
+    { "source": "/category/jobs/", "destination": "/", "permanent": true },
+
+    { "source": "/cocoa-communities-library-project-cclp", "destination": "/projects/cocoa-communities-library-project-cclp", "permanent": true },
+    { "source": "/cocoa-communities-library-project-cclp/", "destination": "/projects/cocoa-communities-library-project-cclp", "permanent": true },
+    { "source": "/nestle-income-accelerator-programme-iap-2-ghana", "destination": "/projects/nestle-income-accelerator-programme-iap-2-ghana", "permanent": true },
+    { "source": "/nestle-income-accelerator-programme-iap-2-ghana/", "destination": "/projects/nestle-income-accelerator-programme-iap-2-ghana", "permanent": true },
+    { "source": "/nestle-income-accelerator-programme-iap-2-cote-divoire", "destination": "/projects/nestle-income-accelerator-programme-iap-2-cote-divoire", "permanent": true },
+    { "source": "/nestle-income-accelerator-programme-iap-2-cote-divoire/", "destination": "/projects/nestle-income-accelerator-programme-iap-2-cote-divoire", "permanent": true },
+    { "source": "/anglophone-west-african-regional-impact-partner-organizat-on-for-the-mastercard-foundation", "destination": "/projects/mastercard-foundation-regional-impact-partner-organization-ipo", "permanent": true },
+    { "source": "/anglophone-west-african-regional-impact-partner-organizat-on-for-the-mastercard-foundation/", "destination": "/projects/mastercard-foundation-regional-impact-partner-organization-ipo", "permanent": true },
+    { "source": "/ghana-community-led-development-collaborative", "destination": "/projects/ghana-community-led-development-collaborative", "permanent": true },
+    { "source": "/ghana-community-led-development-collaborative/", "destination": "/projects/ghana-community-led-development-collaborative", "permanent": true },
+    { "source": "/global-plastic-action-partnership", "destination": "/projects/global-plastic-action-partnership", "permanent": true },
+    { "source": "/global-plastic-action-partnership/", "destination": "/projects/global-plastic-action-partnership", "permanent": true },
+    { "source": "/pur-smallholder-farmer-agroforestry-permanence-study-in-cote-divoire", "destination": "/projects/pur-smallholder-farmer-agroforestry-permanence-study-cote-divoire", "permanent": true },
+    { "source": "/pur-smallholder-farmer-agroforestry-permanence-study-in-cote-divoire/", "destination": "/projects/pur-smallholder-farmer-agroforestry-permanence-study-cote-divoire", "permanent": true },
+    { "source": "/ghana-netherlands-seed-partnership-gnsp", "destination": "/projects/ghana-netherlands-seed-partnership-gnsp", "permanent": true },
+    { "source": "/ghana-netherlands-seed-partnership-gnsp/", "destination": "/projects/ghana-netherlands-seed-partnership-gnsp", "permanent": true },
+    { "source": "/aapcra-livestock-systems-scoping-study-in-ghana-and-nigeria", "destination": "/projects/aciar-livestock-systems-scoping-study-ghana-nigeria", "permanent": true },
+    { "source": "/aapcra-livestock-systems-scoping-study-in-ghana-and-nigeria/", "destination": "/projects/aciar-livestock-systems-scoping-study-ghana-nigeria", "permanent": true },
+    { "source": "/tonys-chocolonely-tree-tagging-survey-in-ghana-and-cote-divoire", "destination": "/projects/tonys-chocolonely-tree-tagging-survey-in-ghana-and-cote-divoire", "permanent": true },
+    { "source": "/tonys-chocolonely-tree-tagging-survey-in-ghana-and-cote-divoire/", "destination": "/projects/tonys-chocolonely-tree-tagging-survey-in-ghana-and-cote-divoire", "permanent": true },
+    { "source": "/impact-story-mathew-attisobi", "destination": "/impact-stories/mathew-vsla-success-story", "permanent": true },
+    { "source": "/impact-story-mathew-attisobi/", "destination": "/impact-stories/mathew-vsla-success-story", "permanent": true },
+
+    { "source": "/nyonkopa-child-labour-remediation-vsla", "destination": "/", "permanent": true },
+    { "source": "/nyonkopa-child-labour-remediation-vsla/", "destination": "/", "permanent": true },
+    { "source": "/my-life-my-right", "destination": "/", "permanent": true },
+    { "source": "/my-life-my-right/", "destination": "/", "permanent": true }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
