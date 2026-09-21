@@ -4,6 +4,15 @@ import { FaDownload, FaFilePdf } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const reports = [
+  // 2026 Publications
+  {
+    date: "May 2026",
+    title: "Global Plastic Action Partnership (GPAP) Evaluation - Final Report",
+    type: "PDA Report / Concept Note",
+    topic: "Research & Evaluation",
+    downloadUrl: "/assets/documents/Global-Plastic-Action-Partnership-Evaluation-Final-Report-May-2026.pdf",
+    fileName: "Global-Plastic-Action-Partnership-Evaluation-Final-Report-May-2026.pdf",
+  },
   // 2025 Publications
   {
     date: "January 2025",

@@ -68,6 +68,7 @@ export function localizeProject(row, language) {
     image: row.image,
     color: row.color,
     detailLink: row.detailLink,
+    relatedDownload: row.relatedDownload,
     ...bundle,
   };
 }

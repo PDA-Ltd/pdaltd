@@ -4,7 +4,7 @@ import { getProjectForSlug } from "../components/ProjectsData";
 import { archivedProjects } from "../components/ArchivedProjectsData";
 import { localizeArchivedProject } from "../data/projectLocalization.js";
 import { motion } from "framer-motion";
-import { FaArrowLeft, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaTag } from "react-icons/fa";
+import { FaArrowLeft, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaTag, FaFileDownload } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const ProjectDetail = () => {
@@ -199,6 +199,24 @@ const ProjectDetail = () => {
                   );
                 })}
               </div>
+            </motion.div>
+          )}
+
+          {project.relatedDownload && (
+            <motion.div
+              className="mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45 }}
+            >
+              <button
+                type="button"
+                onClick={() => navigate(project.relatedDownload.url)}
+                className={`inline-flex items-center gap-2 px-5 py-3 rounded-lg text-white font-poppins font-medium ${colors.bg} hover:opacity-90 transition-opacity`}
+              >
+                <FaFileDownload />
+                {project.relatedDownload.label}
+              </button>
             </motion.div>
           )}
 
