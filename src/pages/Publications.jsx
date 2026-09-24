@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { pic, micro, vid } from "../assets/icons";
-import { publication, glasses, indigenous, realimpact, education, march26quarter } from "../assets/images";
+import { gpap, glasses, indigenous, realimpact, education, march26quarter } from "../assets/images";
 import Button from "../components/Button";
 import BookSlider from "../components/BookSlider";
 import FilterableTable from "../components/FilterableTable";
@@ -121,10 +121,10 @@ const Publications = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <img 
-                  src={publication} 
-                  alt="2023 In Review" 
-                  className="w-full h-auto rounded-lg" 
+                <img
+                  src={gpap}
+                  alt="GPAP Evaluation: Final Report"
+                  className="w-full h-auto rounded-lg"
                   loading="lazy"
                   decoding="async"
                 />
@@ -136,7 +136,7 @@ const Publications = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                 >
-                  2023 IN REVIEW:
+                  GPAP EVALUATION:
                 </motion.h1>
                 <motion.h2
                   className="text-2xl md:text-3xl mb-4 text-orange"
@@ -145,14 +145,14 @@ const Publications = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
                 >
-                  Our Impact
+                  Final Report
                 </motion.h2>
                 <div className="w-16 h-1 bg-orange mb-5"></div>
-                <h3 className="mb-6 text-gray-600 font-semibold">January, 2024</h3>
+                <h3 className="mb-6 text-gray-600 font-semibold">May, 2026</h3>
                 <motion.div className="mb-8" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <a
-                    href="/assets/documents/2023-in-review.pdf"
-                    download="2023-in-review.pdf"
+                    href="/assets/documents/Global-Plastic-Action-Partnership-Evaluation-Final-Report-May-2026.pdf"
+                    download="Global-Plastic-Action-Partnership-Evaluation-Final-Report-May-2026.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block"

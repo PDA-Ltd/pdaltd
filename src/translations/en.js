@@ -268,7 +268,7 @@ export const en = {
     noReportsFound: "No reports found matching your filters.",
     downloadPDF: "Download PDF",
     viewArchives: "View Archive Publications",
-    featuredDescription: "Participatory Development Associates (PDA) is a social development and consultancy organization in Ghana that supports development processes at community, district, national, regional and institutional levels towards creating a fairer world where all people can realize their full potential.",
+    featuredDescription: "An independent, evidence-based evaluation of the Global Plastic Action Partnership (GPAP), assessing its relevance, effectiveness, efficiency, equity, impact and sustainability. PDA served as the in-country survey partner for Ghana, contributing case study research and data collection with informal waste pickers in the Greater Accra region.",
     reportTypes: {
       "PDA Report / Concept Note": "PDA Report / Concept Note",
       "PDA Publication": "PDA Publication",
