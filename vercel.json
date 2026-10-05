@@ -41,7 +41,10 @@
     { "source": "/nyonkopa-child-labour-remediation-vsla", "destination": "/pdaafrica/nyonkopa-child-labour-remediation", "permanent": true },
     { "source": "/nyonkopa-child-labour-remediation-vsla/", "destination": "/pdaafrica/nyonkopa-child-labour-remediation", "permanent": true },
     { "source": "/my-life-my-right", "destination": "/projects/my-life-my-rights", "permanent": true },
-    { "source": "/my-life-my-right/", "destination": "/projects/my-life-my-rights", "permanent": true }
+    { "source": "/my-life-my-right/", "destination": "/projects/my-life-my-rights", "permanent": true },
+
+    { "source": "/download/photo-essay-the-experiences-of-female-led-micro-small-medium-scale-enterprises-in-ghana", "destination": "/assets/documents/photo_essay.pdf", "permanent": true },
+    { "source": "/download/photo-essay-the-experiences-of-female-led-micro-small-medium-scale-enterprises-in-ghana/", "destination": "/assets/documents/photo_essay.pdf", "permanent": true }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
