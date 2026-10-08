@@ -20,6 +20,8 @@ import estherNyarkoVsla from "./esther_nyarko_VSLA.png";
 import mosesAgbelenyoVsla from "./moses_agbelenyo_VSLA.png";
 import yawKwakyeVsla from "./yaw_kwakye_VSLA.png";
 import kofiAcheampongVsla from "./kofi_acheampong_VSLA.png";
+import brace from "./brace.png";
+import akosuaLarryVsla from "./Akosua_Larry_VSLA.jpeg";
 import atangaWife from "./Atanga&wife.jpeg";
 import videospage from "./videospage.png";
 import soronkoAcademy from "./soronko-academy.png";
@@ -510,6 +512,8 @@ export {
   mosesAgbelenyoVsla,
   yawKwakyeVsla,
   kofiAcheampongVsla,
+  brace,
+  akosuaLarryVsla,
   atangaWife,
   videospage,
   soronkoAcademy,

@@ -2160,5 +2160,27 @@
       "location": "Ghana ; Nigeria",
       "status": "En cours"
     }
+  },
+  {
+    "id": 45,
+    "slug": "building-resilient-and-active-communities-in-extractive-landscapes-in-ghana-brace",
+    "imageKey": "brace",
+    "color": "orange",
+    "en": {
+      "title": "Building Resilient and Active Communities in Extractive Landscapes in Ghana (BRACE)",
+      "description": "A baseline study tracking community resilience and environmental rights outcomes in Ghana's mining regions, commissioned as part of the EU-funded BRACE project.",
+      "fullDescription": "BRACE is a three-year, EU-funded project promoting sustainable environmental management in Ghana's mining regions. PDA was commissioned to design and conduct the project's baseline study, tracking progress and impact across four key work packages.",
+      "snapshot": "**Project Snapshot**\n\nBRACE is a three-year project funded by the European Union, aimed at promoting sustainable environmental management in mining regions of Ghana. Implemented by A Rocha Ghana in collaboration with Nature Development Foundation and Wacam, the project focuses on enhancing community resilience in the Eastern, Ashanti, Western North, Western, and Ahafo Regions.\n\n**Project Objectives**\n\nMain Goal: Strengthen the capacity of local communities to hold state and private sector actors accountable for environmental rights violations related to extractive activities.\nSpecific Objectives:\n• To build the knowledge, capacity and skills of target groups to hold state and private sector actors to account over violations to communities' environmental human rights, lands, and natural resources by damaging extractive developments\n• To provide access to justice systems for local communities whose environmental rights, lands and natural resources have been violated or are threatened by extractive sector activities\n• Establish mechanisms for direct engagement between communities and duty bearers to defend their environmental human rights\n• Build the capacity of Community Resource Management Area (CREMA) Executive Committees to implement their management plans effectively\n\n**PDA's Task**\n\nParticipatory Development Associates (PDA) was commissioned to design and conduct a baseline study to track the progress and impact of the BRACE project, establishing benchmarks against which the project's effectiveness can be measured. The PDA REL team used a cross-sectional mixed-methods approach to gather and analyze data across the project's four key work packages.\n\n**How We Went About It**\n• Questionnaire development and scripting of the survey tool, tailored to capture the specific needs and concerns of communities involved in the BRACE project.\n• Enumerator recruitment and training: local enumerators who understood community dynamics were recruited and trained to administer the survey and gather accurate, reliable data in the appropriate local languages.\n• Field data collection: enumerators conducted fieldwork directly with community members, speaking to 352 sample respondents across the target regions.\n• Analysis and reporting: findings were analyzed to identify trends and key insights, producing a detailed report for partners with actionable recommendations for the project's initiatives and advocacy efforts.\n\n**Impact**\n\nThe BRACE project targets a range of stakeholders, including 50 community-based organizations, 30 women's groups, 10 civil society organizations, and various traditional authorities, impacting approximately 200 rural communities threatened by mining activities. The insights gained from the baseline study provided critical information to empower community stakeholders and strengthen their advocacy efforts regarding environmental rights.",
+      "howWeWentAboutIt": "",
+      "objectives": [],
+      "activities": [],
+      "outcomes": [],
+      "partners": "European Union; A Rocha Ghana; Nature Development Foundation; Wacam",
+      "period": "2023 – 2026",
+      "category": "Agriculture & Climate",
+      "location": "Eastern, Ashanti, Western North, Western and Ahafo Regions, Ghana",
+      "status": "Completed"
+    },
+    "fr": {}
   }
 ]

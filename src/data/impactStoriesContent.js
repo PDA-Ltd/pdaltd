@@ -12,6 +12,40 @@
 
 export const impactStoriesRaw = [
   {
+    id: 10,
+    slug: "akosua-larry-poultry-business-fbs",
+    imageKey: "akosuaLarryVsla",
+    imagePosition: "center 20%",
+    galleryImageKeys: [],
+    videoUrl: "",
+    dateIso: "2026-10-08",
+    en: {
+      date: "October 8, 2026",
+      title: "Seeing My Poultry as a Business",
+      description:
+        "Farmer Business School training through her VSLA helped Akosua Larry stop seeing her poultry as just a way to make a living and start running it as a deliberate, profitable business.",
+      category: "Financial Inclusion",
+      location: "Chiefkrom, Asunafo North Municipality, Goaso",
+      person: "Akosua Larry",
+      project: "Dua Biako VSLA Group",
+      fullContent: [
+        "My name is Akosua Larry, and I live in Chiefkrom in the Asunafo North Municipality of Goaso. I am the Box Keeper of the Dua Biako VSLA Group, and I also raise poultry as a source of livelihood.",
+        "Before joining the VSLA and participating in the trainings that followed, I mainly saw my poultry as a way to make a living. Today, I see it differently. I now see my poultry as a business.",
+        "Through the VSLA and, in particular, the Farmer Business School (FBS) training, I have learned to think differently about how I manage my poultry business. The FBS taught me to pay closer attention to my costs and pricing. I now look at how much I spend, how much I charge, and what is left after my expenses. I have started thinking more carefully about profitability and asking myself an important question: What is my business truly earning?",
+        "The training has also changed the way I make investment decisions. I no longer make decisions simply because an opportunity is available. I take time to consider the opportunity, weigh the costs and potential benefits, and decide whether it makes sense for my business. This has helped me become more deliberate about where I put my money and how I plan for the future.",
+        "My goal now is not simply to keep my poultry activity going. I want to build a sustainable and growing business. What started as a subsistence activity is gradually becoming an intentional enterprise. The VSLA and the training I received have helped me see my poultry differently, understand the business behind it, and make decisions with greater purpose.",
+        "I am proud of how far I have come, and I am looking forward to growing my business even further.",
+      ],
+      keyOutcomes: [
+        "Learned to track costs, pricing and profitability through Farmer Business School training",
+        "Shifted from subsistence poultry keeping to running it as a deliberate business",
+        "Gained confidence to weigh costs and benefits before making investment decisions",
+        "Building towards a sustainable, growing enterprise rather than just a source of income",
+      ],
+    },
+    fr: {},
+  },
+  {
     id: 9,
     slug: "atanga-esther-accelerator-programme-block-store",
     imageKey: "atangaWife",
