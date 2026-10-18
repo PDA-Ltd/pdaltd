@@ -22,6 +22,18 @@ import yawKwakyeVsla from "./yaw_kwakye_VSLA.png";
 import kofiAcheampongVsla from "./kofi_acheampong_VSLA.png";
 import brace from "./brace.png";
 import akosuaLarryVsla from "./Akosua_Larry_VSLA.jpeg";
+import cddIAmAware from "./cdd_i_am_aware_evaluation.jpg";
+import beyondBeansNeedsAssessment from "./beyond_beans_needs_assessment.jpg";
+import quipEndlineGhanaDrc from "./quip_endline_ghana_drc.png";
+import finedevEndline from "./finedev_endline.jpg";
+import sesameNtdFormativeResearch from "./sesame_ntd_formative_research.jpg";
+import babatorMidlineAgdevco from "./babator_midline_agdevco.jpg";
+import sdgKids from "./sdg_kids.png";
+import seaProject from "./sea_project.jpg";
+import cocoaNutritionInnovation from "./cocoa_nutrition_innovation.jpg";
+import vslaChildIvoryCoast from "./vsla_child_ivory_coast.jpg";
+import vslaGalsCameroon from "./vsla_gals_cameroon.jpg";
+import vulnerabilityUnicef from "./vulnerability_unicef.jpg";
 import atangaWife from "./Atanga&wife.jpeg";
 import videospage from "./videospage.png";
 import soronkoAcademy from "./soronko-academy.png";
@@ -514,6 +526,18 @@ export {
   kofiAcheampongVsla,
   brace,
   akosuaLarryVsla,
+  cddIAmAware,
+  beyondBeansNeedsAssessment,
+  quipEndlineGhanaDrc,
+  finedevEndline,
+  sesameNtdFormativeResearch,
+  babatorMidlineAgdevco,
+  sdgKids,
+  seaProject,
+  cocoaNutritionInnovation,
+  vslaChildIvoryCoast,
+  vslaGalsCameroon,
+  vulnerabilityUnicef,
   atangaWife,
   videospage,
   soronkoAcademy,
