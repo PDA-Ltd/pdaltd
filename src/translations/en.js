@@ -39,7 +39,7 @@ export const en = {
   // Work Section
   work: {
     whereWeWork: "Where We Work",
-    description: "PDA is a social development organization in Ghana with operations in Cote D'Ivoire, Cameroon, Egypt, Kenya, Morocco, Nigeria, Senegal, Uganda, and other African countries",
+    description: "PDA is a social development organization in Ghana with operations in Cote D'Ivoire, Benin, Nigeria, Cameroon, Egypt, Kenya, Morocco, Senegal, Uganda, and other African countries",
   },
   // Common
   common: {
@@ -537,6 +537,7 @@ export const en = {
     viewPhotos: "View Photos",
     viewPublications: "View Publications",
     recordingLink: "Access the full recording of the session here",
+    photoGallery: "Photo Gallery",
   },
   // Partners Page
   partnersPage: {

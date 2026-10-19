@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { FaCalendarAlt, FaArrowLeft, FaMapMarkerAlt } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaCalendarAlt, FaArrowLeft, FaMapMarkerAlt, FaTimes } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 import { getNewsArticleForSlug } from "../data/newsAndActivitiesData.js";
 
@@ -9,6 +9,7 @@ const NewsDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const { t, language } = useTranslation();
+  const [lightboxImage, setLightboxImage] = useState(null);
 
   const item = useMemo(() => getNewsArticleForSlug(slug, language), [slug, language]);
 
@@ -98,11 +99,21 @@ const NewsDetail = () => {
         <div className="prose prose-lg max-w-none">
           {item.fullContent ? (
             <div className="text-gray-700 leading-relaxed space-y-6">
-              {item.fullContent.map((paragraph, index) => (
-                <p key={index} className="text-base md:text-lg">
-                  {paragraph}
-                </p>
-              ))}
+              {item.fullContent.map((paragraph, index) => {
+                const boldMatch = paragraph.match(/^\*\*(.+)\*\*$/);
+                if (boldMatch) {
+                  return (
+                    <p key={index} className="text-base md:text-lg font-bold text-gray-900">
+                      {boldMatch[1]}
+                    </p>
+                  );
+                }
+                return (
+                  <p key={index} className="text-base md:text-lg">
+                    {paragraph}
+                  </p>
+                );
+              })}
               {item.recordingUrl && (
                 <p className="text-base md:text-lg">
                   <a
@@ -122,6 +133,43 @@ const NewsDetail = () => {
             </p>
           )}
         </div>
+
+        {/* Photo Gallery */}
+        {item.galleryImages && item.galleryImages.length > 0 && (
+          <motion.div
+            className="mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5">
+              {t("newsAndActivities.photoGallery")}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {item.galleryImages.map((image) => (
+                <button
+                  key={image.imageKey}
+                  type="button"
+                  onClick={() => setLightboxImage(image)}
+                  className="relative block w-full h-56 rounded-xl overflow-hidden shadow-md group focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.caption ? `${item.title} — ${image.caption}` : item.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  {image.caption && (
+                    <span className="absolute bottom-0 left-0 right-0 px-3 py-2 bg-black/60 text-white text-sm font-semibold">
+                      {image.caption}
+                    </span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
         {/* Additional Info */}
         {item.additionalInfo && (
@@ -161,6 +209,45 @@ const NewsDetail = () => {
           </motion.button>
         </motion.div>
       </motion.article>
+
+      {/* Image Lightbox */}
+      <AnimatePresence>
+        {lightboxImage && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setLightboxImage(null)}
+          >
+            <motion.div
+              className="relative max-w-5xl max-h-[85vh] w-full"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => setLightboxImage(null)}
+                className="absolute -top-10 right-0 md:top-2 md:right-2 text-white md:bg-black/50 md:rounded-full md:p-2 hover:text-orange transition-colors"
+                aria-label={t("common.close")}
+              >
+                <FaTimes size={24} />
+              </button>
+              <img
+                src={lightboxImage.src}
+                alt={lightboxImage.caption ? `${item.title} — ${lightboxImage.caption}` : item.title}
+                className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+              />
+              {lightboxImage.caption && (
+                <p className="mt-3 text-center text-white font-semibold">{lightboxImage.caption}</p>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

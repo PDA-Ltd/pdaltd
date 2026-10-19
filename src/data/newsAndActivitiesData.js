@@ -18,6 +18,11 @@ const withResolvedImages = newsArticlesRaw.map((article) => {
   return {
     ...article,
     image: image || IMG.vsla,
+    galleryImages: (article.galleryImageKeys || []).map((item) => {
+      const imageKey = typeof item === "string" ? item : item.imageKey;
+      const caption = typeof item === "string" ? undefined : item.caption;
+      return { imageKey, caption, src: IMG[imageKey] || IMG.vsla };
+    }),
   };
 });
 

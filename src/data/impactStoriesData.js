@@ -33,10 +33,11 @@ const resolveImage = (imageKey, fallback = IMG.realimpact) => {
 const withResolvedMedia = impactStoriesRaw.map((story) => ({
   ...story,
   image: resolveImage(story.imageKey),
-  galleryImages: (story.galleryImageKeys || []).map((imageKey) => ({
-    imageKey,
-    src: resolveImage(imageKey),
-  })),
+  galleryImages: (story.galleryImageKeys || []).map((item) => {
+    const imageKey = typeof item === "string" ? item : item.imageKey;
+    const caption = typeof item === "string" ? undefined : item.caption;
+    return { imageKey, caption, src: resolveImage(imageKey) };
+  }),
 }));
 
 const localizeImpactStory = (story, language) => {

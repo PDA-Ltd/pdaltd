@@ -34,6 +34,11 @@ import cocoaNutritionInnovation from "./cocoa_nutrition_innovation.jpg";
 import vslaChildIvoryCoast from "./vsla_child_ivory_coast.jpg";
 import vslaGalsCameroon from "./vsla_gals_cameroon.jpg";
 import vulnerabilityUnicef from "./vulnerability_unicef.jpg";
+import amangoaseLibrary from "./amangoase_library.jpeg";
+import amangoaseBefore from "./amangoase_before.jpg";
+import amangoaseAfter from "./amangoase_after.jpeg";
+import amangoaseLibraryHandover from "./amangoase_library_handover.jpeg";
+import rainforestAllianceCashew from "./rainforest_alliance_cashew.png";
 import atangaWife from "./Atanga&wife.jpeg";
 import videospage from "./videospage.png";
 import soronkoAcademy from "./soronko-academy.png";
@@ -538,6 +543,11 @@ export {
   vslaChildIvoryCoast,
   vslaGalsCameroon,
   vulnerabilityUnicef,
+  amangoaseLibrary,
+  amangoaseBefore,
+  amangoaseAfter,
+  amangoaseLibraryHandover,
+  rainforestAllianceCashew,
   atangaWife,
   videospage,
   soronkoAcademy,

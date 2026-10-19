@@ -4,13 +4,93 @@
  * How to add a new story:
  * 1. Copy one full `{ ... },` block below.
  * 2. Set a new `id`, `slug`, `imageKey`, `dateIso`, and optional `videoUrl`.
- * 3. Use `galleryImageKeys` for additional images; each key must match an export
- *    from `src/assets/images/index.js`.
+ * 3. Use `galleryImageKeys` for additional images, shown below the article and
+ *    openable in a lightbox. Entries can be a plain string (`"someImageKey"`)
+ *    or `{ imageKey, caption }` to label the photo (e.g. "Before"/"After").
+ *    Each `imageKey` must match an export from `src/assets/images/index.js`.
  * 4. Fill the `en` object. French fields can be added over time; missing French
  *    values fall back to English.
  */
 
 export const impactStoriesRaw = [
+  {
+    id: 11,
+    slug: "amangoase-da-jhs-library-renovation-cclp",
+    imageKey: "amangoaseLibraryHandover",
+    imagePosition: "center 20%",
+    galleryImageKeys: [
+      { imageKey: "amangoaseBefore", caption: "Before" },
+      { imageKey: "amangoaseAfter", caption: "After" },
+    ],
+    videoUrl: "",
+    dateIso: "2026-10-18",
+    en: {
+      date: "October 18, 2026",
+      title: "A Library Reborn: Strengthening Literacy in Amangoase",
+      description:
+        "PDA Africa and the Magic Libraries Foundation have renovated the library at Amangoase D/A JHS under the Cocoa Communities' Library Project (CCLP) — the third such renovation — transforming it into a welcoming space where children are discovering the joy of reading.",
+      category: "Education",
+      location: "Amangoase, Ashanti Region, Ghana",
+      person: "Janet & Esther Osei",
+      project: "Cocoa Communities' Library Project (CCLP)",
+      fullContent: [
+        "**Strengthening children's literacy and promoting a culture of reading in cocoa-growing communities.**",
+        "PDA Africa, in partnership with the Magic Libraries Foundation, has renovated the library at Amangoase D/A Junior High School (JHS) in the Ashanti Region under the Cocoa Communities' Library Project (CCLP). The renovation marks the third library improvement undertaken through the project, reinforcing ongoing efforts to promote literacy and improve children's access to quality reading materials in cocoa-growing communities.",
+        "The renovation has transformed the school's library into a more welcoming, child-friendly learning environment designed to encourage reading, exploration, and independent learning. Improvements included fresh painting, floor tiling, new furniture, and a collection of age-appropriate books to support children's reading and learning beyond the classroom.",
+        "The renovated library was formally handed over to the school and community, with the headmistress, chief, School Management Committee (SMC) chairman and school authorities receiving it and committing to its care and continued use for the benefit of the children.",
+        "The value of the library extends beyond the school environment. Eric Brunye, CCLP Patron, shared that conversations with parents had revealed a strong appreciation for the facility and its anticipated contribution to their children's learning. \"From conversations with some parents, the community greatly appreciates the library and the positive impact it will have on their children's learning,\" he noted.",
+        "**A Welcoming Space Where Children Can Discover Reading**",
+        "For the children who use the library, the improvements offer an opportunity to experience reading as an enjoyable activity, not simply a classroom requirement. Janet, a member of the school's reading club, described the library as a place where children feel comfortable exploring books at their own pace. \"The library is a fun and welcoming place to be and we are able to read freely,\" she said.",
+        "The enthusiasm is evident in the children's eagerness to participate in reading activities. Esther Osei, the school's headmistress, observed that the children are often so excited about the library that they arrive before the scheduled reading sessions begin. \"The children love the library so much that they can't wait for reading time! Some even arrive before it's time to start. It's wonderful to see their excitement for reading!\" she shared.",
+        "These experiences reflect the importance of creating inviting spaces where children can develop positive reading habits, build confidence and cultivate a lasting interest in learning.",
+        "**Promoting Literacy in Cocoa-Growing Communities**",
+        "The Cocoa Communities' Library Project (CCLP) is a partnership between Participatory Development Associates (PDA) and the Magic Libraries Foundation aimed at improving children's reading literacy and nurturing a lasting culture of reading in cocoa-growing communities in the Ahafo Ano South East and Ahafo Ano South West Districts of Ghana's Ashanti Region.",
+        "The project was launched in 2023 in ten communities and, following its success, was renewed for a further two years (2025–2026) and expanded to reach 20 communities. Working alongside the Ghana Education Service, traditional authorities, schools, parents and community volunteers, the project seeks to ensure that children have regular access to engaging reading opportunities, quality books and supportive learning environments.",
+        "**Investing in Children's Learning and Future**",
+        "The renovation of the Amangoase D/A JHS library represents more than an improvement to the school's physical infrastructure. It is an investment in children's curiosity, imagination, confidence, and educational future.",
+        "Through its partnership with the Magic Libraries Foundation, PDA Africa continues to support efforts to create learning environments where children can access books, explore new ideas, and discover the joy of reading. The Cocoa Communities' Library Project demonstrates how collaboration among development partners, schools and communities can expand learning opportunities and help children in cocoa-growing communities build a stronger foundation for the future.",
+      ],
+      keyOutcomes: [
+        "Third library renovated under the Cocoa Communities' Library Project (CCLP)",
+        "Transformed into a welcoming, child-friendly space with new furniture, flooring and age-appropriate books",
+        "Formally handed over to the school and community, with local leadership committing to its upkeep",
+        "Children now arrive early and eagerly for reading sessions, reflecting renewed enthusiasm for reading",
+      ],
+    },
+    fr: {
+      date: "18 octobre 2026",
+      title: "Une bibliothèque renaît : renforcer l'alphabétisation à Amangoase",
+      description:
+        "PDA Africa et la Magic Libraries Foundation ont rénové la bibliothèque de l'école Amangoase D/A JHS dans le cadre du Cocoa Communities' Library Project (CCLP) — la troisième rénovation du genre — la transformant en un espace accueillant où les enfants découvrent le plaisir de la lecture.",
+      category: "Éducation",
+      location: "Amangoase, région Ashanti, Ghana",
+      person: "Janet et Esther Osei",
+      project: "Cocoa Communities' Library Project (CCLP)",
+      fullContent: [
+        "**Renforcer l'alphabétisation des enfants et promouvoir une culture de la lecture dans les communautés cacaoyères.**",
+        "PDA Africa, en partenariat avec la Magic Libraries Foundation, a rénové la bibliothèque de l'école secondaire du premier cycle (JHS) d'Amangoase D/A dans la région Ashanti, dans le cadre du Cocoa Communities' Library Project (CCLP). Cette rénovation marque la troisième amélioration de bibliothèque réalisée dans le cadre du projet, renforçant les efforts continus visant à promouvoir l'alphabétisation et à améliorer l'accès des enfants à des supports de lecture de qualité dans les communautés cacaoyères.",
+        "La rénovation a transformé la bibliothèque de l'école en un environnement d'apprentissage plus accueillant et adapté aux enfants, conçu pour encourager la lecture, l'exploration et l'apprentissage autonome. Les améliorations ont inclus une nouvelle peinture, un carrelage de sol, du nouveau mobilier et une collection de livres adaptés à l'âge des enfants pour soutenir leur lecture et leur apprentissage au-delà de la salle de classe.",
+        "La bibliothèque rénovée a été officiellement remise à l'école et à la communauté, la directrice, le chef, le président du Comité de gestion scolaire (SMC) et les autorités scolaires l'ayant réceptionnée et s'étant engagés à en assurer l'entretien et l'utilisation continue au bénéfice des enfants.",
+        "La valeur de la bibliothèque dépasse le cadre scolaire. Eric Brunye, parrain du CCLP, a indiqué que les échanges avec les parents avaient révélé une forte appréciation de l'équipement et de sa contribution attendue à l'apprentissage de leurs enfants. « D'après les échanges avec certains parents, la communauté apprécie grandement la bibliothèque et l'impact positif qu'elle aura sur l'apprentissage de leurs enfants », a-t-il souligné.",
+        "**Un espace accueillant où les enfants peuvent découvrir la lecture**",
+        "Pour les enfants qui fréquentent la bibliothèque, les améliorations offrent l'occasion de vivre la lecture comme une activité agréable, et non simplement comme une obligation scolaire. Janet, membre du club de lecture de l'école, a décrit la bibliothèque comme un lieu où les enfants se sentent à l'aise pour explorer les livres à leur propre rythme. « La bibliothèque est un lieu amusant et accueillant, et nous pouvons y lire librement », a-t-elle déclaré.",
+        "Cet enthousiasme se traduit par l'empressement des enfants à participer aux activités de lecture. Esther Osei, directrice de l'école, a observé que les enfants sont souvent si enthousiastes à l'idée de se rendre à la bibliothèque qu'ils arrivent avant le début des séances de lecture prévues. « Les enfants aiment tellement la bibliothèque qu'ils ne peuvent pas attendre l'heure de la lecture ! Certains arrivent même avant l'heure prévue. C'est merveilleux de voir leur enthousiasme pour la lecture ! », a-t-elle partagé.",
+        "Ces expériences reflètent l'importance de créer des espaces accueillants où les enfants peuvent développer de bonnes habitudes de lecture, gagner en confiance et cultiver un intérêt durable pour l'apprentissage.",
+        "**Promouvoir l'alphabétisation dans les communautés cacaoyères**",
+        "Le Cocoa Communities' Library Project (CCLP) est un partenariat entre Participatory Development Associates (PDA) et la Magic Libraries Foundation, visant à améliorer l'alphabétisation des enfants et à cultiver une culture durable de la lecture dans les communautés cacaoyères des districts d'Ahafo Ano South East et d'Ahafo Ano South West, dans la région Ashanti du Ghana.",
+        "Le projet a été lancé en 2023 dans dix communautés et, à la suite de son succès, a été renouvelé pour deux années supplémentaires (2025–2026) et étendu à 20 communautés. En collaboration avec le Ghana Education Service, les autorités traditionnelles, les écoles, les parents et les bénévoles communautaires, le projet vise à garantir aux enfants un accès régulier à des opportunités de lecture stimulantes, à des livres de qualité et à des environnements d'apprentissage favorables.",
+        "**Investir dans l'apprentissage et l'avenir des enfants**",
+        "La rénovation de la bibliothèque de l'école Amangoase D/A JHS représente bien plus qu'une amélioration de l'infrastructure physique de l'école. Il s'agit d'un investissement dans la curiosité, l'imagination, la confiance et l'avenir éducatif des enfants.",
+        "Grâce à son partenariat avec la Magic Libraries Foundation, PDA Africa continue de soutenir les efforts visant à créer des environnements d'apprentissage où les enfants peuvent accéder à des livres, explorer de nouvelles idées et découvrir le plaisir de la lecture. Le Cocoa Communities' Library Project démontre comment la collaboration entre partenaires de développement, écoles et communautés peut élargir les opportunités d'apprentissage et aider les enfants des communautés cacaoyères à bâtir des bases plus solides pour l'avenir.",
+      ],
+      keyOutcomes: [
+        "Troisième bibliothèque rénovée dans le cadre du Cocoa Communities' Library Project (CCLP)",
+        "Transformée en un espace accueillant et adapté aux enfants, avec du nouveau mobilier, un nouveau carrelage et des livres adaptés à leur âge",
+        "Officiellement remise à l'école et à la communauté, les autorités locales s'engageant à en assurer l'entretien",
+        "Les enfants arrivent désormais tôt et avec enthousiasme aux séances de lecture, traduisant un intérêt renouvelé pour la lecture",
+      ],
+    },
+  },
   {
     id: 10,
     slug: "akosua-larry-poultry-business-fbs",
@@ -44,7 +124,31 @@ export const impactStoriesRaw = [
         "Demonstrates how financial inclusion and FBS training strengthen agency and transform livelihoods",
       ],
     },
-    fr: {},
+    fr: {
+      date: "8 octobre 2026",
+      title: "Voir mon élevage de volailles comme une entreprise",
+      description:
+        "Pour Akosua Larry, la formation Farmer Business School dispensée par son AVEC a fait bien plus qu'ajouter une compétence — elle a transformé sa façon de percevoir, d'analyser et de saisir les opportunités économiques, faisant de son élevage de volailles une entreprise réfléchie.",
+      category: "Inclusion financière",
+      location: "Chiefkrom, municipalité d'Asunafo North, Goaso",
+      person: "Akosua Larry",
+      project: "Groupe AVEC Dua Biako",
+      fullContent: [
+        "Akosua Larry est la gardienne de caisse (Box Keeper) du groupe AVEC Dua Biako à Chiefkrom, dans la municipalité d'Asunafo North à Goaso, où elle élève également des volailles comme principale source de revenus.",
+        "Son histoire illustre une dimension importante du développement : la transformation la plus durable survient lorsque les interventions vont au-delà de l'accès aux ressources et commencent à transformer la façon dont les individus perçoivent, analysent et saisissent les opportunités économiques. Grâce à l'AVEC et, en particulier, à la formation Farmer Business School (FBS) qui a suivi, Akosua considère de plus en plus son élevage de volailles non plus simplement comme une activité de subsistance, mais comme une entreprise nécessitant une attention particulière aux structures de coûts, à la tarification, à la rentabilité, aux décisions d'investissement et à la croissance durable.",
+        "« Avant de rejoindre l'AVEC et de participer aux formations qui ont suivi, je voyais surtout mon élevage de volailles comme un moyen de subsistance. Aujourd'hui, je le vois différemment. Je considère désormais mon élevage comme une entreprise », a déclaré Akosua. « La FBS m'a appris à porter une attention plus grande à mes coûts et à ma tarification. J'examine désormais combien je dépense, combien je facture, et ce qu'il me reste après mes dépenses. J'ai commencé à réfléchir plus attentivement à la rentabilité et à me poser une question importante : que rapporte réellement mon entreprise ? »",
+        "La formation a également changé la façon dont Akosua prend ses décisions d'investissement. Plutôt que d'agir simplement parce qu'une opportunité se présente, elle prend désormais le temps d'évaluer les coûts et les bénéfices potentiels avant de décider si cela est pertinent pour son entreprise — un changement qui l'a rendue plus réfléchie quant à l'endroit où elle place son argent et à la façon dont elle planifie l'avenir.",
+        "« Mon objectif n'est plus simplement de poursuivre mon activité d'élevage de volailles. Je veux bâtir une entreprise durable et en croissance », a-t-elle dit. « Ce qui a commencé comme une activité de subsistance devient progressivement une entreprise réfléchie. Je suis fière du chemin parcouru et j'ai hâte de développer encore davantage mon entreprise. »",
+        "Le témoignage d'Akosua est plus qu'une réussite individuelle. Il offre une démonstration concrète de la façon dont l'inclusion financière, le transfert de connaissances et la capacité entrepreneuriale peuvent converger pour renforcer l'autonomie et transformer les moyens de subsistance, faisant passer des activités orientées vers la subsistance à des entreprises économiques réfléchies.",
+        "La Farmer Business School est l'un des modules essentiels de renforcement des capacités que le PDA dispense à travers ses groupes AVEC, aux côtés des sessions sur l'alphabétisation financière, la transformation des rapports de genre et la protection de l'enfance. Elle dote les membres d'outils pratiques pour l'établissement des coûts, la tarification, la tenue des registres et la planification des investissements, les aidant à passer d'activités informelles génératrices de revenus à des entreprises gérées de façon plus réfléchie et rentable — un changement que reflète le propre témoignage d'Akosua sur son élevage de volailles.",
+      ],
+      keyOutcomes: [
+        "A appris à suivre les coûts, la tarification et la rentabilité grâce à la formation Farmer Business School",
+        "Est passée d'un élevage de volailles de subsistance à une entreprise gérée de façon réfléchie et analysée",
+        "A gagné en confiance pour évaluer les coûts et les bénéfices avant de prendre des décisions d'investissement",
+        "Démontre comment l'inclusion financière et la formation FBS renforcent l'autonomie et transforment les moyens de subsistance",
+      ],
+    },
   },
   {
     id: 9,

@@ -34,6 +34,7 @@ export function localizeNewsArticle(article, language) {
     slug: article.slug,
     type: article.type,
     image: article.image,
+    galleryImages: article.galleryImages || [],
     dateIso: article.dateIso,
     date: bundle.date,
     title: bundle.title,

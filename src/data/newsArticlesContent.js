@@ -7,7 +7,11 @@
  * 3) Fill the `en` object completely (date, title, description, category, location, fullContent[], additionalInfo[]).
  * 4) Fill the `fr` object with the same keys. If French is not ready yet, you may omit a field in `fr`:
  *    it will fall back to English for that field only.
- * 5) Optional top-level: `recordingUrl`, `sourceUrl`.
+ * 5) Optional top-level: `recordingUrl`, `sourceUrl`, `galleryImageKeys` (extra
+ *    photos shown below the article, each openable in a lightbox). Entries
+ *    can be a plain string (`"someImageKey"`) or `{ imageKey, caption }` to
+ *    label the photo (e.g. "Before"/"After"); `imageKey` must match an export
+ *    name in `src/assets/images/index.js`.
  */
 
 export const newsArticlesRaw = [
@@ -785,6 +789,81 @@ export const newsArticlesRaw = [
         "Venue: Palms by Eagles Hotel, Ghana",
         "Participants: 24 young leaders (12 from Ghana, 12 from Canada)",
         "Theme: #InternationalYouthDay — youth employment and entrepreneurship",
+      ],
+    },
+  },
+  {
+    id: 16,
+    slug: "pda-magic-libraries-foundation-renovate-library-amangoase-da-jhs",
+    type: "news",
+    imageKey: "amangoaseLibrary",
+    galleryImageKeys: [
+      { imageKey: "amangoaseBefore", caption: "Before" },
+      { imageKey: "amangoaseAfter", caption: "After" },
+    ],
+    dateIso: "2026-10-18",
+    en: {
+      date: "October 18, 2026",
+      title: "PDA Africa and Magic Libraries Foundation Renovate Library at Amangoase D/A JHS",
+      description:
+        "PDA Africa, in partnership with the Magic Libraries Foundation, has renovated the library at Amangoase D/A Junior High School in the Ashanti Region under the Cocoa Communities' Library Project (CCLP), strengthening children's literacy in cocoa-growing communities.",
+      category: "Education",
+      location: "Amangoase, Ashanti Region, Ghana",
+      fullContent: [
+        "**Strengthening children's literacy and promoting a culture of reading in cocoa-growing communities.**",
+        "PDA Africa, in partnership with the Magic Libraries Foundation, has renovated the library at Amangoase D/A Junior High School (JHS) in the Ashanti Region under the Cocoa Communities' Library Project (CCLP). The renovation marks the third library improvement undertaken through the project, reinforcing ongoing efforts to promote literacy and improve children's access to quality reading materials in cocoa-growing communities.",
+        "The renovation has transformed the school's library into a more welcoming, child-friendly learning environment designed to encourage reading, exploration, and independent learning. Improvements included fresh painting, floor tiling, new furniture, and a collection of age-appropriate books to support children's reading and learning beyond the classroom.",
+        "The renovated library was formally handed over to the school and community, with the headmistress, chief, School Management Committee (SMC) chairman and school authorities receiving it and committing to its care and continued use for the benefit of the children.",
+        "The value of the library extends beyond the school environment. Eric Brunye, CCLP Patron, shared that conversations with parents had revealed a strong appreciation for the facility and its anticipated contribution to their children's learning. \"From conversations with some parents, the community greatly appreciates the library and the positive impact it will have on their children's learning,\" he noted.",
+        "**A Welcoming Space Where Children Can Discover Reading**",
+        "For the children who use the library, the improvements offer an opportunity to experience reading as an enjoyable activity, not simply a classroom requirement. Janet, a member of the school's reading club, described the library as a place where children feel comfortable exploring books at their own pace. \"The library is a fun and welcoming place to be and we are able to read freely,\" she said.",
+        "The enthusiasm is evident in the children's eagerness to participate in reading activities. Esther Osei, the school's headmistress, observed that the children are often so excited about the library that they arrive before the scheduled reading sessions begin. \"The children love the library so much that they can't wait for reading time! Some even arrive before it's time to start. It's wonderful to see their excitement for reading!\" she shared.",
+        "These experiences reflect the importance of creating inviting spaces where children can develop positive reading habits, build confidence and cultivate a lasting interest in learning.",
+        "**Promoting Literacy in Cocoa-Growing Communities**",
+        "The Cocoa Communities' Library Project (CCLP) is a partnership between Participatory Development Associates (PDA) and the Magic Libraries Foundation aimed at improving children's reading literacy and nurturing a lasting culture of reading in cocoa-growing communities in the Ahafo Ano South East and Ahafo Ano South West Districts of Ghana's Ashanti Region.",
+        "The project was launched in 2023 in ten communities and, following its success, was renewed for a further two years (2025–2026) and expanded to reach 20 communities. Working alongside the Ghana Education Service, traditional authorities, schools, parents and community volunteers, the project seeks to ensure that children have regular access to engaging reading opportunities, quality books and supportive learning environments.",
+        "**Investing in Children's Learning and Future**",
+        "The renovation of the Amangoase D/A JHS library represents more than an improvement to the school's physical infrastructure. It is an investment in children's curiosity, imagination, confidence, and educational future.",
+        "Through its partnership with the Magic Libraries Foundation, PDA Africa continues to support efforts to create learning environments where children can access books, explore new ideas, and discover the joy of reading. The Cocoa Communities' Library Project demonstrates how collaboration among development partners, schools and communities can expand learning opportunities and help children in cocoa-growing communities build a stronger foundation for the future.",
+      ],
+      additionalInfo: [
+        "Partner: Magic Libraries Foundation",
+        "Project: Cocoa Communities' Library Project (CCLP)",
+        "Location: Amangoase D/A JHS, Ashanti Region",
+        "Third library renovated under the CCLP",
+        "CCLP coverage: 20 communities in Ahafo Ano South East and Ahafo Ano South West Districts (2025–2026)",
+      ],
+    },
+    fr: {
+      date: "18 octobre 2026",
+      title: "PDA Africa et la Magic Libraries Foundation rénovent la bibliothèque de l'école Amangoase D/A JHS",
+      description:
+        "PDA Africa, en partenariat avec la Magic Libraries Foundation, a rénové la bibliothèque de l'école secondaire du premier cycle (JHS) d'Amangoase D/A dans la région Ashanti, dans le cadre du Cocoa Communities' Library Project (CCLP), renforçant l'alphabétisation des enfants dans les communautés cacaoyères.",
+      category: "Éducation",
+      location: "Amangoase, région Ashanti, Ghana",
+      fullContent: [
+        "**Renforcer l'alphabétisation des enfants et promouvoir une culture de la lecture dans les communautés cacaoyères.**",
+        "PDA Africa, en partenariat avec la Magic Libraries Foundation, a rénové la bibliothèque de l'école secondaire du premier cycle (JHS) d'Amangoase D/A dans la région Ashanti, dans le cadre du Cocoa Communities' Library Project (CCLP). Cette rénovation marque la troisième amélioration de bibliothèque réalisée dans le cadre du projet, renforçant les efforts continus visant à promouvoir l'alphabétisation et à améliorer l'accès des enfants à des supports de lecture de qualité dans les communautés cacaoyères.",
+        "La rénovation a transformé la bibliothèque de l'école en un environnement d'apprentissage plus accueillant et adapté aux enfants, conçu pour encourager la lecture, l'exploration et l'apprentissage autonome. Les améliorations ont inclus une nouvelle peinture, un carrelage de sol, du nouveau mobilier et une collection de livres adaptés à l'âge des enfants pour soutenir leur lecture et leur apprentissage au-delà de la salle de classe.",
+        "La bibliothèque rénovée a été officiellement remise à l'école et à la communauté, la directrice, le chef, le président du Comité de gestion scolaire (SMC) et les autorités scolaires l'ayant réceptionnée et s'étant engagés à en assurer l'entretien et l'utilisation continue au bénéfice des enfants.",
+        "La valeur de la bibliothèque dépasse le cadre scolaire. Eric Brunye, parrain du CCLP, a indiqué que les échanges avec les parents avaient révélé une forte appréciation de l'équipement et de sa contribution attendue à l'apprentissage de leurs enfants. « D'après les échanges avec certains parents, la communauté apprécie grandement la bibliothèque et l'impact positif qu'elle aura sur l'apprentissage de leurs enfants », a-t-il souligné.",
+        "**Un espace accueillant où les enfants peuvent découvrir la lecture**",
+        "Pour les enfants qui fréquentent la bibliothèque, les améliorations offrent l'occasion de vivre la lecture comme une activité agréable, et non simplement comme une obligation scolaire. Janet, membre du club de lecture de l'école, a décrit la bibliothèque comme un lieu où les enfants se sentent à l'aise pour explorer les livres à leur propre rythme. « La bibliothèque est un lieu amusant et accueillant, et nous pouvons y lire librement », a-t-elle déclaré.",
+        "Cet enthousiasme se traduit par l'empressement des enfants à participer aux activités de lecture. Esther Osei, directrice de l'école, a observé que les enfants sont souvent si enthousiastes à l'idée de se rendre à la bibliothèque qu'ils arrivent avant le début des séances de lecture prévues. « Les enfants aiment tellement la bibliothèque qu'ils ne peuvent pas attendre l'heure de la lecture ! Certains arrivent même avant l'heure prévue. C'est merveilleux de voir leur enthousiasme pour la lecture ! », a-t-elle partagé.",
+        "Ces expériences reflètent l'importance de créer des espaces accueillants où les enfants peuvent développer de bonnes habitudes de lecture, gagner en confiance et cultiver un intérêt durable pour l'apprentissage.",
+        "**Promouvoir l'alphabétisation dans les communautés cacaoyères**",
+        "Le Cocoa Communities' Library Project (CCLP) est un partenariat entre Participatory Development Associates (PDA) et la Magic Libraries Foundation, visant à améliorer l'alphabétisation des enfants et à cultiver une culture durable de la lecture dans les communautés cacaoyères des districts d'Ahafo Ano South East et d'Ahafo Ano South West, dans la région Ashanti du Ghana.",
+        "Le projet a été lancé en 2023 dans dix communautés et, à la suite de son succès, a été renouvelé pour deux années supplémentaires (2025–2026) et étendu à 20 communautés. En collaboration avec le Ghana Education Service, les autorités traditionnelles, les écoles, les parents et les bénévoles communautaires, le projet vise à garantir aux enfants un accès régulier à des opportunités de lecture stimulantes, à des livres de qualité et à des environnements d'apprentissage favorables.",
+        "**Investir dans l'apprentissage et l'avenir des enfants**",
+        "La rénovation de la bibliothèque de l'école Amangoase D/A JHS représente bien plus qu'une amélioration de l'infrastructure physique de l'école. Il s'agit d'un investissement dans la curiosité, l'imagination, la confiance et l'avenir éducatif des enfants.",
+        "Grâce à son partenariat avec la Magic Libraries Foundation, PDA Africa continue de soutenir les efforts visant à créer des environnements d'apprentissage où les enfants peuvent accéder à des livres, explorer de nouvelles idées et découvrir le plaisir de la lecture. Le Cocoa Communities' Library Project démontre comment la collaboration entre partenaires de développement, écoles et communautés peut élargir les opportunités d'apprentissage et aider les enfants des communautés cacaoyères à bâtir des bases plus solides pour l'avenir.",
+      ],
+      additionalInfo: [
+        "Partenaire : Magic Libraries Foundation",
+        "Projet : Cocoa Communities' Library Project (CCLP)",
+        "Lieu : école Amangoase D/A JHS, région Ashanti",
+        "Troisième bibliothèque rénovée dans le cadre du CCLP",
+        "Couverture du CCLP : 20 communautés dans les districts d'Ahafo Ano South East et d'Ahafo Ano South West (2025–2026)",
       ],
     },
   },
