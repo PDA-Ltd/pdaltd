@@ -12,6 +12,11 @@ import { useTranslation } from "../hooks/useTranslation";
 
 const VALID_SLUG = /^[a-z0-9-]+$/;
 
+// Slugs to keep out of this homepage carousel specifically — the projects
+// themselves still live on the full Projects page, they're just excluded
+// here so the slider surfaces other recent work instead.
+const HOMEPAGE_EXCLUDED_SLUGS = new Set(["vsla-child-ivory-coast", "vsla-gals-cameroon"]);
+
 const CurrentProjects = () => {
   const navigate = useNavigate();
   const { language } = useTranslation();
@@ -23,6 +28,7 @@ const CurrentProjects = () => {
     const eligible = projects.filter(
       (project) =>
         VALID_SLUG.test(project.slug || "") &&
+        !HOMEPAGE_EXCLUDED_SLUGS.has(project.slug) &&
         (project.status === "Active" || project.status === "Ongoing")
     );
 
