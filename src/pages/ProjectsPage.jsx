@@ -258,7 +258,9 @@ const ProjectsPage = () => {
       return matchesSearch && matchesCategory && matchesDate && matchesPartner && matchesCountry;
     });
 
-    // Keep newly added featured projects at the top while preserving default order for others.
+    // Keep newly added featured projects at the top; arrange everything else
+    // alphabetically by title (this is the default order, before any filter
+    // narrows the list — filtering doesn't change the ordering rule itself).
     return filtered.sort((a, b) => {
       const aIndex = FEATURED_PROJECT_SLUGS.indexOf(a.slug);
       const bIndex = FEATURED_PROJECT_SLUGS.indexOf(b.slug);
@@ -268,7 +270,7 @@ const ProjectsPage = () => {
       if (aFeatured && bFeatured) return aIndex - bIndex;
       if (aFeatured) return -1;
       if (bFeatured) return 1;
-      return 0;
+      return (a.title || "").localeCompare(b.title || "", language, { sensitivity: "base" });
     });
   }, [searchQuery, selectedCategory, selectedDate, selectedPartner, selectedCountry, allValue, language, projectsToSearch, getProjectField, mapCategoryToFilter]);
 
