@@ -257,7 +257,7 @@ export const en = {
     title: "Publications",
     latestEpisodes: "Latest Episodes",
     signUpToday: "Sign Up Today",
-    subscriptionSuccess: "Thank you! Your subscription request has been sent.",
+    subscriptionSuccess: "You've been added to our mailing list.",
     subscribeTitle: "SUBSCRIBE TO OUR NEWSLETTERS",
     subscribeDescription: "Stay up to date with PDA research, insights and events on your topics of interest",
     privacyNote: "We only use your email address to send you the newsletter and to see how many people are opening our emails. Please read our full privacy policy",
@@ -538,6 +538,18 @@ export const en = {
     viewPublications: "View Publications",
     recordingLink: "Access the full recording of the session here",
     photoGallery: "Photo Gallery",
+  },
+  // Mailing List Popup
+  mailingListPopup: {
+    badge: "Stay Updated",
+    title: "Join our mailing list",
+    description:
+      "Get the latest PDA updates, publications, and event highlights directly in your inbox.",
+    emailLabel: "Email address",
+    emailPlaceholder: "Enter your email address",
+    subscribe: "Subscribe",
+    maybeLater: "Maybe later",
+    closeLabel: "Close subscription popup",
   },
   // Partners Page
   partnersPage: {

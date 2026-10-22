@@ -82,7 +82,7 @@ const MailingListPopup = ({ isOpen, onClose }) => {
               type="button"
               onClick={onClose}
               className="absolute right-3 top-3 p-2 text-gray-500 hover:text-orange/80 transition-colors"
-              aria-label="Close subscription popup"
+              aria-label={t("mailingListPopup.closeLabel")}
             >
               <FaTimes />
             </button>
@@ -90,19 +90,19 @@ const MailingListPopup = ({ isOpen, onClose }) => {
             <div className="mb-5">
               <p className="inline-flex items-center gap-2 text-xs uppercase tracking-wide font-semibold text-orange bg-orange/10 px-3 py-1 rounded-full">
                 <FaEnvelope />
-                Stay Updated
+                {t("mailingListPopup.badge")}
               </p>
               <h3 className="mt-4 text-2xl font-bold text-ash leading-tight">
-                Join our mailing list
+                {t("mailingListPopup.title")}
               </h3>
               <p className="mt-2 text-gray-600">
-                Get the latest PDA updates, publications, and event highlights directly in your inbox.
+                {t("mailingListPopup.description")}
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-3">
               <label htmlFor="mailing-list-email" className="sr-only">
-                Email address
+                {t("mailingListPopup.emailLabel")}
               </label>
               <input
                 id="mailing-list-email"
@@ -111,7 +111,7 @@ const MailingListPopup = ({ isOpen, onClose }) => {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 className="w-full rounded-lg border-2 border-gray-200 px-4 py-3 focus:outline-none focus:border-orange"
-                placeholder="Enter your email address"
+                placeholder={t("mailingListPopup.emailPlaceholder")}
               />
 
               {submitStatus === "success" && (
@@ -143,14 +143,14 @@ const MailingListPopup = ({ isOpen, onClose }) => {
                   disabled={isSubmitting}
                   className="flex-1 rounded-lg bg-orange text-white font-semibold py-3 hover:bg-orange/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? t("common.loading") : "Subscribe"}
+                  {isSubmitting ? t("common.loading") : t("mailingListPopup.subscribe")}
                 </button>
                 <button
                   type="button"
                   onClick={onClose}
                   className="flex-1 rounded-lg border border-gray-300 text-gray-700 font-semibold py-3 hover:bg-gray-100 transition-colors"
                 >
-                  Maybe later
+                  {t("mailingListPopup.maybeLater")}
                 </button>
               </div>
             </form>

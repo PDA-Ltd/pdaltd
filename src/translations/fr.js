@@ -257,7 +257,7 @@ export const fr = {
     title: "Publications",
     latestEpisodes: "Derniers Épisodes",
     signUpToday: "S'inscrire Aujourd'hui",
-    subscriptionSuccess: "Merci! Votre demande d'abonnement a été envoyée.",
+    subscriptionSuccess: "Votre adresse a été ajoutée à notre liste de diffusion.",
     subscribeTitle: "S'ABONNER À NOS NEWSLETTERS",
     subscribeDescription: "Restez à jour avec les recherches, les informations et les événements de PDA sur vos sujets d'intérêt",
     privacyNote: "Nous utilisons uniquement votre adresse e-mail pour vous envoyer la newsletter et pour voir combien de personnes ouvrent nos e-mails. Veuillez lire notre politique de confidentialité complète",
@@ -538,6 +538,18 @@ export const fr = {
     viewPublications: "Voir les Publications",
     recordingLink: "Accéder à l’enregistrement complet de la session ici",
     photoGallery: "Galerie photo",
+  },
+  // Mailing List Popup
+  mailingListPopup: {
+    badge: "Restez Informé",
+    title: "Rejoignez notre liste de diffusion",
+    description:
+      "Recevez les dernières actualités, publications et temps forts du PDA directement dans votre boîte de réception.",
+    emailLabel: "Adresse e-mail",
+    emailPlaceholder: "Saisissez votre adresse e-mail",
+    subscribe: "S'abonner",
+    maybeLater: "Plus tard",
+    closeLabel: "Fermer la fenêtre d'abonnement",
   },
   // Partners Page
   partnersPage: {
