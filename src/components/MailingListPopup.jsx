@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTimes, FaEnvelope } from "react-icons/fa";
+import { FaTimes, FaEnvelope, FaCheckCircle } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const MailingListPopup = ({ isOpen, onClose }) => {
+  const { t, currentLanguage } = useTranslation();
   const [email, setEmail] = useState("");
-  const mailingListRecipients = "info@pdaghana.com,amensah@pdaghana.com,gmyamoah@pdaghana.com";
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -19,18 +22,42 @@ const MailingListPopup = ({ isOpen, onClose }) => {
     return () => window.removeEventListener("keydown", onEsc);
   }, [isOpen, onClose]);
 
-  const handleSubmit = (event) => {
+  // The popup stays mounted between openings, so clear previous state on close.
+  useEffect(() => {
+    if (isOpen) return;
+    setEmail("");
+    setIsSubmitting(false);
+    setSubmitStatus(null);
+  }, [isOpen]);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!email.trim()) return;
 
-    const subject = encodeURIComponent("Newsletter Subscription");
-    const body = encodeURIComponent(
-      `Please add this email to the PDA mailing list:\n\nEmail: ${email.trim()}`
-    );
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    window.location.href = `mailto:${mailingListRecipients}?subject=${subject}&body=${body}`;
-    onClose();
-    setEmail("");
+    try {
+      const response = await fetch("/api/newsletter-signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Signup failed");
+      }
+
+      setSubmitStatus("success");
+      setEmail("");
+      // Give the subscriber a moment to see the confirmation before it closes.
+      window.setTimeout(onClose, 2500);
+    } catch (err) {
+      console.error("Mailing list signup error:", err);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -86,12 +113,37 @@ const MailingListPopup = ({ isOpen, onClose }) => {
                 className="w-full rounded-lg border-2 border-gray-200 px-4 py-3 focus:outline-none focus:border-orange"
                 placeholder="Enter your email address"
               />
+
+              {submitStatus === "success" && (
+                <motion.div
+                  className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg flex items-center gap-2"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  <FaCheckCircle />
+                  <span>{t("publications.subscriptionSuccess")}</span>
+                </motion.div>
+              )}
+
+              {submitStatus === "error" && (
+                <motion.div
+                  className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  {currentLanguage === "fr"
+                    ? "Une erreur s'est produite. Veuillez réessayer plus tard."
+                    : "Something went wrong. Please try again later."}
+                </motion.div>
+              )}
+
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   type="submit"
-                  className="flex-1 rounded-lg bg-orange text-white font-semibold py-3 hover:bg-orange/90 transition-colors"
+                  disabled={isSubmitting}
+                  className="flex-1 rounded-lg bg-orange text-white font-semibold py-3 hover:bg-orange/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Subscribe
+                  {isSubmitting ? t("common.loading") : "Subscribe"}
                 </button>
                 <button
                   type="button"
