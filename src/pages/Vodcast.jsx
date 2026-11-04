@@ -19,7 +19,7 @@ const Vodcast = () => {
   ];
 
   const platforms = [
-    { name: "YouTube", icon: FaYoutube, color: "text-red-600", link: "https://www.youtube.com/@pdatv3656" },
+    { name: "YouTube", icon: FaYoutube, color: "text-red-600", link: "https://www.youtube.com/@official_pdatv" },
     { name: "Vimeo", icon: FaVimeo, color: "text-blue-500", link: "https://vimeo.com" },
   ];
 

@@ -88,7 +88,7 @@
 //             Videos
 //           </h3>
 
-//           <a href="https://www.youtube.com/@pdatv3656/playlists">
+//           <a href="https://www.youtube.com/@official_pdatv/playlists">
 //             <Tab label="MORE VIDEOS" />
 //           </a>
 //         </div>
@@ -135,7 +135,7 @@ const VideoGallery = () => {
             Videos
           </h3>
           <a
-            href="https://www.youtube.com/@pdatv3656/playlists"
+            href="https://www.youtube.com/@official_pdatv/playlists"
             target="_blank"
             rel="noopener noreferrer"
           >

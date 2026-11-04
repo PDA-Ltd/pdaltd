@@ -144,7 +144,7 @@ const Videos = () => {
           whileTap={{ scale: 0.95 }}
         >
           <a
-            href="https://www.youtube.com/@pdatv3656/playlists"
+            href="https://www.youtube.com/@official_pdatv/playlists"
             target="_blank"
             rel="noopener noreferrer"
           >

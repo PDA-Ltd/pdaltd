@@ -130,7 +130,7 @@ export const socialMedia = [
   {
     src: youtube,
     alt: "youtube logo",
-    link: "https://www.youtube.com/@pdatv3656",
+    link: "https://www.youtube.com/@official_pdatv",
   },
   {
     src: facebook,
@@ -154,7 +154,7 @@ export const whiteMedia = [
   {
     src: whiteYoutube,
     alt: "youtube logo",
-    link: "https://www.youtube.com/@pdatv3656",
+    link: "https://www.youtube.com/@official_pdatv",
   },
   {
     src: whiteFacebook,
