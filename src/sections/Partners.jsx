@@ -41,7 +41,7 @@ const Partners = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Our Partners
+            {t("home.partners.title")}
           </motion.h2>
           <motion.div
             className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
@@ -58,7 +58,7 @@ const Partners = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Trusted by leading organizations worldwide
+          {t("home.partners.subtitle")}
         </motion.p>
       </motion.div>
 

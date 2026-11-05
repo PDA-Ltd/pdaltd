@@ -104,7 +104,7 @@ const Hero = () => {
           <button
             key={index}
             type="button"
-            aria-label={`Show slide ${index + 1}`}
+            aria-label={`${t("common.showSlide")} ${index + 1}`}
             onClick={() => setActiveSlide(index)}
             className={`h-2 rounded-full transition-all ${
               index === activeSlide ? "w-6 bg-white" : "w-2 bg-white/50"

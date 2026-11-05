@@ -40,6 +40,45 @@ export const fr = {
   work: {
     whereWeWork: "Où Nous Travaillons",
     description: "PDA est une organisation de développement social au Ghana avec des opérations en Côte d'Ivoire, au Bénin, au Nigeria, au Cameroun, en Égypte, au Kenya, au Maroc, au Sénégal, en Ouganda et dans d'autres pays africains",
+    mapAlt: "Carte des pays africains où PDA intervient",
+  },
+  // Homepage Sections
+  home: {
+    impact: {
+      title: "Notre Impact",
+      peopleReached: "Personnes touchées",
+      peopleReachedDescription: "Personnes directement touchées par nos programmes",
+      projects: "Projets",
+      projectsDescription: "Projets menés à bien",
+      partners: "Partenaires",
+      partnersDescription: "Partenariats de collaboration à travers le monde",
+      countries: "Pays",
+      countriesDescription: "Opérations actives en Afrique subsaharienne",
+    },
+    whatWeDo: {
+      title: "Ce Que Nous Faisons",
+      serviceLabel: "Service",
+      exploreAll: "Découvrir Tous Nos Services",
+    },
+    currentProjects: {
+      title: "Projets En Cours",
+      subtitle: "Découvrez nos initiatives en cours en Afrique subsaharienne",
+      viewAll: "Voir Tous Les Projets",
+    },
+    updates: {
+      title: "Actualités et Événements",
+      subtitle: "Suivez nos dernières activités et événements",
+    },
+    partners: {
+      title: "Nos Partenaires",
+      subtitle: "La confiance d'organisations de premier plan à travers le monde",
+    },
+    cta: {
+      title: "Prêt à Avoir un Impact ?",
+      subtitle: "Devenez notre partenaire pour créer un changement durable dans les communautés d'Afrique subsaharienne",
+      getInTouch: "Nous Contacter",
+      exploreWork: "Découvrir Nos Activités",
+    },
   },
   // Common
   common: {
@@ -71,6 +110,16 @@ export const fr = {
     notFound: "Contenu non trouvé",
     backToNews: "Retour aux Actualités et Activités",
     keyPoints: "Points Clés",
+    next: "Suivant",
+    previous: "Précédent",
+    goToSlide: "Aller à la diapositive",
+    showSlide: "Afficher la diapositive",
+    primaryNavigation: "Navigation principale",
+    toggleMenu: "Afficher ou masquer le menu",
+    changeLanguage: "Changer de langue",
+    quickLinks: "Liens Rapides",
+    followUs: "Suivez-nous",
+    signupError: "Une erreur s'est produite. Veuillez réessayer plus tard.",
   },
   // Footer
   footer: {

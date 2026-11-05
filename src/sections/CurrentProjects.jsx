@@ -19,7 +19,7 @@ const HOMEPAGE_EXCLUDED_SLUGS = new Set(["vsla-child-ivory-coast", "vsla-gals-ca
 
 const CurrentProjects = () => {
   const navigate = useNavigate();
-  const { language } = useTranslation();
+  const { t, language } = useTranslation();
 
   // Show the 6 most recently added projects (Active/Ongoing), auto-rotating as new
   // ones are appended to projectsRawContent.json — no manual slug list to maintain.
@@ -49,7 +49,7 @@ const CurrentProjects = () => {
     <button
       onClick={onClick}
       className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
-      aria-label="Next"
+      aria-label={t("common.next")}
     >
       <FaChevronRight className="text-orange group-hover:text-orange/80 transition-colors text-xl" />
     </button>
@@ -60,7 +60,7 @@ const CurrentProjects = () => {
     <button
       onClick={onClick}
       className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
-      aria-label="Previous"
+      aria-label={t("common.previous")}
     >
       <FaChevronLeft className="text-orange group-hover:text-orange/80 transition-colors text-xl" />
     </button>
@@ -124,7 +124,7 @@ const CurrentProjects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              Current Projects
+              {t("home.currentProjects.title")}
             </motion.h2>
             <motion.div
               className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
@@ -141,7 +141,7 @@ const CurrentProjects = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            Explore our active initiatives across Sub-Saharan Africa
+            {t("home.currentProjects.subtitle")}
           </motion.p>
         </motion.div>
 
@@ -213,7 +213,7 @@ const CurrentProjects = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Link to="/our-projects">
-            <Button label="View All Projects >>>" />
+            <Button label={`${t("home.currentProjects.viewAll")} >>>`} />
           </Link>
         </motion.div>
       </div>

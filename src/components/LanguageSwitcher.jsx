@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
 import { FaGlobe } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const LanguageSwitcher = () => {
   const { language, changeLanguage } = useLanguage();
+  const { t } = useTranslation();
 
   const languages = [
     { code: "en", name: "EN", flag: "🇬🇧" },
@@ -16,7 +18,7 @@ const LanguageSwitcher = () => {
         className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        aria-label="Change language"
+        aria-label={t("common.changeLanguage")}
       >
         <FaGlobe className="text-gray-700 text-lg" />
         <span className="font-semibold text-gray-700">{language.toUpperCase()}</span>

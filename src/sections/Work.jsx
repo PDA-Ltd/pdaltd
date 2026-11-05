@@ -28,7 +28,7 @@ const Work = () => {
           >
             <img
               src={map}
-              alt="Map"
+              alt={t("work.mapAlt")}
               className="object-contain w-full max-w-full h-auto shadow-2xl rounded-2xl"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-orange/10 to-orange/10 rounded-2xl -z-10 blur-xl"></div>

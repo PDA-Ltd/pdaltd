@@ -4,7 +4,7 @@ import { FaTimes, FaEnvelope, FaCheckCircle } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const MailingListPopup = ({ isOpen, onClose }) => {
-  const { t, currentLanguage } = useTranslation();
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -131,9 +131,7 @@ const MailingListPopup = ({ isOpen, onClose }) => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  {currentLanguage === "fr"
-                    ? "Une erreur s'est produite. Veuillez réessayer plus tard."
-                    : "Something went wrong. Please try again later."}
+                  {t("common.signupError")}
                 </motion.div>
               )}
 

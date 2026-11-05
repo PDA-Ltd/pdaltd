@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import { FaArrowRight } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const CTASection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full py-20 md:py-32 bg-gradient-to-r from-orange via-orange/95 to-orange relative overflow-hidden">
       {/* Animated Background Pattern */}
@@ -28,10 +31,10 @@ const CTASection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Make an Impact?
+            {t("home.cta.title")}
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed">
-            Partner with us to create lasting change in communities across Sub-Saharan Africa
+            {t("home.cta.subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <motion.div
@@ -44,7 +47,7 @@ const CTASection = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Get In Touch
+                  {t("home.cta.getInTouch")}
                 </motion.button>
               </Link>
             </motion.div>
@@ -56,7 +59,7 @@ const CTASection = () => {
                 to="/our-projects"
                 className="inline-flex items-center justify-center gap-2 text-white text-base md:text-lg font-semibold border-2 border-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white/10 transition-all duration-300 group w-full sm:w-auto"
               >
-                Explore Our Work
+                {t("home.cta.exploreWork")}
                 <motion.span
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}

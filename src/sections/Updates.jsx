@@ -10,7 +10,7 @@ import { useTranslation } from "../hooks/useTranslation";
 
 const Updates = () => {
   const navigate = useNavigate();
-  const { language } = useTranslation();
+  const { t, language } = useTranslation();
 
   // Most recent 5 news/activities, auto-rotating as new ones are appended to
   // newsArticlesContent.js — same shared source as the News & Activities page.
@@ -24,7 +24,7 @@ const Updates = () => {
     <button
       onClick={onClick}
       className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
-      aria-label="Next"
+      aria-label={t("common.next")}
     >
       <FaChevronRight className="text-orange group-hover:text-orange/80 transition-colors text-xl" />
     </button>
@@ -35,7 +35,7 @@ const Updates = () => {
     <button
       onClick={onClick}
       className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
-      aria-label="Previous"
+      aria-label={t("common.previous")}
     >
       <FaChevronLeft className="text-orange group-hover:text-orange/80 transition-colors text-xl" />
     </button>
@@ -79,7 +79,7 @@ const Updates = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Updates & Events
+            {t("home.updates.title")}
           </motion.h2>
           <motion.div
             className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
@@ -96,7 +96,7 @@ const Updates = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Stay updated with our latest activities and events
+          {t("home.updates.subtitle")}
         </motion.p>
       </motion.div>
 

@@ -20,6 +20,9 @@ export const LanguageProvider = ({ children }) => {
   useEffect(() => {
     // Save language preference to localStorage
     localStorage.setItem("pda-language", language);
+    // Keep <html lang> in step so screen readers and search engines
+    // read the page in the language it's actually rendered in.
+    document.documentElement.lang = language;
   }, [language]);
 
   const changeLanguage = (lang) => {

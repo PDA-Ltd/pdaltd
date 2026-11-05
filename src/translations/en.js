@@ -40,6 +40,45 @@ export const en = {
   work: {
     whereWeWork: "Where We Work",
     description: "PDA is a social development organization in Ghana with operations in Cote D'Ivoire, Benin, Nigeria, Cameroon, Egypt, Kenya, Morocco, Senegal, Uganda, and other African countries",
+    mapAlt: "Map of the African countries where PDA operates",
+  },
+  // Homepage Sections
+  home: {
+    impact: {
+      title: "Our Impact",
+      peopleReached: "People Reached",
+      peopleReachedDescription: "Individuals directly impacted by our programs",
+      projects: "Projects",
+      projectsDescription: "Successful projects completed",
+      partners: "Partners",
+      partnersDescription: "Collaborative partnerships worldwide",
+      countries: "Countries",
+      countriesDescription: "Active operations across Sub-Saharan Africa",
+    },
+    whatWeDo: {
+      title: "What We Do",
+      serviceLabel: "Service",
+      exploreAll: "Explore All Services",
+    },
+    currentProjects: {
+      title: "Current Projects",
+      subtitle: "Explore our active initiatives across Sub-Saharan Africa",
+      viewAll: "View All Projects",
+    },
+    updates: {
+      title: "Updates & Events",
+      subtitle: "Stay updated with our latest activities and events",
+    },
+    partners: {
+      title: "Our Partners",
+      subtitle: "Trusted by leading organizations worldwide",
+    },
+    cta: {
+      title: "Ready to Make an Impact?",
+      subtitle: "Partner with us to create lasting change in communities across Sub-Saharan Africa",
+      getInTouch: "Get In Touch",
+      exploreWork: "Explore Our Work",
+    },
   },
   // Common
   common: {
@@ -71,6 +110,16 @@ export const en = {
     contact: "Contact",
     send: "Send",
     loading: "Loading...",
+    next: "Next",
+    previous: "Previous",
+    goToSlide: "Go to slide",
+    showSlide: "Show slide",
+    primaryNavigation: "Primary navigation",
+    toggleMenu: "Toggle menu",
+    changeLanguage: "Change language",
+    quickLinks: "Quick Links",
+    followUs: "Follow Us",
+    signupError: "Something went wrong. Please try again later.",
   },
   // Footer
   footer: {

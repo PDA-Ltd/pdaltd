@@ -5,7 +5,7 @@ import { FaEnvelope, FaCheckCircle } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const NewsletterForm = () => {
-  const { t, currentLanguage } = useTranslation();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -172,9 +172,7 @@ const NewsletterForm = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <span className="font-poppins">
-            {currentLanguage === "fr"
-              ? "Une erreur s'est produite. Veuillez réessayer plus tard."
-              : "Something went wrong. Please try again later."}
+            {t("common.signupError")}
           </span>
         </motion.div>
       )}

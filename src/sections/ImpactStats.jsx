@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FaUsers, FaGlobe, FaHandshake, FaAward } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const CountUpNumber = ({ end, suffix, delay = 0, color, isInView }) => {
   const [count, setCount] = useState(0);
@@ -48,38 +49,40 @@ const CountUpNumber = ({ end, suffix, delay = 0, color, isInView }) => {
 };
 
 const ImpactStats = () => {
+  const { t } = useTranslation();
+
   const stats = [
     {
       icon: FaUsers,
       number: 100000,
       suffix: "+",
-      label: "People Reached",
+      label: t("home.impact.peopleReached"),
       color: "orange",
-      description: "Individuals directly impacted by our programs",
+      description: t("home.impact.peopleReachedDescription"),
     },
     {
       icon: FaAward,
       number: 100,
       suffix: "+",
-      label: "Projects",
+      label: t("home.impact.projects"),
       color: "red",
-      description: "Successful projects completed",
+      description: t("home.impact.projectsDescription"),
     },
     {
       icon: FaHandshake,
       number: 50,
       suffix: "+",
-      label: "Partners",
+      label: t("home.impact.partners"),
       color: "orange",
-      description: "Collaborative partnerships worldwide",
+      description: t("home.impact.partnersDescription"),
     },
     {
       icon: FaGlobe,
       number: 8,
       suffix: "+",
-      label: "Countries",
+      label: t("home.impact.countries"),
       color: "red",
-      description: "Active operations across Sub-Saharan Africa",
+      description: t("home.impact.countriesDescription"),
     },
   ];
 
@@ -109,7 +112,7 @@ const ImpactStats = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              Our Impact
+              {t("home.impact.title")}
             </motion.h2>
             <motion.div
               className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"

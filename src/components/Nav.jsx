@@ -6,10 +6,12 @@ import { FaTimes, FaBars } from "react-icons/fa";
 import { pdaLogo } from "../assets/images";
 import Menu from "./Menu";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Nav = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     if (isMenuVisible) {
@@ -28,7 +30,7 @@ const Nav = () => {
       <div className="w-full h-3 bg-orange relative z-10"></div>
       <nav
         className="w-full shadow-3xl bg-white flex justify-around items-center relative z-10 px-4"
-        aria-label="Primary navigation"
+        aria-label={t("common.primaryNavigation")}
       >
         <motion.a
           href="/"
@@ -53,7 +55,7 @@ const Nav = () => {
             <button
               onClick={toggleMenu}
               className="sidebarIconToggle cursor-pointer w-[50px] h-[50px] z-[99] relative flex flex-col items-center justify-center"
-              aria-label="Toggle menu"
+              aria-label={t("common.toggleMenu")}
               aria-expanded={isMenuVisible}
               aria-controls="primary-menu-panel"
             >

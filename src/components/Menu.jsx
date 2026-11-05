@@ -117,7 +117,7 @@ const Menu = ({ onLinkClick }) => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <img src={search} alt="Search Icon" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+              <img src={search} alt="" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
               <span>{t("common.search").toUpperCase()}</span>
             </motion.button>
             <a
@@ -149,7 +149,7 @@ const Menu = ({ onLinkClick }) => {
           {/* Quick Links - Mobile & Tablet */}
           <div className="space-y-1">
             <h3 className="font-poppins font-semibold text-xs md:text-sm text-gray-500 uppercase tracking-wider mb-3 md:mb-4">
-              Quick Links
+              {t("common.quickLinks")}
             </h3>
             <div className="space-y-1">
               {navLinks.filter(section => !section.isSubOrg).map((section) => (
@@ -248,7 +248,7 @@ const Menu = ({ onLinkClick }) => {
           {/* Social Media - Mobile & Tablet */}
           <div className="pt-4 md:pt-5 border-t border-gray-200">
             <h3 className="font-poppins font-semibold text-xs md:text-sm text-gray-500 uppercase tracking-wider mb-3 md:mb-4">
-              Follow Us
+              {t("common.followUs")}
             </h3>
             <div className="flex gap-4 md:gap-5">
               {socialMedia.map((icon) => (
@@ -392,7 +392,7 @@ const Menu = ({ onLinkClick }) => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <img src={search} alt="Search Icon" className="w-4 h-4 lg:w-5 lg:h-5" />
+                <img src={search} alt="" className="w-4 h-4 lg:w-5 lg:h-5" />
                 <span>{t("common.search").toUpperCase()}</span>
               </motion.button>
               <a href="/contact" onClick={(e) => handleLinkClick(e, "/contact")} className="w-full">

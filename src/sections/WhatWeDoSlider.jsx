@@ -118,7 +118,7 @@ const WhatWeDoSlider = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              What We Do
+              {t("home.whatWeDo.title")}
             </motion.h2>
             <motion.div
               className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
@@ -246,7 +246,7 @@ const WhatWeDoSlider = () => {
                   <span className={`text-sm font-bold uppercase tracking-wider ${
                     currentService.accent === "orange" ? "text-orange" : "text-orange/90"
                   }`}>
-                    Service {currentService.number}
+                    {t("home.whatWeDo.serviceLabel")} {currentService.number}
                   </span>
                 </motion.div>
               </motion.div>
@@ -257,14 +257,14 @@ const WhatWeDoSlider = () => {
           <button
             onClick={prevSlide}
             className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-orange flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
-            aria-label="Previous"
+            aria-label={t("common.previous")}
           >
             <FaChevronLeft className="text-gray-600 group-hover:text-orange transition-colors text-base sm:text-lg md:text-xl" />
           </button>
           <button
             onClick={nextSlide}
             className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-orange flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
-            aria-label="Next"
+            aria-label={t("common.next")}
           >
             <FaChevronRight className="text-gray-600 group-hover:text-orange/80 transition-colors text-base sm:text-lg md:text-xl" />
           </button>
@@ -285,7 +285,7 @@ const WhatWeDoSlider = () => {
                       : "bg-orange/90 w-8"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
-                aria-label={`Go to slide ${index + 1}`}
+                aria-label={`${t("common.goToSlide")} ${index + 1}`}
               />
             ))}
           </div>
@@ -304,7 +304,7 @@ const WhatWeDoSlider = () => {
             className="group inline-flex items-center gap-4 text-black hover:text-orange transition-colors duration-300"
           >
             <span className="text-lg md:text-xl font-semibold uppercase tracking-wider">
-              Explore All Services
+              {t("home.whatWeDo.exploreAll")}
             </span>
             <motion.div
               className="w-12 h-12 rounded-full border-2 border-black group-hover:border-orange flex items-center justify-center"
