@@ -791,6 +791,34 @@ export const newsArticlesRaw = [
         "Theme: #InternationalYouthDay — youth employment and entrepreneurship",
       ],
     },
+    fr: {
+      date: "12 août 2026",
+      title:
+        "Le PDA participe à la cérémonie de clôture du 80e Séminaire international 2026 du WUSC-EUMC",
+      description:
+        "Participatory Development Associates Ltd. (PDA) s’est joint à l’Entraide universitaire mondiale du Canada (WUSC-EUMC) et à ses partenaires pour célébrer la Journée internationale de la jeunesse lors de la cérémonie de clôture du 80e Séminaire international 2026 du WUSC-EUMC au Ghana, qui a réuni 24 jeunes leaders du Ghana et du Canada pour un parcours d’échange culturel et de solutions portées par les jeunes.",
+      category: "Développement des jeunes",
+      location: "Accra, Ghana",
+      fullContent: [
+        "Participatory Development Associates Ltd. (PDA) s’est joint à l’Entraide universitaire mondiale du Canada (WUSC-EUMC) et à ses partenaires pour célébrer la Journée internationale de la jeunesse lors de la cérémonie de clôture du 80e Séminaire international 2026 du WUSC-EUMC au Ghana, qui s’est tenue à l’hôtel Palms by Eagles, anciennement connu sous le nom de Holiday Inn. La participation du PDA témoigne de sa relation de longue date avec le WUSC et de leur engagement commun en faveur d’initiatives qui favorisent la participation des jeunes, le développement inclusif, l’apprentissage et la création de véritables perspectives pour les jeunes. L’événement a réuni 24 jeunes leaders — 12 participants du Ghana et 12 du Canada — pour un parcours axé sur l’échange culturel, la collaboration, l’apprentissage et les solutions portées par les jeunes face aux défis qui les concernent.",
+        "La cérémonie a débuté par une séance de réseautage et d’inscription, suivie de photographies et d’une vidéo retraçant les moments forts du parcours des participants tout au long du Séminaire. La vidéo a capté les temps marquants d’apprentissage, d’échange culturel, de collaboration, d’amitié et de partage entre les participants ghanéens et canadiens.",
+        "Le programme a été officiellement ouvert par le discours de bienvenue d’Appiah Wiafe Adofo, directrice pays du WUSC, qui est revenue sur l’importance de la collaboration entre les jeunes et des partenariats internationaux pour promouvoir un développement inclusif. Cette intervention a été suivie de l’allocution principale de S.E. Myriam Montrat, haute-commissaire du Canada, qui a encouragé les jeunes à jouer un rôle actif dans la construction de l’avenir, rappelant aux participants que « l’avenir se construit, il ne s’hérite pas ».",
+        "Sakina Musa, coordinatrice du Séminaire international, a ensuite partagé ses réflexions, soulignant le parcours des participants et l’importance de l’apprentissage continu, de l’échange culturel et d’un engagement véritable des jeunes.",
+        "L’un des temps forts de la cérémonie a été la présentation des conclusions, des travaux de recherche et des données élaborés par les jeunes leaders au cours du Séminaire. Leurs travaux portaient sur l’avenir de l’emploi et de l’entrepreneuriat des jeunes, avec une attention particulière à l’offre et à la demande, à l’accès et à l’inclusion.",
+        "Les échanges ont mis en lumière les difficultés auxquelles se heurtent les jeunes dans l’économie numérique en pleine croissance du Ghana. Si les possibilités offertes par le numérique continuent de se multiplier, de nombreux jeunes — en particulier dans les communautés rurales et à faibles revenus — se heurtent à des obstacles tels que le coût élevé des données, un accès limité aux équipements et aux compétences numériques adaptés, et des difficultés d’accès à des financements abordables. Ces obstacles peuvent restreindre leur capacité à chercher un emploi, à développer des compétences numériques, à toucher des clients, à participer aux marchés en ligne et à faire croître leur entreprise.",
+        "Les notes d’orientation des participants ont donc exploré des pistes concrètes pour bâtir un écosystème de l’emploi des jeunes plus inclusif. Leurs conclusions ont souligné la nécessité de lever ensemble les obstacles liés à l’accès au numérique, au développement des compétences, au financement, à l’emploi et à l’entrepreneuriat, afin qu’un plus grand nombre de jeunes puissent tirer parti des perspectives qui émergent.",
+        "La cérémonie a également été l’occasion d’échanges culturels et de célébration. Une présentation culturelle a mis en valeur la diversité des participants ghanéens et canadiens, et des certificats ont été remis aux 24 jeunes leaders en reconnaissance de leur réussite au Séminaire et de leur engagement tout au long du programme.",
+        "Des représentants de la Ghana Chamber of Young Entrepreneurs (GCYE) et de Social Enterprise Ghana (SE Ghana) ont également échangé avec les participants sur l’entrepreneuriat des jeunes, le développement des entreprises et les perspectives qu’offre l’écosystème entrepreneurial ghanéen. Leurs interventions ont rappelé l’importance de renforcer les dispositifs d’accompagnement qui permettent aux jeunes de créer et de pérenniser des moyens de subsistance durables.",
+        "Le programme s’est achevé par un déjeuner partagé, des photographies, du réseautage et des échanges informels entre participants et partenaires. La cérémonie de clôture a célébré non seulement l’achèvement du Séminaire, mais aussi les relations, les savoirs et les idées nés de cet échange entre le Ghana et le Canada.",
+        "Pour le PDA, cet événement a réaffirmé la valeur des partenariats qui offrent aux jeunes un espace pour échanger des idées, gagner en confiance et contribuer à des solutions qui comptent pour leurs communautés. Le PDA demeure attaché aux idéaux portés par le WUSC et le projet IGNI+E : l’inclusion, le leadership des jeunes, l’échange culturel et l’action collective. Les enseignements et les points de vue partagés lors de l’événement viennent également renforcer le travail plus large du PDA en faveur d’un développement inclusif et de la création de véritables perspectives pour les jeunes au Ghana.",
+      ],
+      additionalInfo: [
+        "Événement : cérémonie de clôture du 80e Séminaire international 2026 du WUSC-EUMC",
+        "Lieu : hôtel Palms by Eagles, Ghana",
+        "Participants : 24 jeunes leaders (12 du Ghana, 12 du Canada)",
+        "Thème : Journée internationale de la jeunesse — emploi et entrepreneuriat des jeunes",
+      ],
+    },
   },
   {
     id: 16,

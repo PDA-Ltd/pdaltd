@@ -18,6 +18,16 @@ const mergeSectionContent = (frContent, enContent) => {
   return enContent;
 };
 
+/**
+ * `relatedDownload` lives on the row itself rather than inside the locale
+ * bundles, so its label needs an explicit French override: `fr.relatedDownload`.
+ * Only the label is translated — the url is shared.
+ */
+const mergeRelatedDownload = (base, frOverride) => {
+  if (!base) return base;
+  return { ...base, label: pickStr(frOverride?.label, base.label) };
+};
+
 const mergeAdditionalSections = (enSecs, frSecs) => {
   if (!enSecs?.length) return undefined;
   if (!frSecs?.length) return enSecs;
@@ -68,7 +78,10 @@ export function localizeProject(row, language) {
     image: row.image,
     color: row.color,
     detailLink: row.detailLink,
-    relatedDownload: row.relatedDownload,
+    relatedDownload: mergeRelatedDownload(
+      row.relatedDownload,
+      language === "fr" ? row.fr?.relatedDownload : null
+    ),
     ...bundle,
   };
 }
