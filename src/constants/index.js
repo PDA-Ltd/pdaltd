@@ -74,8 +74,7 @@ export const navLinks = [
   { href: "/child-abuse-tracker", label: "Child Abuse Tracker" },
   { href: "/covid-19", label: "COVID 19" },
   { href: "/#partners", label: "Partners" },
-  // Restore with Events page (see Events.jsx EVENTS_PAGE_BLURRED)
-  // { href: "/events", label: "Events" },
+  { href: "/events", label: "Events" },
 ];
 
 export const navigation = [

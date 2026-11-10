@@ -8,6 +8,11 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { getNewsArticlesForLocale } from "../data/newsAndActivitiesData.js";
 import { useTranslation } from "../hooks/useTranslation";
 
+// Slugs to keep out of this homepage carousel specifically — the articles
+// themselves still live on the News & Activities page, they're just excluded
+// here so the slider surfaces other recent work instead.
+const HOMEPAGE_EXCLUDED_SLUGS = new Set(["protecting-people-protecting-data-webinar"]);
+
 const Updates = () => {
   const navigate = useNavigate();
   const { t, language } = useTranslation();
@@ -15,7 +20,10 @@ const Updates = () => {
   // Most recent 5 news/activities, auto-rotating as new ones are appended to
   // newsArticlesContent.js — same shared source as the News & Activities page.
   const updates = useMemo(
-    () => getNewsArticlesForLocale(language).slice(0, 5),
+    () =>
+      getNewsArticlesForLocale(language)
+        .filter((article) => !HOMEPAGE_EXCLUDED_SLUGS.has(article.slug))
+        .slice(0, 5),
     [language]
   );
 

@@ -28,8 +28,7 @@ const Menu = ({ onLinkClick }) => {
     { href: "/child-abuse-tracker", label: t("nav.childAbuseTracker") },
     { href: "/covid-19", label: t("nav.covid19") },
     { href: "/partners", label: t("nav.partners") },
-    // Restore with Events route when page is unblurred (see Events.jsx)
-    // { href: "/events", label: t("nav.events") },
+    { href: "/events", label: t("nav.events") },
     { href: "https://pdaafrica.org", label: "PDA Africa", external: true, isSubOrg: true },
   ], [t]);
 

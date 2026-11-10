@@ -16,6 +16,70 @@
 
 export const newsArticlesRaw = [
   {
+    id: 17,
+    slug: "9th-knowledge-sharing-workshop-child-protection",
+    type: "activity",
+    imageKey: "ksw9",
+    dateIso: "2026-11-10",
+    sourceUrl: "https://bit.ly/PDAksw9",
+    en: {
+      date: "November 10, 2026",
+      title:
+        "Register Now: PDA's 9th Knowledge Sharing Workshop on Child Protection, 3 December",
+      description:
+        "PDA Africa, the Department of Children (MoGCSP) and the Ghana Internet Safety Foundation convene the 9th Knowledge Sharing Workshop on Child Protection at the British Council, Accra, on Thursday 3 December 2026, under the theme \"Digital Futures: Identity, Digital Safety and the Future of Child Protection in Ghana\".",
+      category: "Events",
+      location: "British Council, Accra",
+      fullContent: [
+        "Every child counts. Every child deserves protection. But are Ghana's child protection systems keeping pace with a rapidly changing digital world?",
+        "PDA Africa, in collaboration with the Department of Children under the Ministry of Gender, Children and Social Protection (MoGCSP) and the Ghana Internet Safety Foundation (GISF), will convene the 9th Knowledge Sharing Workshop on Child Protection on Thursday, 3 December 2026 at the British Council in Accra. Registration opens at 9:30 AM and the programme runs from 10:00 AM to 3:30 PM.",
+        "This year's theme is \"Digital Futures: Identity, Digital Safety and the Future of Child Protection in Ghana\". From birth registration and legal identity to artificial intelligence, online safety and emerging cyber risks, the challenges facing children are evolving quickly. The workshop asks two questions that are reshaping what it means to protect a child: who counts as a child in the eyes of the state, and how safe children are in the digital spaces where they now learn, play and connect.",
+        "The day is built around two thematic sessions. \"Every Child Counts\" examines birth registration, legal identity and the right to belong — barriers to timely registration, the link between health facilities and registration, access to rights and services, and the future of identity. \"Growing Up Digital\" turns to AI, online safety and emerging cyber risks for children, covering children's data and privacy, digital wellbeing, the role of parents, schools and institutions, and who is being left behind.",
+        "The workshop is an in-person, one-day event combining presentations, a short documentary, facilitated roundtable group work, a panel discussion and exhibition stands showcasing the work of participating organisations.",
+        "Whether you work in child protection, education, technology, policy or community development, you are invited to be part of the conversation shaping child protection in Ghana. The full concept note, including the programme for the day and the detailed session breakdowns, is available to download below.",
+        "The workshop continues an annual series. The 8th edition, held in December 2025 in Accra and Bechem, examined the threat posed by illegal mining (galamsey) to children in Ghana's cocoa-growing regions.",
+      ],
+      additionalInfo: [
+        "Date: Thursday, 3 December 2026",
+        "Time: Registration from 9:30 AM; programme 10:00 AM – 3:30 PM",
+        "Venue: British Council, Accra",
+        "Theme: Digital Futures: Identity, Digital Safety and the Future of Child Protection in Ghana",
+        "Convened by: PDA Africa, the Department of Children (MoGCSP) and the Ghana Internet Safety Foundation (GISF)",
+        "Registration: https://bit.ly/PDAksw9",
+        "Concept note: /assets/documents/9th-Knowledge-Sharing-Workshop-on-Child-Protection-Concept-Note.pdf",
+        "Enquiries: Derek Ampofo — 0542 349 462 | Aseda Mensah — 0508 493 316",
+      ],
+    },
+    fr: {
+      date: "10 novembre 2026",
+      title:
+        "Inscrivez-vous : 9e Atelier de partage des connaissances du PDA sur la protection de l’enfance, le 3 décembre",
+      description:
+        "PDA Africa, le Département de l’enfance (MoGCSP) et la Ghana Internet Safety Foundation organisent le 9e Atelier de partage des connaissances sur la protection de l’enfance au British Council d’Accra, le jeudi 3 décembre 2026, sur le thème « Avenirs numériques : identité, sécurité numérique et avenir de la protection de l’enfance au Ghana ».",
+      category: "Événements",
+      location: "British Council, Accra",
+      fullContent: [
+        "Chaque enfant compte. Chaque enfant a droit à la protection. Mais les systèmes ghanéens de protection de l’enfance suivent-ils le rythme d’un monde numérique en mutation rapide ?",
+        "PDA Africa, en collaboration avec le Département de l’enfance du ministère du Genre, des Enfants et de la Protection sociale (MoGCSP) et la Ghana Internet Safety Foundation (GISF), organisera le 9e Atelier de partage des connaissances sur la protection de l’enfance le jeudi 3 décembre 2026 au British Council d’Accra. L’accueil débutera à 9h30 et le programme se déroulera de 10h00 à 15h30.",
+        "Le thème de cette édition est « Avenirs numériques : identité, sécurité numérique et avenir de la protection de l’enfance au Ghana ». De l’enregistrement des naissances et de l’identité légale à l’intelligence artificielle, à la sécurité en ligne et aux nouveaux risques cyber, les défis auxquels les enfants font face évoluent rapidement. L’atelier pose deux questions qui redéfinissent ce que protéger un enfant veut dire : qui est reconnu comme un enfant aux yeux de l’État, et quelle sécurité les enfants trouvent-ils dans les espaces numériques où ils apprennent, jouent et échangent désormais ?",
+        "La journée s’articule autour de deux sessions thématiques. « Chaque enfant compte » portera sur l’enregistrement des naissances, l’identité légale et le droit d’exister aux yeux de la loi : les obstacles à un enregistrement rapide, le lien entre les établissements de santé et l’état civil, l’accès aux droits et aux services, et l’avenir de l’identité. « Grandir à l’ère du numérique » abordera l’intelligence artificielle, la sécurité en ligne et les nouveaux risques cyber pour les enfants, en traitant des données et de la vie privée des enfants, du bien-être numérique, du rôle des parents, des écoles et des institutions, et de la question de ceux que l’on laisse de côté.",
+        "L’atelier est un événement d’une journée en présentiel, associant présentations, documentaire court, tables rondes animées en petits groupes, discussion en panel et stands d’exposition présentant les travaux des organisations participantes.",
+        "Que vous travailliez dans la protection de l’enfance, l’éducation, la technologie, les politiques publiques ou le développement communautaire, vous êtes invité à prendre part à la conversation qui façonne la protection de l’enfance au Ghana. La note de cadrage complète, qui comprend le programme de la journée et le détail des sessions, peut être téléchargée ci-dessous.",
+        "Cet atelier s’inscrit dans une série annuelle. La 8e édition, tenue en décembre 2025 à Accra et à Bechem, portait sur la menace que représente l’orpaillage illégal (galamsey) pour les enfants des régions cacaoyères du Ghana.",
+      ],
+      additionalInfo: [
+        "Date : jeudi 3 décembre 2026",
+        "Horaires : accueil dès 9h30 ; programme de 10h00 à 15h30",
+        "Lieu : British Council, Accra",
+        "Thème : Avenirs numériques — identité, sécurité numérique et avenir de la protection de l’enfance au Ghana",
+        "Organisé par : PDA Africa, le Département de l’enfance (MoGCSP) et la Ghana Internet Safety Foundation (GISF)",
+        "Inscription : https://bit.ly/PDAksw9",
+        "Note de cadrage : /assets/documents/9th-Knowledge-Sharing-Workshop-on-Child-Protection-Concept-Note.pdf",
+        "Renseignements : Derek Ampofo — 0542 349 462 | Aseda Mensah — 0508 493 316",
+      ],
+    },
+  },
+  {
     id: 1,
     slug: "farmers-voice-radio-academy",
     type: "news",

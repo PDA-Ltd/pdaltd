@@ -705,6 +705,25 @@ export const en = {
   events: {
     upcomingEvents: "Upcoming Events",
     tweetsFrom: "Tweets from @pdaghanaofficial",
+    intro:
+      "Join us for engaging webinars, workshops, and events where we share insights, best practices, and lessons learned from our work in development, research, and evaluation.",
+    pastEvents: "Past Events",
+    pastEventsIntro: "Events we have already held. Recordings and write-ups are shared where available.",
+    featuredEvent: "Featured Event",
+    register: "REGISTER TO JOIN",
+    conceptNote: "Read the concept note",
+    sessionsTitle: "What we will be discussing",
+    eventEnded: "This event has ended",
+    noUpcoming: "No Upcoming Events",
+    noUpcomingMessage: "Check back soon for upcoming events and webinars.",
+    expertSpeakers: "Expert Speakers",
+    expertSpeakersText:
+      "Learn from experienced professionals and thought leaders in development and research.",
+    interactiveSessions: "Interactive Sessions",
+    interactiveSessionsText: "Engage in discussions, Q&A sessions, and networking opportunities.",
+    practicalInsights: "Practical Insights",
+    practicalInsightsText:
+      "Gain actionable knowledge and best practices from real-world experiences.",
   },
   // Error Pages
   error: {

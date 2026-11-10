@@ -246,6 +246,7 @@ import syh from "./syh.jpg";
 import fow from "./fow.jpg";
 import bdi from "./bdi.jpg";
 import kswa from "./8kswa.jpg";
+import ksw9 from "./9ksw.jpeg";
 import kswb from "./8kswb.jpg";
 import etg from "./etg.jpg";
 import flexcorp from "./Flexcorp.jpg";
@@ -501,6 +502,7 @@ export {
   fow,
   bdi,
   kswa,
+  ksw9,
   kswb,
   etg,
   flexcorp,
