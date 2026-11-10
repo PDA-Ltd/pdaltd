@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCalendarAlt, FaArrowLeft, FaMapMarkerAlt, FaTimes } from "react-icons/fa";
+import { FaCalendarAlt, FaArrowLeft, FaMapMarkerAlt, FaTimes, FaExternalLinkAlt } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 import { getNewsArticleForSlug } from "../data/newsAndActivitiesData.js";
 
@@ -97,6 +97,13 @@ const NewsDetail = () => {
         transition={{ delay: 0.3 }}
       >
         <div className="prose prose-lg max-w-none">
+          {/* Theme — sits above the write-up in the brand orange */}
+          {item.theme && (
+            <p className="mb-8 text-lg md:text-xl font-bold text-orange leading-snug">
+              {item.theme}
+            </p>
+          )}
+
           {item.fullContent ? (
             <div className="text-gray-700 leading-relaxed space-y-6">
               {item.fullContent.map((paragraph, index) => {
@@ -131,6 +138,34 @@ const NewsDetail = () => {
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
               {item.description}
             </p>
+          )}
+
+          {/* Calls to action — side by side on desktop, stacked on mobile */}
+          {(item.registrationUrl || item.conceptNoteUrl) && (
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              {item.registrationUrl && (
+                <a
+                  href={item.registrationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-orange text-white font-bold py-4 px-6 rounded-lg text-center hover:bg-orange/90 transition-colors duration-300 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+                >
+                  <span>{t("events.register")}</span>
+                  <FaExternalLinkAlt className="text-sm" />
+                </a>
+              )}
+              {item.conceptNoteUrl && (
+                <a
+                  href={item.conceptNoteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 border-2 border-orange text-orange font-bold py-4 px-6 rounded-lg text-center hover:bg-orange/5 transition-colors duration-300 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+                >
+                  <span>{t("events.conceptNote")}</span>
+                  <FaExternalLinkAlt className="text-sm" />
+                </a>
+              )}
+            </div>
           )}
         </div>
 

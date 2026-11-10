@@ -7,7 +7,10 @@
  * 3) Fill the `en` object completely (date, title, description, category, location, fullContent[], additionalInfo[]).
  * 4) Fill the `fr` object with the same keys. If French is not ready yet, you may omit a field in `fr`:
  *    it will fall back to English for that field only.
- * 5) Optional top-level: `recordingUrl`, `sourceUrl`, `galleryImageKeys` (extra
+ * 5) Optional per-locale: `theme` — shown in brand orange above the write-up.
+ * 6) Optional top-level: `registrationUrl` and `conceptNoteUrl` — rendered as
+ *    side-by-side buttons at the end of the write-up.
+ * 7) Optional top-level: `recordingUrl`, `sourceUrl`, `galleryImageKeys` (extra
  *    photos shown below the article, each openable in a lightbox). Entries
  *    can be a plain string (`"someImageKey"`) or `{ imageKey, caption }` to
  *    label the photo (e.g. "Before"/"After"); `imageKey` must match an export
@@ -21,9 +24,13 @@ export const newsArticlesRaw = [
     type: "activity",
     imageKey: "ksw9",
     dateIso: "2026-11-10",
-    sourceUrl: "https://bit.ly/PDAksw9",
+    registrationUrl: "https://bit.ly/PDAksw9",
+    conceptNoteUrl:
+      "/assets/documents/9th-Knowledge-Sharing-Workshop-on-Child-Protection-Concept-Note.pdf",
     en: {
       date: "November 10, 2026",
+      theme:
+        "Digital Futures: Identity, Digital Safety and the Future of Child Protection in Ghana",
       title:
         "Register Now: PDA's 9th Knowledge Sharing Workshop on Child Protection, 3 December",
       description:
@@ -43,15 +50,14 @@ export const newsArticlesRaw = [
         "Date: Thursday, 3 December 2026",
         "Time: Registration from 9:30 AM; programme 10:00 AM – 3:30 PM",
         "Venue: British Council, Accra",
-        "Theme: Digital Futures: Identity, Digital Safety and the Future of Child Protection in Ghana",
         "Convened by: PDA Africa, the Department of Children (MoGCSP) and the Ghana Internet Safety Foundation (GISF)",
-        "Registration: https://bit.ly/PDAksw9",
-        "Concept note: /assets/documents/9th-Knowledge-Sharing-Workshop-on-Child-Protection-Concept-Note.pdf",
         "Enquiries: Derek Ampofo — 0542 349 462 | Aseda Mensah — 0508 493 316",
       ],
     },
     fr: {
       date: "10 novembre 2026",
+      theme:
+        "Avenirs numériques : identité, sécurité numérique et avenir de la protection de l’enfance au Ghana",
       title:
         "Inscrivez-vous : 9e Atelier de partage des connaissances du PDA sur la protection de l’enfance, le 3 décembre",
       description:
@@ -71,10 +77,7 @@ export const newsArticlesRaw = [
         "Date : jeudi 3 décembre 2026",
         "Horaires : accueil dès 9h30 ; programme de 10h00 à 15h30",
         "Lieu : British Council, Accra",
-        "Thème : Avenirs numériques — identité, sécurité numérique et avenir de la protection de l’enfance au Ghana",
         "Organisé par : PDA Africa, le Département de l’enfance (MoGCSP) et la Ghana Internet Safety Foundation (GISF)",
-        "Inscription : https://bit.ly/PDAksw9",
-        "Note de cadrage : /assets/documents/9th-Knowledge-Sharing-Workshop-on-Child-Protection-Concept-Note.pdf",
         "Renseignements : Derek Ampofo — 0542 349 462 | Aseda Mensah — 0508 493 316",
       ],
     },

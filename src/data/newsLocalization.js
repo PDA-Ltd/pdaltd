@@ -17,6 +17,7 @@ const mergeLocaleBundle = (en, frPartial) => {
     description: isNonEmptyString(fr.description) ? fr.description : en.description,
     category: isNonEmptyString(fr.category) ? fr.category : en.category,
     location: isNonEmptyString(fr.location) ? fr.location : en.location,
+    theme: isNonEmptyString(fr.theme) ? fr.theme : en.theme,
     fullContent: isNonEmptyStringArray(fr.fullContent) ? fr.fullContent : en.fullContent,
     additionalInfo: isNonEmptyStringArray(fr.additionalInfo) ? fr.additionalInfo : en.additionalInfo,
   };
@@ -41,10 +42,13 @@ export function localizeNewsArticle(article, language) {
     description: bundle.description,
     category: bundle.category,
     location: bundle.location,
+    theme: bundle.theme,
     fullContent: bundle.fullContent,
     additionalInfo: bundle.additionalInfo,
     recordingUrl: article.recordingUrl,
     sourceUrl: article.sourceUrl,
+    registrationUrl: article.registrationUrl,
+    conceptNoteUrl: article.conceptNoteUrl,
   };
 }
 
